@@ -8,7 +8,7 @@ const DrawerResult: FC<DrawerResultProps> = (props) => {
 
   return (
     <article className="space-y-6">
-      <h1 className="text-center text-4xl">{round || '-'}회 당첨번호</h1>
+      <h2 className="text-center text-4xl">{round || '-'}회 당첨번호</h2>
       <strong className="block space-x-6 text-center">
         {winningNumbers.map((number, index) => (
           <span
