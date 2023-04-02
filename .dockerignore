@@ -1,0 +1,14 @@
+**/.next
+**/.turbo
+**/dist
+**/node_modules
+**/Dockerfile
+**/next-env.d.ts
+**/README.md
+.husky
+.vscode
+.dockerignore
+.editorconfig
+.gitignore
+.lintstagedrc.json
+.nvmrc

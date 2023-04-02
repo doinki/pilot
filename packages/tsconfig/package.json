@@ -1,0 +1,10 @@
+{
+  "exports": {
+    "./base": "./base.json",
+    "./next": "./next.json",
+    "./package.json": "./package.json",
+    "./react": "./react.json"
+  },
+  "name": "@pilot/tsconfig",
+  "private": true
+}

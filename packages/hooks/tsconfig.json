@@ -1,0 +1,1 @@
+{ "extends": "@pilot/tsconfig/react", "exclude": ["dist", "node_modules"] }

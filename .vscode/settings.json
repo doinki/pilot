@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "tailwindCSS.experimental.configFile": {
+    "apps/lotto/tailwind.config.js": "apps/lotto/**",
+    "packages/ui/tailwind.config.js": "packages/ui/**"
+  }
+}
