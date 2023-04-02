@@ -7,15 +7,15 @@ const DrawerResult: FC<DrawerResultProps> = (props) => {
   const { round, winningNumbers } = props;
 
   return (
-    <article className="space-y-6">
-      <h2 className="text-center text-4xl">{round || '-'}회 당첨번호</h2>
-      <strong className="block space-x-6 text-center">
+    <article className="space-y-4 border p-4">
+      <h2 className="text-2xl">{round || '-'}회 당첨번호</h2>
+      <strong className="flex flex-wrap gap-4">
         {winningNumbers.map((number, index) => (
           <span
             key={number}
-            className={
-              index === winningNumbers.length - 1 ? 'text-blue-500' : undefined
-            }
+            className={`inline-flex h-16 w-16 items-center justify-center rounded-full border ${
+              index === winningNumbers.length - 1 ? 'text-blue-500' : ''
+            }`}
           >
             {number || '-'}
           </span>
