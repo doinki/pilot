@@ -4,6 +4,7 @@ const Document = () => {
   return (
     <Html lang="ko">
       <Head>
+        <link href="/circle.svg" rel="icon" />
         <script
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
