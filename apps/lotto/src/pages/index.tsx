@@ -2,6 +2,7 @@ import { readFile } from 'fs/promises';
 import type { GetStaticProps, NextPage } from 'next';
 
 import { DrawerResult } from '@/components';
+import { RandomNumbers } from '@/components/RandomNumbers';
 import { defaultLotto } from '@/constants';
 import type { Lottos } from '@/types';
 
@@ -17,6 +18,7 @@ const Home: NextPage<HomeProps> = ({ lottos = {} }) => {
 
   return (
     <main className="grid h-screen place-content-center">
+      <RandomNumbers />
       <DrawerResult {...latestLotto} />
     </main>
   );
