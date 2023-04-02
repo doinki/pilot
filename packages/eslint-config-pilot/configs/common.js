@@ -6,6 +6,7 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   ignorePatterns: ['dist', 'public'],
   rules: {
+    '@typescript-eslint/no-shadow': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
