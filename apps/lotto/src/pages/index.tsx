@@ -2,18 +2,18 @@ import { readFile } from 'fs/promises';
 import type { GetStaticProps, NextPage } from 'next';
 
 import { defaultLotto } from '@/constants';
-import type { Lotto } from '@/types';
+import type { Lottos } from '@/types';
 
 interface HomeProps {
-  lotto?: Record<string, Lotto>;
+  lottos?: Lottos;
 }
 
-const Home: NextPage<HomeProps> = ({ lotto = {} }) => {
-  const latestRound = Object.keys(lotto)
+const Home: NextPage<HomeProps> = ({ lottos = {} }) => {
+  const latestRound = Object.keys(lottos)
     .sort((a, b) => Number(a) - Number(b))
     .at(-1);
   const { round, winningNumbers } = latestRound
-    ? lotto[latestRound]
+    ? lottos[latestRound]
     : defaultLotto;
 
   return (
@@ -37,11 +37,11 @@ const Home: NextPage<HomeProps> = ({ lotto = {} }) => {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
-    const lotto = JSON.parse(
-      await readFile('public/lotto.json', 'utf-8')
-    ) as Record<string, Lotto>;
+    const lottos = JSON.parse(
+      await readFile('public/lottos.json', 'utf-8')
+    ) as Lottos;
 
-    return { props: { lotto } };
+    return { props: { lottos } };
   } catch {
     return { props: {} };
   }

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import { read } from 'xlsx';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const lottoFilePath = join(__dirname, '..', 'public', 'lotto.json');
+const lottoFilePath = join(__dirname, '..', 'public', 'lottos.json');
 const drwNoStart = 1;
 const drwNoEnd = 1;
 const rowPrefixList = ['N', 'O', 'P', 'Q', 'R', 'S', 'T'];
