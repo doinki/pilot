@@ -13,9 +13,12 @@ module.exports = {
           '**/*.test.ts?(x)',
           '**/jest.setup.ts',
           '**/next.config.js',
+          '**/scripts/**/*',
         ],
       },
     ],
     'import/prefer-default-export': 'off',
+    'no-shadow': 'off',
+    'no-underscore-dangle': 'off',
   },
 };
