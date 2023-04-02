@@ -2,6 +2,7 @@ import { readFile } from 'fs/promises';
 import type { GetStaticProps, NextPage } from 'next';
 
 import { DrawerResult } from '@/components';
+import { RandomNumbers } from '@/components/RandomNumbers';
 import { defaultLotto } from '@/constants';
 import type { Lottos } from '@/types';
 
@@ -16,7 +17,8 @@ const Home: NextPage<HomeProps> = ({ lottos = {} }) => {
   const latestLotto = latestRound ? lottos[latestRound] : defaultLotto;
 
   return (
-    <main className="grid h-screen place-content-center">
+    <main className="grid h-screen place-content-center gap-6">
+      <RandomNumbers />
       <DrawerResult {...latestLotto} />
     </main>
   );
