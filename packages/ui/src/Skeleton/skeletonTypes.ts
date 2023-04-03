@@ -31,5 +31,5 @@ export interface SkeletonTypeMap<P = {}, D extends ElementType = 'span'> {
 
 export type SkeletonProps<
   P = {},
-  D extends React.ElementType = SkeletonTypeMap['defaultComponent']
+  D extends ElementType = SkeletonTypeMap['defaultComponent']
 > = OverrideProps<SkeletonTypeMap<P, D>, D>;
