@@ -17,7 +17,7 @@ const Home: NextPage<HomeProps> = ({ lottos = {} }) => {
   const latestLotto = latestRound ? lottos[latestRound] : defaultLotto;
 
   return (
-    <main className="grid h-screen place-content-center gap-6">
+    <main className="grid h-screen place-content-center gap-6 p-4">
       <RandomNumbers />
       <DrawerResult {...latestLotto} />
     </main>
