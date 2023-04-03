@@ -3,6 +3,7 @@
  */
 module.exports = {
   eslint: { ignoreDuringBuilds: true },
+  experimental: { scrollRestoration: true },
   output: 'standalone',
   poweredByHeader: false,
   reactStrictMode: true,
