@@ -51,8 +51,8 @@ importers:
         specifier: ^18.15.11
         version: 18.15.11
       '@types/react':
-        specifier: ^18.0.31
-        version: 18.0.31
+        specifier: ^18.0.32
+        version: 18.0.32
       '@types/react-dom':
         specifier: ^18.0.11
         version: 18.0.11
@@ -214,8 +214,8 @@ importers:
         specifier: ^18.15.11
         version: 18.15.11
       '@types/react':
-        specifier: ^18.0.31
-        version: 18.0.31
+        specifier: ^18.0.32
+        version: 18.0.32
       '@types/react-dom':
         specifier: ^18.0.11
         version: 18.0.11
@@ -315,8 +315,8 @@ importers:
         specifier: ^18.15.11
         version: 18.15.11
       '@types/react':
-        specifier: ^18.0.31
-        version: 18.0.31
+        specifier: ^18.0.32
+        version: 18.0.32
       '@types/react-dom':
         specifier: ^18.0.11
         version: 18.0.11
@@ -2418,7 +2418,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.4
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       react: 18.2.0
     dev: true
 
@@ -2672,7 +2672,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-inspector: 6.0.1(react@18.2.0)
-      telejson: 7.0.4
+      telejson: 7.1.0
       ts-dedent: 2.2.0
       uuid-browser: 3.1.0
     dev: true
@@ -2750,7 +2750,7 @@ packages:
       '@storybook/csf-plugin': 7.0.0-rc.11
       '@storybook/csf-tools': 7.0.0-rc.11
       '@storybook/global': 5.0.0
-      '@storybook/mdx2-csf': 1.0.0-next.7
+      '@storybook/mdx2-csf': 1.0.0-next.8
       '@storybook/node-logger': 7.0.0-rc.11
       '@storybook/postinstall': 7.0.0-rc.11
       '@storybook/preview-api': 7.0.0-rc.11
@@ -3016,7 +3016,7 @@ packages:
       react: 18.2.0
       react-colorful: 5.6.1(react-dom@18.2.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
-      telejson: 7.0.4
+      telejson: 7.1.0
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
     transitivePeerDependencies:
@@ -3119,7 +3119,7 @@ packages:
       '@storybook/core-events': 7.0.0-rc.11
       '@storybook/global': 5.0.0
       qs: 6.11.1
-      telejson: 7.0.4
+      telejson: 7.1.0
     dev: true
 
   /@storybook/channel-websocket@7.0.0-rc.11:
@@ -3128,7 +3128,7 @@ packages:
       '@storybook/channels': 7.0.0-rc.11
       '@storybook/client-logger': 7.0.0-rc.11
       '@storybook/global': 5.0.0
-      telejson: 7.0.4
+      telejson: 7.1.0
     dev: true
 
   /@storybook/channels@7.0.0-rc.11:
@@ -3282,7 +3282,7 @@ packages:
       '@storybook/core-events': 7.0.0-rc.11
       '@storybook/csf': 0.0.2-next.11
       '@storybook/csf-tools': 7.0.0-rc.11
-      '@storybook/docs-mdx': 0.0.1-next.6
+      '@storybook/docs-mdx': 0.0.1-next.7
       '@storybook/global': 5.0.0
       '@storybook/manager': 7.0.0-rc.11
       '@storybook/node-logger': 7.0.0-rc.11
@@ -3312,7 +3312,7 @@ packages:
       read-pkg-up: 7.0.1
       semver: 7.3.8
       serve-favicon: 2.5.0
-      telejson: 7.0.4
+      telejson: 7.1.0
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
       watchpack: 2.4.0
@@ -3373,8 +3373,8 @@ packages:
       type-fest: 2.19.0
     dev: true
 
-  /@storybook/docs-mdx@0.0.1-next.6:
-    resolution: {integrity: sha512-DjoSIXADmLJtdroXAjUotFiZlcZ2usWhqrS7aeOtZs0DVR0Ws5WQjnwtpDUXt8gryTSd+OZJ0cNsDcqg4JDEvQ==}
+  /@storybook/docs-mdx@0.0.1-next.7:
+    resolution: {integrity: sha512-JbgBf/EMBtx65iXtB3pOiX3818UeL9jZ+KAY241OAPqJVXjMQ5KaVOdg/57MSmd508HDIGx7CiImOMEmWwQ9/g==}
     dev: true
 
   /@storybook/docs-tools@7.0.0-rc.11:
@@ -3426,7 +3426,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       semver: 7.3.8
       store2: 2.14.2
-      telejson: 7.0.4
+      telejson: 7.1.0
       ts-dedent: 2.2.0
     dev: true
 
@@ -3434,8 +3434,8 @@ packages:
     resolution: {integrity: sha512-p/23cjlpuEM/U5lp2effiVPJ/VzAzfdeNQ55v+M8mQGglzOINpI1feZp9KS3dVsTrt+CjzctMShKQy7h9/wP7w==}
     dev: true
 
-  /@storybook/mdx2-csf@1.0.0-next.7:
-    resolution: {integrity: sha512-xcQ8w4IecABAjsakaZTGiUEnEgFZzVKsMjqECjd+qdkwgD3R/kwrBdfyC15CLM5Ye1miPwYBIwJGeBXB9qxsZg==}
+  /@storybook/mdx2-csf@1.0.0-next.8:
+    resolution: {integrity: sha512-t2O5s/HHTH5evZVHgVtCWTZgMZ/CaqDu3xVGgjVbKeTvpPAbi0Waab5SSX8T9PG5jNDei/x+jpAVCcNMOHoWzg==}
     dev: true
 
   /@storybook/node-logger@6.5.16:
@@ -3624,7 +3624,7 @@ packages:
       acorn-jsx: 5.3.2(acorn@7.4.1)
       acorn-walk: 7.2.0
       escodegen: 2.0.0
-      html-tags: 3.2.0
+      html-tags: 3.3.0
       lodash: 4.17.21
       prop-types: 15.8.1
       react: 18.2.0
@@ -4118,11 +4118,11 @@ packages:
   /@types/react-dom@18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
     dev: true
 
-  /@types/react@18.0.31:
-    resolution: {integrity: sha512-EEG67of7DsvRDU6BLLI0p+k1GojDLz9+lZsnCpCRTa/lOokvyPBvp8S5x+A24hME3yyQuIipcP70KJ6H7Qupww==}
+  /@types/react@18.0.32:
+    resolution: {integrity: sha512-gYGXdtPQ9Cj0w2Fwqg5/ak6BcK3Z15YgjSqtyDizWUfx7mQ8drs0NBUzRRsAdoFVTO8kJ8L2TL8Skm7OFPnLUw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -7315,8 +7315,8 @@ packages:
       terser: 5.16.8
     dev: true
 
-  /html-tags@3.2.0:
-    resolution: {integrity: sha512-vy7ClnArOZwCnqZgvv+ddgHgJiAFXe3Ge9ML5/mBctVJoUoYPCdxVucOywjDARn6CVoh3dRSFdPHy2sX80L0Wg==}
+  /html-tags@3.3.0:
+    resolution: {integrity: sha512-mH3dWNbvfCKcAEysbpD7wvtIJ6ImPog8aFhfzqog9gCN8CJFhKjLDtjpohG3IxYRLqHMJ1PWpBvnSMkFJBQ6Jg==}
     engines: {node: '>=8'}
     dev: true
 
@@ -10680,8 +10680,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /telejson@7.0.4:
-    resolution: {integrity: sha512-J4QEuCnYGXAI9KSN7RXK0a0cOW2ONpjc4IQbInGZ6c3stvplLAYyZjTnScrRd8deXVjNCFV1wXcLC7SObDuQYA==}
+  /telejson@7.1.0:
+    resolution: {integrity: sha512-jFJO4P5gPebZAERPkJsqMAQ0IMA1Hi0AoSfxpnUaV6j6R2SZqlpkbS20U6dEUtA3RUYt2Ak/mTlkQzHH9Rv/hA==}
     dependencies:
       memoizerific: 1.11.3
     dev: true
