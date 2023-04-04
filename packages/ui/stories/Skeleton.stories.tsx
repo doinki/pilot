@@ -11,36 +11,22 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Variant: Story = {
-  render: (args) => (
-    <div className="space-y-6">
-      <Skeleton height={64} variant="circular" width={64} {...args} />
-      <Skeleton height={64} variant="rectangular" width={160} {...args} />
-      <Skeleton height={64} variant="rounded" width={320} {...args} />
-      <Skeleton variant="text" />
-    </div>
-  ),
+export const VariantCircular: Story = {
+  args: { height: 64, variant: 'circular', width: 64 },
 };
+export const VariantRectangular: Story = {
+  args: { height: 64, variant: 'circular', width: 160 },
+};
+export const VariantRounded: Story = {
+  args: { height: 64, variant: 'rounded', width: 320 },
+};
+export const VariantText: Story = { args: { variant: 'text' } };
 
-export const Animation: Story = {
-  render: (args) => (
-    <div className="space-y-6">
-      <Skeleton
-        animation="pulse"
-        height={120}
-        variant="rectangular"
-        width={120}
-        {...args}
-      />
-      <Skeleton
-        animation={false}
-        height={120}
-        variant="rectangular"
-        width={120}
-        {...args}
-      />
-    </div>
-  ),
+export const AnimationPulse: Story = {
+  args: { animation: 'pulse', height: 120, variant: 'rectangular', width: 120 },
+};
+export const AnimationFalse: Story = {
+  args: { ...AnimationPulse.args, animation: false },
 };
 
 export const Size: Story = {
