@@ -3,12 +3,16 @@ on:
     branches:
       - main
       - develop
-  push:
     paths:
-      - stories/**
+      - packages/ui/src/**
+      - packages/ui/stories/**
+  push:
     branches:
       - main
       - develop
+    paths:
+      - packages/ui/src/**
+      - packages/ui/stories/**
 
 jobs:
   chromatic:
