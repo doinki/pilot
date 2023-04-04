@@ -3,6 +3,12 @@ on:
     branches:
       - main
       - develop
+  push:
+    paths:
+      - stories/**
+    branches:
+      - main
+      - develop
 
 jobs:
   chromatic:
