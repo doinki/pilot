@@ -15,7 +15,7 @@ export const VariantCircular: Story = {
   args: { height: 64, variant: 'circular', width: 64 },
 };
 export const VariantRectangular: Story = {
-  args: { height: 64, variant: 'circular', width: 160 },
+  args: { height: 64, variant: 'rectangular', width: 160 },
 };
 export const VariantRounded: Story = {
   args: { height: 64, variant: 'rounded', width: 320 },
