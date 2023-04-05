@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Divider } from '../src';
 
-const meta = {
+const meta: Meta<typeof Divider> = {
   component: Divider,
   tags: ['autodocs'],
   title: 'Divider',
-} satisfies Meta<typeof Divider>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Divider>;
 
 export const OrientationHorizontal: Story = {
   args: { orientation: 'horizontal' },

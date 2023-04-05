@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Stack } from '../src';
 
-const meta = {
+const meta: Meta<typeof Stack> = {
   args: {
     children: [
       <div key={1}>1</div>,
@@ -14,10 +14,10 @@ const meta = {
   component: Stack,
   tags: ['autodocs'],
   title: 'Stack',
-} satisfies Meta<typeof Stack>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Stack>;
 
 export const DirectionColumn: Story = { args: { direction: 'column' } };
 export const DirectionColumnReverse: Story = {

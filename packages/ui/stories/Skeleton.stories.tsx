@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Skeleton } from '../src';
 
-const meta = {
+const meta: Meta<typeof Skeleton> = {
   component: Skeleton,
   tags: ['autodocs'],
   title: 'Skeleton',
-} satisfies Meta<typeof Skeleton>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Skeleton>;
 
 export const VariantCircular: Story = {
   args: { height: 64, variant: 'circular', width: 64 },
