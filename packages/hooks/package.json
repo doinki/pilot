@@ -12,13 +12,15 @@
     "lint": "eslint ."
   },
   "peerDependencies": {
-    "@pilot/utils": "workspace:*",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
+  "dependencies": {
+    "@pilot/utils": "workspace:^"
+  },
   "devDependencies": {
-    "@pilot/tsconfig": "workspace:*",
-    "@pilot/utils": "workspace:*",
+    "@pilot/tsconfig": "workspace:^",
+    "@pilot/types": "workspace:^",
     "@swc/core": "^1.3.46",
     "@swc/jest": "^0.2.24",
     "@testing-library/dom": "^9.2.0",
@@ -30,13 +32,10 @@
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@types/testing-library__jest-dom": "^5.14.5",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.37.0",
-    "eslint-config-pilot": "workspace:*",
+    "eslint-config-pilot": "workspace:^",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
-    "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.3"

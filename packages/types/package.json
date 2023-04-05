@@ -1,0 +1,21 @@
+{
+  "name": "@pilot/types",
+  "private": true,
+  "sideEffects": false,
+  "types": "src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11"
+  },
+  "devDependencies": {
+    "@pilot/tsconfig": "workspace:^",
+    "eslint": "^8.37.0",
+    "eslint-config-pilot": "workspace:^",
+    "typescript": "^5.0.3"
+  }
+}

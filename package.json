@@ -16,6 +16,7 @@
     "lint": "turbo lint",
     "lotto": "pnpm --filter=lotto",
     "hooks": "pnpm --filter=@pilot/hooks",
+    "types": "pnpm --filter=@pilot/types",
     "ui": "pnpm --filter=@pilot/ui",
     "utils": "pnpm --filter=@pilot/utils",
     "postinstall": "husky install"
