@@ -1,5 +1,5 @@
 {
   "extends": "@pilot/tsconfig/next",
   "compilerOptions": { "baseUrl": ".", "paths": { "@/*": ["./src/*"] } },
-  "include": ["next-env.d.ts", "src"]
+  "exclude": [".next", ".turbo", "node_modules"]
 }

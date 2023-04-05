@@ -3,6 +3,6 @@
  */
 module.exports = {
   extends: 'pilot/react',
-  parserOptions: { project: require.resolve('./tsconfig.eslint.json') },
+  parserOptions: { project: require.resolve('./tsconfig.json') },
   root: true,
 };
