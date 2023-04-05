@@ -147,8 +147,8 @@ importers:
         specifier: ^0.6.11
         version: 0.6.11(eslint@8.37.0)(typescript@5.0.3)
       eslint-plugin-tailwindcss:
-        specifier: ^3.10.3
-        version: 3.10.3(tailwindcss@3.3.1)
+        specifier: ^3.11.0
+        version: 3.11.0(tailwindcss@3.3.1)
       eslint-plugin-testing-library:
         specifier: ^5.10.2
         version: 5.10.2(eslint@8.37.0)(typescript@5.0.3)
@@ -360,8 +360,8 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
       tailwind-merge:
-        specifier: ^1.11.0
-        version: 1.11.0
+        specifier: ^1.12.0
+        version: 1.12.0
       tailwindcss:
         specifier: ^3.3.1
         version: 3.3.1(postcss@8.4.21)
@@ -3538,7 +3538,7 @@ packages:
       acorn-jsx: 5.3.2(acorn@7.4.1)
       acorn-walk: 7.2.0
       escodegen: 2.0.0
-      html-tags: 3.3.0
+      html-tags: 3.3.1
       lodash: 4.17.21
       prop-types: 15.8.1
       react: 18.2.0
@@ -4993,7 +4993,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001474
-      electron-to-chromium: 1.4.350
+      electron-to-chromium: 1.4.352
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10(browserslist@4.21.5)
     dev: true
@@ -5791,8 +5791,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium@1.4.350:
-    resolution: {integrity: sha512-XnXcWpVnOfHZ4C3NPiL+SubeoGV8zc/pg8GEubRtc1dPA/9jKS2vsOPmtClJHhWxUb2RSGC1OBLCbgNUJMtZPw==}
+  /electron-to-chromium@1.4.352:
+    resolution: {integrity: sha512-ikFUEyu5/q+wJpMOxWxTaEVk2M1qKqTGKKyfJmod1CPZxKfYnxVS41/GCBQg21ItBpZybyN8sNpRqCUGm+Zc4Q==}
     dev: true
 
   /emittery@0.13.1:
@@ -6347,8 +6347,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-tailwindcss@3.10.3(tailwindcss@3.3.1):
-    resolution: {integrity: sha512-yDJDs0R6AHT1quc9cCB5mpg5s5hBH0yE5L57GYWfRQWidF3HVEVrRF+Hg/4metBJzKikTD9QPIFd6CZANarWOQ==}
+  /eslint-plugin-tailwindcss@3.11.0(tailwindcss@3.3.1):
+    resolution: {integrity: sha512-RaraOG4D6VXutKnoNvFQ4+frTWGJDKtezy1yCrGFS7Um1to/npDNdh2GL19IRoGB/eanbtwhxFXy+xyEw0grAg==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
       tailwindcss: ^3.2.2
@@ -7239,8 +7239,8 @@ packages:
       terser: 5.16.8
     dev: true
 
-  /html-tags@3.3.0:
-    resolution: {integrity: sha512-mH3dWNbvfCKcAEysbpD7wvtIJ6ImPog8aFhfzqog9gCN8CJFhKjLDtjpohG3IxYRLqHMJ1PWpBvnSMkFJBQ6Jg==}
+  /html-tags@3.3.1:
+    resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
     dev: true
 
@@ -10500,8 +10500,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /tailwind-merge@1.11.0:
-    resolution: {integrity: sha512-oG3/328Y7LrfPMfkgMNxoqEk1ZQdXBxdphf9FFrreo8q0EtVIHt3bQf2IyFhQuVt8puB57lCRBNbazGhYAyz9w==}
+  /tailwind-merge@1.12.0:
+    resolution: {integrity: sha512-Y17eDp7FtN1+JJ4OY0Bqv9OA41O+MS8c1Iyr3T6JFLnOgLg3EvcyMKZAnQ8AGyvB5Nxm3t9Xb5Mhe139m8QT/g==}
     dev: true
 
   /tailwindcss@3.3.1(postcss@8.4.21):
