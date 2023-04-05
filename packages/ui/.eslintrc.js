@@ -3,7 +3,7 @@
  */
 module.exports = {
   extends: 'pilot/react',
-  parserOptions: { project: require.resolve('./tsconfig.json') },
+  parserOptions: { project: require.resolve('./tsconfig.eslint.json') },
   root: true,
   rules: {
     '@typescript-eslint/ban-types': [

@@ -4,7 +4,7 @@ require('@rushstack/eslint-patch/modern-module-resolution');
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  ignorePatterns: ['dist', 'public'],
+  ignorePatterns: ['dist', 'public', 'storybook-static'],
   rules: {
     '@typescript-eslint/no-shadow': 'off',
     'import/no-extraneous-dependencies': [

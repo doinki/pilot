@@ -3,10 +3,10 @@
  */
 module.exports = {
   extends: 'pilot/next',
-  parserOptions: { project: require.resolve('./tsconfig.json') },
+  parserOptions: { project: require.resolve('./tsconfig.eslint.json') },
   settings: {
     'import/resolver': {
-      typescript: { project: require.resolve('./tsconfig.json') },
+      typescript: { project: require.resolve('./tsconfig.eslint.json') },
     },
   },
 };

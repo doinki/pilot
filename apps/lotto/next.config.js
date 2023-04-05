@@ -8,5 +8,4 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   transpilePackages: ['@pilot/hooks', '@pilot/ui', '@pilot/utils'],
-  typescript: { tsconfigPath: 'tsconfig.build.json' },
 };

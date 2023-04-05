@@ -6,5 +6,6 @@
     "isolatedModules": true,
     "lib": ["DOM", "ESNext"],
     "jsx": "preserve"
-  }
+  },
+  "exclude": []
 }
