@@ -1,4 +1,4 @@
 {
   "extends": "@pilot/tsconfig/react",
-  "exclude": [".turbo", "dist", "node_modules", "storybook-static"]
+  "exclude": [".turbo", "coverage", "dist", "node_modules", "storybook-static"]
 }
