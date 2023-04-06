@@ -61,8 +61,5 @@ module.exports = {
     'trim/argument': 'warn',
     'trim/class-name': 'warn',
   },
-  settings: {
-    'import/resolver': { typescript: { alwaysTryTypes: true } },
-    tailwindcss: { callees: ['twJoin', 'twMerge'] },
-  },
+  settings: { 'import/resolver': { typescript: { alwaysTryTypes: true } } },
 };
