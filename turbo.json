@@ -10,6 +10,7 @@
       "outputs": ["storybook-static/**"]
     },
     "lint": {},
+    "storybook": { "cache": false, "persistent": true },
     "test": {},
     "test:coverage": { "outputs": ["coverage/**"] },
     "test:watch": { "cache": false, "persistent": true }

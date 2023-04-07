@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "storybook": "turbo storybook",
     "build": "turbo build",
     "build:storybook": "turbo build:storybook",
     "test": "turbo test",
