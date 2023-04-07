@@ -1,10 +1,8 @@
-/**
- * @jest-environment node
- */
+/* @jest-environment node */
 
 import React from 'react';
 
-import { useLayoutEffect } from '../src';
+import { useLayoutEffect } from './useLayoutEffect';
 
 describe('useLayoutEffect', () => {
   test('should be `React.useEffect` if not browser', () => {
