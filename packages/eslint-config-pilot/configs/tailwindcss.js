@@ -5,5 +5,10 @@ require('@rushstack/eslint-patch/modern-module-resolution');
  */
 module.exports = {
   extends: ['plugin:tailwindcss/recommended'],
-  settings: { tailwindcss: { callees: ['twJoin', 'twMerge'] } },
+  settings: {
+    tailwindcss: {
+      callees: ['tw', 'twJoin', 'twMerge'],
+      classRegex: '^(?:c|\\w+C)lassName$',
+    },
+  },
 };
