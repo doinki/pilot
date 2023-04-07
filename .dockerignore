@@ -1,10 +1,14 @@
 **/.next
 **/.turbo
+**/coverage
 **/dist
 **/node_modules
+**/storybook-static
 **/Dockerfile
 **/next-env.d.ts
 **/README.md
+.git
+.github
 .husky
 .vscode
 .dockerignore
