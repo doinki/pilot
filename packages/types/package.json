@@ -7,6 +7,14 @@
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint ."
   },
+  "peerDependencies": {
+    "next": "^13.0.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.33",
@@ -16,6 +24,7 @@
     "@pilot/tsconfig": "workspace:^",
     "eslint": "^8.37.0",
     "eslint-config-pilot": "workspace:^",
+    "next": "^13.3.0",
     "typescript": "^5.0.3"
   }
 }
