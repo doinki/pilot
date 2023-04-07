@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Stack Direction Column 1`] = `
+<div
+  class="flex flex-col gap-4"
+>
+  <div>
+    1
+  </div>
+  <div>
+    2
+  </div>
+  <div>
+    3
+  </div>
+</div>
+`;
+
+exports[`Storyshots Stack Direction Column Reverse 1`] = `
+<div
+  class="flex flex-col-reverse gap-4"
+>
+  <div>
+    1
+  </div>
+  <div>
+    2
+  </div>
+  <div>
+    3
+  </div>
+</div>
+`;
+
+exports[`Storyshots Stack Direction Row 1`] = `
+<div
+  class="flex flex-row gap-4"
+>
+  <div>
+    1
+  </div>
+  <div>
+    2
+  </div>
+  <div>
+    3
+  </div>
+</div>
+`;
+
+exports[`Storyshots Stack Direction Row Reverse 1`] = `
+<div
+  class="flex flex-row-reverse gap-4"
+>
+  <div>
+    1
+  </div>
+  <div>
+    2
+  </div>
+  <div>
+    3
+  </div>
+</div>
+`;
+
+exports[`Storyshots Stack Divider 1`] = `
+<div
+  class="flex flex-col gap-4"
+>
+  <div>
+    1
+  </div>
+  <hr />
+  <div>
+    2
+  </div>
+  <hr />
+  <div>
+    3
+  </div>
+</div>
+`;

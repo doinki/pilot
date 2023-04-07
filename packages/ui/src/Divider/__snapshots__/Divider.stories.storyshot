@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Divider Orientation Horizontal 1`] = `
+<hr
+  class="block h-0 w-auto border-0 border-b"
+/>
+`;
+
+exports[`Storyshots Divider Orientation Vertical 1`] = `
+<div
+  style="height: 320px;"
+>
+  <hr
+    class="block h-full w-0 border-0 border-r"
+  />
+</div>
+`;

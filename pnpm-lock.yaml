@@ -314,6 +314,9 @@ importers:
       '@storybook/addon-postcss':
         specifier: ^2.0.0
         version: 2.0.0(webpack@5.78.0)
+      '@storybook/addon-storyshots':
+        specifier: ^7.0.2
+        version: 7.0.2(@storybook/react@7.0.2)(jest@29.5.0)(preact@10.13.2)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/react':
         specifier: ^7.0.2
         version: 7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.3)
@@ -365,6 +368,9 @@ importers:
       eslint-config-pilot:
         specifier: workspace:^
         version: link:../eslint-config-pilot
+      identity-obj-proxy:
+        specifier: ^3.0.0
+        version: 3.0.0
       jest:
         specifier: ^29.5.0
         version: 29.5.0(@types/node@18.15.11)
@@ -2847,6 +2853,83 @@ packages:
       - webpack
     dev: true
 
+  /@storybook/addon-storyshots@7.0.2(@storybook/react@7.0.2)(jest@29.5.0)(preact@10.13.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-BbKDiYo14uskqsluSxzcoovO8WAwCu4XdfIAwcXvy2Z/IZeCIDaLmphFhq12S2yq8j2JCP1WKR94xpNSJ+9t6A==}
+    peerDependencies:
+      '@angular/core': '>=13.0.0'
+      '@angular/platform-browser-dynamic': '>=13.0.0'
+      '@storybook/angular': '*'
+      '@storybook/react': '*'
+      '@storybook/vue': '*'
+      '@storybook/vue3': '*'
+      jest: '*'
+      jest-preset-angular: ' >= 12.2.3'
+      jest-vue-preprocessor: '*'
+      preact: ^10.5.13
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      rxjs: '*'
+      svelte: '*'
+      vue: '*'
+      vue-jest: '*'
+    peerDependenciesMeta:
+      '@angular/core':
+        optional: true
+      '@angular/platform-browser-dynamic':
+        optional: true
+      '@storybook/angular':
+        optional: true
+      '@storybook/react':
+        optional: true
+      '@storybook/vue':
+        optional: true
+      '@storybook/vue3':
+        optional: true
+      jest-preset-angular:
+        optional: true
+      jest-vue-preprocessor:
+        optional: true
+      preact:
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      rxjs:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-jest:
+        optional: true
+    dependencies:
+      '@jest/transform': 29.5.0
+      '@storybook/babel-plugin-require-context-hook': 1.0.1
+      '@storybook/client-api': 7.0.2
+      '@storybook/core-common': 7.0.2
+      '@storybook/core-webpack': 7.0.2
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 7.0.2
+      '@storybook/react': 7.0.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.3)
+      '@storybook/types': 7.0.2
+      '@types/glob': 7.2.0
+      '@types/jest-specific-snapshot': 0.5.6
+      glob: 8.1.0
+      jest: 29.5.0(@types/node@18.15.11)
+      jest-specific-snapshot: 7.0.0(jest@29.5.0)
+      preact: 10.13.2
+      preact-render-to-string: 5.2.6(preact@10.13.2)
+      pretty-format: 29.5.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-test-renderer: 18.2.0(react@18.2.0)
+      read-pkg-up: 7.0.1
+      ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/addon-toolbars@7.0.2(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-tAxZ2+nUYsJdT1sx3BrmoMAZFM19+OzWJY6qSnbEq5zoRgvGZaXGR6tLMKydDoHQBU9Ta9YHGo7N7u7h1C23yg==}
     peerDependencies:
@@ -2919,6 +3002,10 @@ packages:
       '@storybook/manager-api': 7.0.2(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@storybook/babel-plugin-require-context-hook@1.0.1:
+    resolution: {integrity: sha512-WM4vjgSVi8epvGiYfru7BtC3f0tGwNs7QK3Uc4xQn4t5hHQvISnCqbNrHdDYmNW56Do+bBztE8SwP6NGUvd7ww==}
     dev: true
 
   /@storybook/blocks@7.0.2(react-dom@18.2.0)(react@18.2.0):
@@ -3935,6 +4022,13 @@ packages:
     resolution: {integrity: sha512-frsJrz2t/CeGifcu/6uRo4b+SzAwT4NYCVPu1GN8IB9XTzrpPkGuV0tmh9mN+/L0PklAlsC3u5Fxt0ju00LXIw==}
     dev: true
 
+  /@types/glob@7.2.0:
+    resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
+    dependencies:
+      '@types/minimatch': 5.1.2
+      '@types/node': 18.15.11
+    dev: true
+
   /@types/glob@8.1.0:
     resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
     dependencies:
@@ -3966,6 +4060,12 @@ packages:
     resolution: {integrity: sha512-c3mAZEuK0lvBp8tmuL74XRKn1+y2dcwOUpH7x4WrF6gk1GIgiluDRgMYQtw2OFcBvAJWlt6ASU3tSqxp0Uu0Aw==}
     dependencies:
       '@types/istanbul-lib-report': 3.0.0
+    dev: true
+
+  /@types/jest-specific-snapshot@0.5.6:
+    resolution: {integrity: sha512-AQdUbEyTwO6JR2yZK7PTXDzK32AlkviDZJZEukZnrZtBjITYBtExFh59HTNTZeFSs+k1b1bqCHmWUwj3VHeh/A==}
+    dependencies:
+      '@types/jest': 29.5.0
     dev: true
 
   /@types/jest@29.5.0:
@@ -7184,6 +7284,10 @@ packages:
       uglify-js: 3.17.4
     dev: true
 
+  /harmony-reflect@1.6.2:
+    resolution: {integrity: sha512-HIp/n38R9kQjDEziXyDTuW3vvoxxyxjxFzXLrBr18uB47GnSt+G9D29fqrpM5ZkspMcPICud3XsBJQ4Y2URg8g==}
+    dev: true
+
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
 
@@ -7377,6 +7481,13 @@ packages:
       postcss: ^8.1.0
     dependencies:
       postcss: 8.4.21
+    dev: true
+
+  /identity-obj-proxy@3.0.0:
+    resolution: {integrity: sha512-00n6YnVHKrinT9t0d9+5yZC6UBNJANpYEQvL2LlX6Ab9lnmxzIRcEmTPuyGScvl1+jKuCICX1Z0Ab1pPKKdikA==}
+    engines: {node: '>=4'}
+    dependencies:
+      harmony-reflect: 1.6.2
     dev: true
 
   /ieee754@1.2.1:
@@ -8113,6 +8224,17 @@ packages:
       natural-compare: 1.4.0
       pretty-format: 29.5.0
       semver: 7.3.8
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /jest-specific-snapshot@7.0.0(jest@29.5.0):
+    resolution: {integrity: sha512-Ut2YItOYFC88Pir/JPN8Cgjvf60N4ZPmIqGJ2iZI+c9SLR27hwJxaEngKpW4RurPb+p45BbSuZoKe9SlVIylQA==}
+    peerDependencies:
+      jest: '>= 29.0.0'
+    dependencies:
+      jest: 29.5.0(@types/node@18.15.11)
+      jest-snapshot: 29.5.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9428,6 +9550,19 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /preact-render-to-string@5.2.6(preact@10.13.2):
+    resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
+    peerDependencies:
+      preact: '>=10'
+    dependencies:
+      preact: 10.13.2
+      pretty-format: 3.8.0
+    dev: true
+
+  /preact@10.13.2:
+    resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
+    dev: true
+
   /prelude-ls@1.1.2:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
     engines: {node: '>= 0.8.0'}
@@ -9471,6 +9606,10 @@ packages:
       '@jest/schemas': 29.4.3
       ansi-styles: 5.2.0
       react-is: 18.2.0
+    dev: true
+
+  /pretty-format@3.8.0:
+    resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
     dev: true
 
   /pretty-hrtime@1.0.3:
@@ -9706,6 +9845,27 @@ packages:
   /react-refresh@0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /react-shallow-renderer@16.15.0(react@18.2.0):
+    resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      object-assign: 4.1.1
+      react: 18.2.0
+      react-is: 18.2.0
+    dev: true
+
+  /react-test-renderer@18.2.0(react@18.2.0):
+    resolution: {integrity: sha512-JWD+aQ0lh2gvh4NM3bBM42Kx+XybOxCpgYK7F8ugAlpaTSnWsX+39Z4XkOykGZAHrjwwTZT3x3KxswVWxHPUqA==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      react: 18.2.0
+      react-is: 18.2.0
+      react-shallow-renderer: 16.15.0(react@18.2.0)
+      scheduler: 0.23.0
     dev: true
 
   /react@18.2.0:
