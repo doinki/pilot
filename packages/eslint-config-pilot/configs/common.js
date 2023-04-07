@@ -7,6 +7,7 @@ module.exports = {
   ignorePatterns: ['dist', 'public', 'storybook-static'],
   rules: {
     '@typescript-eslint/no-shadow': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
