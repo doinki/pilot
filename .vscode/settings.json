@@ -1,5 +1,23 @@
 {
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "search.exclude": {
+    "**/coverage": true,
+    "**/dist": true,
+    "**/storybook-static": true,
+    "pnpm-lock.yaml": true
+  },
+  "tailwindCSS.classAttributes": [
+    "className",
+    "endClassName",
+    "startClassName",
+    "wrapperClassName",
+    "enter",
+    "enterFrom",
+    "enterTo",
+    "leave",
+    "leaveFrom",
+    "leaveTo"
+  ],
   "tailwindCSS.experimental.configFile": {
     "apps/lotto/tailwind.config.js": "apps/lotto/**",
     "packages/ui/tailwind.config.js": "packages/ui/**"
