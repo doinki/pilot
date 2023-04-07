@@ -16,11 +16,11 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
+    "@pilot/types": "workspace:^",
     "@pilot/utils": "workspace:^"
   },
   "devDependencies": {
     "@pilot/tsconfig": "workspace:^",
-    "@pilot/types": "workspace:^",
     "@swc/core": "^1.3.46",
     "@swc/helpers": "^0.5.0",
     "@swc/jest": "^0.2.24",

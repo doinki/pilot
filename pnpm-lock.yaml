@@ -177,6 +177,9 @@ importers:
 
   packages/hooks:
     dependencies:
+      '@pilot/types':
+        specifier: workspace:^
+        version: link:../types
       '@pilot/utils':
         specifier: workspace:^
         version: link:../utils
@@ -184,9 +187,6 @@ importers:
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
-      '@pilot/types':
-        specifier: workspace:^
-        version: link:../types
       '@swc/core':
         specifier: ^1.3.46
         version: 1.3.46(@swc/helpers@0.5.0)
@@ -280,6 +280,9 @@ importers:
       '@pilot/hooks':
         specifier: workspace:^
         version: link:../hooks
+      '@pilot/types':
+        specifier: workspace:^
+        version: link:../types
       '@pilot/utils':
         specifier: workspace:^
         version: link:../utils
@@ -302,9 +305,6 @@ importers:
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
-      '@pilot/types':
-        specifier: workspace:^
-        version: link:../types
       '@storybook/addon-essentials':
         specifier: ^7.0.2
         version: 7.0.2(react-dom@18.2.0)(react@18.2.0)
@@ -403,13 +403,14 @@ importers:
         version: 5.78.0(@swc/core@1.3.46)(esbuild@0.17.15)
 
   packages/utils:
+    dependencies:
+      '@pilot/types':
+        specifier: workspace:^
+        version: link:../types
     devDependencies:
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
-      '@pilot/types':
-        specifier: workspace:^
-        version: link:../types
       '@swc/core':
         specifier: ^1.3.46
         version: 1.3.46(@swc/helpers@0.5.0)

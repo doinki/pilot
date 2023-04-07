@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@pilot/hooks": "workspace:^",
+    "@pilot/types": "workspace:^",
     "@pilot/utils": "workspace:^",
     "tailwind-merge": "^1.12.0"
   },
@@ -29,7 +30,6 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
     "@pilot/tsconfig": "workspace:^",
-    "@pilot/types": "workspace:^",
     "@storybook/addon-essentials": "^7.0.2",
     "@storybook/addon-interactions": "^7.0.2",
     "@storybook/addon-links": "^7.0.2",
