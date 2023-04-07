@@ -1,10 +1,13 @@
 import '@/styles/tailwind.css';
 
-import type { AppProps } from 'next/app';
+import type { ExtendedAppProps } from '@pilot/types';
+import { noop } from '@pilot/utils';
 import { DefaultSeo } from 'next-seo';
 import { useEffect } from 'react';
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: ExtendedAppProps) => {
+  const getLayout = Component.getLayout || noop;
+
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
     const isSafari =
@@ -18,7 +21,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <DefaultSeo defaultTitle="Lotto" titleTemplate="%s - Lotto" />
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />, { pageProps, router })}
     </>
   );
 };
