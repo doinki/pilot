@@ -13,12 +13,6 @@ const rollupConfig = [
     input: 'src/index.ts',
     output: { dir: 'dist', format: 'esm', preserveModules: true },
     plugins: [
-      typescript({
-        emitDeclarationOnly: true,
-        noEmit: false,
-        outDir: 'dist',
-        tsconfig: 'tsconfig.build.json',
-      }),
       babel({
         babelHelpers: 'runtime',
         extensions,
@@ -30,12 +24,21 @@ const rollupConfig = [
         ],
       }),
       nodeResolve({ extensions }),
+      typescript({
+        compilerOptions: {
+          declarationDir: 'dist',
+          emitDeclarationOnly: true,
+          noEmit: false,
+        },
+        noForceEmit: true,
+        tsconfig: 'tsconfig.build.json',
+      }),
     ],
   },
   {
     external: [/node_modules/],
     input: 'src/index.ts',
-    output: { dir: 'dist/cjs', format: 'cjs', preserveModules: true },
+    output: { dir: 'dist/cjs', format: 'cjs' },
     plugins: [
       babel({
         babelHelpers: 'runtime',
