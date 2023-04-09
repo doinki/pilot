@@ -4,19 +4,31 @@
   "sideEffects": false,
   "types": "src/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
     "lint": "eslint ."
   },
-  "dependencies": {
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
-    "next": "^13.3.0"
+  "peerDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "next": "^13.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@pilot/tsconfig": "workspace:^",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
     "eslint": "^8.38.0",
     "eslint-config-pilot": "workspace:^",
+    "next": "^13.3.0",
     "typescript": "^5.0.4"
   }
 }

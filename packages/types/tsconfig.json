@@ -1,5 +1,5 @@
 {
   "extends": "@pilot/tsconfig/base",
   "compilerOptions": { "lib": ["DOM", "ESNext"] },
-  "exclude": [".turbo", "coverage", "dist", "node_modules"]
+  "exclude": [".turbo", "node_modules"]
 }

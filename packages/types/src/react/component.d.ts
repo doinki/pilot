@@ -1,14 +1,16 @@
+import type { ComponentPropsWithRef, CSSProperties, ElementType } from 'react';
+
 export type DistributiveOmit<T, K extends keyof any> = T extends any
   ? Omit<T, K>
   : never;
 
 export interface CommonProps {
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
 export interface OverridableTypeMap {
-  defaultComponent: React.ElementType;
+  defaultComponent: ElementType;
   props: {};
 }
 
@@ -16,18 +18,18 @@ export type BaseProps<M extends OverridableTypeMap> = M['props'] & CommonProps;
 
 export type OverrideProps<
   M extends OverridableTypeMap,
-  C extends React.ElementType
+  C extends ElementType
 > = BaseProps<M> &
-  DistributiveOmit<React.ComponentPropsWithRef<C>, keyof BaseProps<M>>;
+  DistributiveOmit<ComponentPropsWithRef<C>, keyof BaseProps<M>>;
 
 export type DefaultComponentProps<M extends OverridableTypeMap> = BaseProps<M> &
   DistributiveOmit<
-    React.ComponentPropsWithRef<M['defaultComponent']>,
+    ComponentPropsWithRef<M['defaultComponent']>,
     keyof BaseProps<M>
   >;
 
 export interface OverridableComponent<M extends OverridableTypeMap> {
-  <C extends React.ElementType>(
+  <C extends ElementType>(
     props: { component: C } & OverrideProps<M, C>
   ): JSX.Element | null;
   (props: DefaultComponentProps<M>): JSX.Element | null;
