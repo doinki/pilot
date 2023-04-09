@@ -1,5 +1,5 @@
 {
-  "main": "dist/cjs/index.js",
+  "main": "dist/node/index.js",
   "module": "dist/index.js",
   "name": "@pilot/icons",
   "private": true,
