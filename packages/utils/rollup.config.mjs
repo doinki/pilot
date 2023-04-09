@@ -18,7 +18,7 @@ const rollupConfig = [
         extensions,
         plugins: [['@babel/plugin-transform-runtime', { version: '^7.21.0' }]],
         presets: [
-          ['@babel/preset-env', { browserslistEnv: 'modern' }],
+          ['@babel/preset-env', { browserslistEnv: 'production' }],
           '@babel/preset-typescript',
         ],
       }),

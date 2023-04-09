@@ -1,7 +1,10 @@
-defaults
-
-[modern]
-defaults and supports bigint
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version
 
 [node]
 node 18
+
+[production]
+defaults and supports bigint
