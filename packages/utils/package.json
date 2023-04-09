@@ -1,21 +1,32 @@
 {
-  "main": "src/index.ts",
+  "main": "dist/node/index.js",
+  "module": "dist/index.js",
   "name": "@pilot/utils",
   "private": true,
   "sideEffects": false,
-  "types": "src/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "dev": "rollup --watch -c",
+    "build": "rimraf dist && rollup -c",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check-types": "tsc -p tsconfig.build.json"
   },
-  "dependencies": {
-    "@pilot/types": "workspace:^"
+  "peerDependencies": {
+    "@babel/runtime": "^7.21.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@babel/runtime": "^7.21.0",
     "@pilot/tsconfig": "workspace:^",
+    "@pilot/types": "workspace:^",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@swc/core": "^1.3.46",
     "@swc/helpers": "^0.5.0",
     "@swc/jest": "^0.2.24",
@@ -25,6 +36,8 @@
     "eslint-config-pilot": "workspace:^",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "rimraf": "^4.4.1",
+    "rollup": "^3.20.2",
     "typescript": "^5.0.4"
   }
 }

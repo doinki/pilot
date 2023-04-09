@@ -513,14 +513,34 @@ importers:
         version: 5.78.0(@swc/core@1.3.46)
 
   packages/utils:
-    dependencies:
-      '@pilot/types':
-        specifier: workspace:^
-        version: link:../types
     devDependencies:
+      '@babel/core':
+        specifier: ^7.21.4
+        version: 7.21.4
+      '@babel/preset-env':
+        specifier: ^7.21.4
+        version: 7.21.4(@babel/core@7.21.4)
+      '@babel/preset-typescript':
+        specifier: ^7.21.4
+        version: 7.21.4(@babel/core@7.21.4)
+      '@babel/runtime':
+        specifier: ^7.21.0
+        version: 7.21.0
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
+      '@pilot/types':
+        specifier: workspace:^
+        version: link:../types
+      '@rollup/plugin-babel':
+        specifier: ^6.0.3
+        version: 6.0.3(@babel/core@7.21.4)(rollup@3.20.2)
+      '@rollup/plugin-node-resolve':
+        specifier: ^15.0.2
+        version: 15.0.2(rollup@3.20.2)
+      '@rollup/plugin-typescript':
+        specifier: ^11.1.0
+        version: 11.1.0(rollup@3.20.2)(typescript@5.0.4)
       '@swc/core':
         specifier: ^1.3.46
         version: 1.3.46(@swc/helpers@0.5.0)
@@ -548,6 +568,12 @@ importers:
       jest-environment-jsdom:
         specifier: ^29.5.0
         version: 29.5.0
+      rimraf:
+        specifier: ^4.4.1
+        version: 4.4.1
+      rollup:
+        specifier: ^3.20.2
+        version: 3.20.2
       typescript:
         specifier: ^5.0.4
         version: 5.0.4

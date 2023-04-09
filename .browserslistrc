@@ -1,3 +1,5 @@
+[modern]
 defaults and supports bigint
 
-current node
+[node]
+node 18
