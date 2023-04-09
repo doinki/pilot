@@ -8,7 +8,13 @@ import { read } from 'xlsx';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const lottoFilePath = join(__dirname, '..', 'public', 'lottos.json');
 const drwNoStart = 1;
-const drwNoEnd = 1;
+const drwNoEnd = await readFile(lottoFilePath, 'utf-8').then(
+  (data) =>
+    Object.keys(JSON.parse(data))
+      .map(Number)
+      .sort((a, b) => a - b)
+      .at(-1) + 1
+);
 const rowPrefixList = ['N', 'O', 'P', 'Q', 'R', 'S', 'T'];
 
 const sheet = await axios
