@@ -7,6 +7,6 @@ module.exports = {
   output: 'standalone',
   poweredByHeader: false,
   reactStrictMode: true,
-  transpilePackages: ['@pilot/hooks', '@pilot/ui', '@pilot/utils'],
+  transpilePackages: ['@pilot/hooks', '@pilot/ui'],
   typescript: { tsconfigPath: 'tsconfig.build.json' },
 };
