@@ -9,7 +9,7 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx'];
  */
 const rollupConfig = [
   {
-    external: [/node_modules/],
+    external: [/dist/, /node_modules/],
     input: 'src/index.ts',
     output: { dir: 'dist', format: 'esm', preserveModules: true },
     plugins: [
@@ -35,7 +35,7 @@ const rollupConfig = [
     ],
   },
   {
-    external: [/node_modules/],
+    external: [/dist/, /node_modules/],
     input: 'src/index.ts',
     output: { dir: 'dist/node', format: 'cjs' },
     plugins: [
