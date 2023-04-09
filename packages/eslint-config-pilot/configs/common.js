@@ -15,6 +15,7 @@ module.exports = {
           '**/*.test.ts?(x)',
           '**/jest.setup.ts',
           '**/next.config.js',
+          '**/rollup.config.mjs',
           '**/scripts/**/*',
         ],
       },

@@ -9,7 +9,9 @@
     "crawler": "node scripts/crawler.mjs"
   },
   "dependencies": {
+    "@babel/runtime": "^7.21.0",
     "@pilot/hooks": "workspace:^",
+    "@pilot/icons": "workspace:^",
     "@pilot/ui": "workspace:^",
     "@pilot/utils": "workspace:^",
     "axios": "^1.3.5",
