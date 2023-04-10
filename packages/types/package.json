@@ -4,7 +4,7 @@
   "sideEffects": false,
   "types": "src/index.d.ts",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint --cache ."
   },
   "peerDependencies": {
     "@types/react": "^18.0.0",
