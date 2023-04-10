@@ -183,9 +183,6 @@ importers:
 
   packages/hooks:
     dependencies:
-      '@pilot/types':
-        specifier: workspace:^
-        version: link:../types
       '@pilot/utils':
         specifier: workspace:^
         version: link:../utils
@@ -211,6 +208,9 @@ importers:
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
+      '@pilot/types':
+        specifier: workspace:^
+        version: link:../types
       '@rollup/plugin-babel':
         specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.21.4)(rollup@3.20.2)

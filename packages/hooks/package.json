@@ -8,18 +8,17 @@
   "scripts": {
     "dev": "rollup --watch -c",
     "build": "rimraf dist && rollup -c",
+    "check-types": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint .",
-    "check-types": "tsc -p tsconfig.build.json"
+    "lint": "eslint --cache ."
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@pilot/types": "workspace:^",
     "@pilot/utils": "workspace:^"
   },
   "devDependencies": {
@@ -30,6 +29,7 @@
     "@babel/preset-typescript": "^7.21.4",
     "@babel/runtime": "^7.21.0",
     "@pilot/tsconfig": "workspace:^",
+    "@pilot/types": "workspace:^",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
