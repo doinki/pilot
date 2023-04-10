@@ -34,11 +34,10 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
+        "postcss",
         "preact",
         "react",
-        "react-dom",
-        "tailwindcss",
-        "typescript"
+        "react-dom"
       ]
     }
   }
