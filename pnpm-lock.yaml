@@ -202,9 +202,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.21.4
         version: 7.21.4(@babel/core@7.21.4)
-      '@babel/runtime':
-        specifier: ^7.21.0
-        version: 7.21.0
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
@@ -301,9 +298,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.21.4
         version: 7.21.4(@babel/core@7.21.4)
-      '@babel/runtime':
-        specifier: ^7.21.0
-        version: 7.21.0
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
@@ -565,9 +559,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.21.4
         version: 7.21.4(@babel/core@7.21.4)
-      '@babel/runtime':
-        specifier: ^7.21.0
-        version: 7.21.0
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
