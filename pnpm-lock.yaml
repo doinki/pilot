@@ -429,9 +429,6 @@ importers:
       '@pilot/hooks':
         specifier: workspace:^
         version: link:../hooks
-      '@pilot/types':
-        specifier: workspace:^
-        version: link:../types
       '@pilot/utils':
         specifier: workspace:^
         version: link:../utils
@@ -454,6 +451,9 @@ importers:
       '@pilot/tsconfig':
         specifier: workspace:^
         version: link:../tsconfig
+      '@pilot/types':
+        specifier: workspace:^
+        version: link:../types
       '@storybook/addon-essentials':
         specifier: ^7.0.2
         version: 7.0.2(react-dom@18.2.0)(react@18.2.0)
