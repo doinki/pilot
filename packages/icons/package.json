@@ -10,11 +10,11 @@
     "storybook": "storybook dev -p 6007 --no-open",
     "build": "rimraf dist && rollup -c",
     "build:storybook": "storybook build",
+    "check-types": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint .",
-    "check-types": "tsc -p tsconfig.build.json"
+    "lint": "eslint --cache ."
   },
   "peerDependencies": {
     "@babel/runtime": "^7.21.0",
