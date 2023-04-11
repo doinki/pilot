@@ -1,0 +1,16 @@
+{
+  "name": "@pilot/tailwindcss",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint --cache ."
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-pilot": "workspace:^",
+    "tailwindcss": "^3.3.1"
+  }
+}

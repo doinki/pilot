@@ -20,6 +20,7 @@
     "lotto": "pnpm --filter=lotto",
     "hooks": "pnpm --filter=@pilot/hooks",
     "icons": "pnpm --filter=@pilot/icons",
+    "tailwindcss": "pnpm --filter=@pilot/tailwindcss",
     "types": "pnpm --filter=@pilot/types",
     "ui": "pnpm --filter=@pilot/ui",
     "utils": "pnpm --filter=@pilot/utils",
