@@ -3,30 +3,33 @@ import { forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 
 import dividerClasses from './dividerClasses';
-import type { DividerProps, DividerTypeMap } from './dividerTypes';
+import type { DividerTypeMap } from './dividerTypes';
 
-const Divider: OverridableComponent<DividerTypeMap> = forwardRef<
-  HTMLHRElement,
-  DividerProps
->((props, ref) => {
-  const {
-    className,
-    component: Component = 'hr',
-    orientation = 'horizontal',
-    ...other
-  } = props;
+const Divider: OverridableComponent<DividerTypeMap> = forwardRef(
+  (props, ref) => {
+    const {
+      className,
+      component: Component = 'hr',
+      flexItem,
+      orientation = 'horizontal',
+      ...other
+    } = props;
 
-  return (
-    <Component
-      ref={ref}
-      className={twJoin(
-        'block',
-        dividerClasses.orientations[orientation](),
-        className
-      )}
-      {...other}
-    />
-  );
-});
+    return (
+      <Component
+        ref={ref}
+        className={twJoin(
+          dividerClasses.orientations[
+            orientation === 'vertical' && flexItem
+              ? 'vertical-flexItem'
+              : orientation
+          ],
+          className
+        )}
+        {...other}
+      />
+    );
+  }
+);
 
 export default Divider;

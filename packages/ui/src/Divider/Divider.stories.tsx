@@ -22,3 +22,20 @@ export const OrientationVertical: Story = {
     </div>
   ),
 };
+
+export const FlexItemHorizontal: Story = {
+  args: { flexItem: true, orientation: 'horizontal' },
+  render: (args) => (
+    <div className="flex flex-col">
+      <Divider {...args} />
+    </div>
+  ),
+};
+export const FlexItemVertical: Story = {
+  args: { flexItem: true, orientation: 'vertical' },
+  render: (args) => (
+    <div className="flex" style={{ height: 320 }}>
+      <Divider {...args} />
+    </div>
+  ),
+};

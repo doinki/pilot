@@ -11,6 +11,8 @@ export interface DividerTypeMap<P = {}, D extends ElementType = 'hr'> {
      */
     component?: ElementType;
 
+    flexItem?: boolean;
+
     /**
      * @default 'horizontal'
      */
