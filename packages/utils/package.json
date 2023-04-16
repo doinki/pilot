@@ -22,6 +22,7 @@
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-typescript": "^7.21.4",
+    "@babel/runtime": "^7.21.0",
     "@pilot/tsconfig": "workspace:^",
     "@pilot/types": "workspace:^",
     "@rollup/plugin-babel": "^6.0.3",
@@ -36,7 +37,7 @@
     "eslint-config-pilot": "workspace:^",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.0",
     "rollup": "^3.20.2",
     "typescript": "^5.0.4"
   }
