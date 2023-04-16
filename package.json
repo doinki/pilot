@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "dev": "turbo run dev",
+    "dev:crog": "turbo run dev --filter=crog...",
     "storybook": "turbo run storybook",
     "build": "turbo run build",
     "build:storybook": "turbo run build:storybook",
@@ -17,6 +18,7 @@
     "test:coverage": "turbo run test:coverage",
     "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
+    "crog": "pnpm --filter=crog",
     "lotto": "pnpm --filter=lotto",
     "hooks": "pnpm --filter=@pilot/hooks",
     "icons": "pnpm --filter=@pilot/icons",
