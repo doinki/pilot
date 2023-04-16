@@ -1,4 +1,7 @@
 /**
  * @type {import('tailwindcss').Config}
  */
-module.exports = {};
+module.exports = {
+  plugins: [require('./plugins/child')],
+  theme: { extend: require('./theme/extend') },
+};

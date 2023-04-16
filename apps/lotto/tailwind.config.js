@@ -1,4 +1,4 @@
-const tailwindConfig = require('@pilot/ui/tailwind.config');
+const tailwindConfig = require('@pilot/tailwindcss/tailwind.config');
 
 /**
  * @type {import('tailwindcss').Config}

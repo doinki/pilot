@@ -4,4 +4,5 @@
 module.exports = {
   extends: 'pilot/base',
   root: true,
+  rules: { 'global-require': 'off' },
 };
