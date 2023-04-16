@@ -1,5 +1,5 @@
 import type { OverridableComponent } from '@pilot/types';
-import { Children, forwardRef } from 'react';
+import { Children, cloneElement, forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 
 import stackClasses from './stackClasses';
@@ -22,9 +22,14 @@ const Stack: OverridableComponent<StackTypeMap> = forwardRef((props, ref) => {
       {...other}
     >
       {divider
-        ? Children.map(children, (child, index) =>
-            index === 0 ? child : [divider, child]
-          )
+        ? Children.toArray(children)
+            .filter(Boolean)
+            .map((child, index) =>
+              index === 0
+                ? child
+                : // eslint-disable-next-line react/no-array-index-key
+                  [cloneElement(divider, { key: `separator-${index}` }), child]
+            )
         : children}
     </Component>
   );
