@@ -19,6 +19,7 @@
     "leaveTo"
   ],
   "tailwindCSS.experimental.configFile": {
+    "apps/crog/tailwind.config.js": "apps/crog/**",
     "apps/lotto/tailwind.config.js": "apps/lotto/**",
     "packages/ui/tailwind.config.js": "packages/ui/**"
   }

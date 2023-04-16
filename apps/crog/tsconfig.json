@@ -1,0 +1,5 @@
+{
+  "extends": "@pilot/tsconfig/next",
+  "compilerOptions": { "baseUrl": ".", "paths": { "@/*": ["./src/*"] } },
+  "exclude": [".next", ".turbo", "coverage", "node_modules", "storybook-static"]
+}
