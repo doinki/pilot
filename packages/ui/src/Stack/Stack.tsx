@@ -3,12 +3,9 @@ import { Children, forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 
 import stackClasses from './stackClasses';
-import type { StackProps, StackTypeMap } from './stackTypes';
+import type { StackTypeMap } from './stackTypes';
 
-const Stack: OverridableComponent<StackTypeMap> = forwardRef<
-  HTMLDivElement,
-  StackProps
->((props, ref) => {
+const Stack: OverridableComponent<StackTypeMap> = forwardRef((props, ref) => {
   const {
     children,
     className,
@@ -21,11 +18,7 @@ const Stack: OverridableComponent<StackTypeMap> = forwardRef<
   return (
     <Component
       ref={ref}
-      className={twJoin(
-        'flex',
-        stackClasses.directions[direction](),
-        className
-      )}
+      className={twJoin('flex', stackClasses.directions[direction], className)}
       {...other}
     >
       {divider

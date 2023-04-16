@@ -2,12 +2,12 @@ import type { ClassNameValue } from '@pilot/types';
 
 import type { StackDirection } from './stackTypes';
 
-const directions: Record<StackDirection, () => ClassNameValue> = {
-  column: () => 'flex-col',
-  'column-reverse': () => 'flex-col-reverse',
-  row: () => 'flex-row',
-  'row-reverse': () => 'flex-row-reverse',
-};
+const directions = {
+  column: 'flex-col',
+  'column-reverse': 'flex-col-reverse',
+  row: 'flex-row',
+  'row-reverse': 'flex-row-reverse',
+} satisfies Record<StackDirection, ClassNameValue>;
 
 const stackClasses = { directions };
 
