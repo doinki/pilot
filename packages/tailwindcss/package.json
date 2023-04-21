@@ -3,7 +3,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "lint": "eslint --cache ."
+    "lint": "eslint --cache .",
+    "clean": "rimraf .turbo && rimraf node_modules && rimraf .eslintcache"
   },
   "peerDependencies": {
     "tailwindcss": "^3.3.1"
@@ -14,6 +15,7 @@
   "devDependencies": {
     "eslint": "^8.38.0",
     "eslint-config-pilot": "workspace:^",
+    "rimraf": "^5.0.0",
     "tailwindcss": "^3.3.1"
   }
 }

@@ -9,7 +9,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "lint": "eslint --cache ."
+    "lint": "eslint --cache .",
+    "clean": "rimraf .turbo && rimraf node_modules && rimraf .eslintcache"
   },
   "peerDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
@@ -51,6 +52,7 @@
   },
   "devDependencies": {
     "eslint": "^8.38.0",
+    "rimraf": "^5.0.0",
     "typescript": "^5.0.4"
   }
 }

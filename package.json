@@ -26,12 +26,14 @@
     "types": "pnpm --filter=@pilot/types",
     "ui": "pnpm --filter=@pilot/ui",
     "utils": "pnpm --filter=@pilot/utils",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "clean": "turbo run clean"
   },
   "devDependencies": {
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
     "turbo": "^1.9.3"
   },
   "pnpm": {

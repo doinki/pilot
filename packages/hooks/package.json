@@ -12,7 +12,8 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint --cache ."
+    "lint": "eslint --cache .",
+    "clean": "rimraf .turbo && rimraf coverage && rimraf dist && rimraf node_modules && rimraf .eslintcache"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.21.0",

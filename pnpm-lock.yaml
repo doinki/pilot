@@ -13,6 +13,9 @@ importers:
       prettier:
         specifier: ^2.8.7
         version: 2.8.7
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       turbo:
         specifier: ^1.9.3
         version: 1.9.3
@@ -83,6 +86,9 @@ importers:
       postcss:
         specifier: ^8.4.23
         version: 8.4.23
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       tailwindcss:
         specifier: ^3.3.1
         version: 3.3.1(postcss@8.4.23)
@@ -159,6 +165,9 @@ importers:
       postcss:
         specifier: ^8.4.23
         version: 8.4.23
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       tailwindcss:
         specifier: ^3.3.1
         version: 3.3.1(postcss@8.4.23)
@@ -256,6 +265,9 @@ importers:
       eslint:
         specifier: ^8.38.0
         version: 8.38.0
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
@@ -489,6 +501,9 @@ importers:
       eslint-config-pilot:
         specifier: workspace:^
         version: link:../eslint-config-pilot
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       tailwindcss:
         specifier: ^3.3.1
         version: 3.3.1(postcss@8.4.23)
@@ -515,6 +530,9 @@ importers:
       next:
         specifier: ^13.3.0
         version: 13.3.0(react-dom@18.2.0)(react@18.2.0)
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
@@ -636,6 +654,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.0
       storybook:
         specifier: ^7.0.6
         version: 7.0.6
