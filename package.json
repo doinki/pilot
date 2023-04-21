@@ -27,7 +27,7 @@
     "ui": "pnpm --filter=@pilot/ui",
     "utils": "pnpm --filter=@pilot/utils",
     "postinstall": "husky install",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean && rimraf node_modules"
   },
   "devDependencies": {
     "husky": "^8.0.3",
