@@ -24,9 +24,9 @@ const Circle: FC<IconProps> = (props) => {
         cx="16"
         cy="16"
         fill="url(#-)"
-        r="14"
+        r="15.5"
         stroke="#000"
-        strokeWidth="2"
+        strokeWidth="1"
       />
     </svg>
   );
