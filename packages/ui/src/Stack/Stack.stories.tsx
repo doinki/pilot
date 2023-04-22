@@ -13,7 +13,7 @@ const meta: Meta<typeof Stack> = {
   },
   component: Stack,
   tags: ['autodocs'],
-  title: 'Stack',
+  title: 'ui/Stack',
 };
 
 export default meta;
