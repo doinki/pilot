@@ -1,11 +1,6 @@
 {
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
-  "search.exclude": {
-    "**/coverage": true,
-    "**/dist": true,
-    "**/storybook-static": true,
-    "pnpm-lock.yaml": true
-  },
+  "search.exclude": { "pnpm-lock.yaml": true },
   "tailwindCSS.classAttributes": [
     "className",
     "endClassName",
