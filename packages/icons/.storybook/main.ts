@@ -6,6 +6,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-links',
+    '@storybook/addon-storysource',
     'storybook-addon-swc',
   ],
   docs: { autodocs: 'tag' },

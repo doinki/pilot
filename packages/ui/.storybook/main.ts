@@ -10,6 +10,7 @@ const config: StorybookConfig = {
       name: '@storybook/addon-postcss',
       options: { postcssLoaderOptions: { implementation: require('postcss') } },
     },
+    '@storybook/addon-storysource',
     'storybook-addon-swc',
   ],
   docs: { autodocs: 'tag' },
