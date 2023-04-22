@@ -22,7 +22,7 @@ const config: StorybookConfig = {
   stories: [
     '../../icons/src/**/*.stories.@(j|t)sx',
     '../src/**/*.mdx',
-    '../src/**/*.stories.@(j|t)s?(x)',
+    '../src/**/*.stories.@(j|t)sx',
   ],
 };
 
