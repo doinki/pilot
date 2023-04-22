@@ -482,6 +482,9 @@ importers:
       storybook:
         specifier: ^7.0.6
         version: 7.0.6
+      storybook-addon-swc:
+        specifier: ^1.2.0
+        version: 1.2.0(@swc/core@1.3.53)(webpack@5.80.0)
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
