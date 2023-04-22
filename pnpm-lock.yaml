@@ -416,9 +416,6 @@ importers:
       '@storybook/addon-essentials':
         specifier: ^7.0.6
         version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/addon-interactions':
-        specifier: ^7.0.6
-        version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
         specifier: ^7.0.6
         version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
@@ -583,9 +580,6 @@ importers:
         specifier: ^7.0.6
         version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-essentials':
-        specifier: ^7.0.6
-        version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/addon-interactions':
         specifier: ^7.0.6
         version: 7.0.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
@@ -3146,36 +3140,6 @@ packages:
       '@storybook/preview-api': 7.0.6
     dev: true
 
-  /@storybook/addon-interactions@7.0.6(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-+nTXVSF8OQrUDagyJ3cSmkzB4TzAUg8XZ4+5JqfzVY2lTNeVbe64jtvg9A5XlpObGaW5bbOdk79yvlivqTiPUA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/client-logger': 7.0.6
-      '@storybook/components': 7.0.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/core-common': 7.0.6
-      '@storybook/core-events': 7.0.6
-      '@storybook/global': 5.0.0
-      '@storybook/instrumenter': 7.0.6
-      '@storybook/manager-api': 7.0.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.0.6
-      '@storybook/theming': 7.0.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.0.6
-      jest-mock: 27.5.1
-      polished: 4.2.2
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@storybook/addon-links@7.0.6(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-KgaxvlWMJoT+yV4h6yElv3uPNSD/vhpgNO/2Br6KHW0MlB1MlqbrtTH8qJ9wUesJSLiw2O3d6npnsefHTtQiGw==}
     peerDependencies:
@@ -3861,16 +3825,6 @@ packages:
 
   /@storybook/global@5.0.0:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
-    dev: true
-
-  /@storybook/instrumenter@7.0.6:
-    resolution: {integrity: sha512-JUcDas1cYCE+ZMVOw5CKc5g6PxDe3HH+IGdh/W9wL5vmdOUvAs858m7NLxkjkQGufof+Ohbmf/Yz5gyXaZ5+Yg==}
-    dependencies:
-      '@storybook/channels': 7.0.6
-      '@storybook/client-logger': 7.0.6
-      '@storybook/core-events': 7.0.6
-      '@storybook/global': 5.0.0
-      '@storybook/preview-api': 7.0.6
     dev: true
 
   /@storybook/manager-api@7.0.6(react-dom@18.2.0)(react@18.2.0):
@@ -8732,14 +8686,6 @@ packages:
       pretty-format: 29.5.0
       slash: 3.0.0
       stack-utils: 2.0.6
-    dev: true
-
-  /jest-mock@27.5.1:
-    resolution: {integrity: sha512-K4jKbY1d4ENhbrG2zuPWaQBvDly+iZ2yAW+T1fATN78hc0sInwn7wZB8XtlNnvHug5RMwV897Xm4LqmPM4e2Og==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    dependencies:
-      '@jest/types': 27.5.1
-      '@types/node': 18.15.13
     dev: true
 
   /jest-mock@29.5.0:
