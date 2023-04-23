@@ -12,7 +12,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
   return (
-    <main>
+    <main className="px-4">
       {isError && <strong>🥲</strong>}
       <Stack
         className="prose mx-auto dark:prose-invert md:prose-lg"
@@ -20,7 +20,7 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
         divider={<Divider component="li" aria-hidden />}
       >
         {posts.map(({ description, href, title }) => (
-          <li key={href}>
+          <li key={href} className="md:px-2 lg:px-4">
             <article>
               <h2>
                 <span className="not-prose">
