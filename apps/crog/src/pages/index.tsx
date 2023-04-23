@@ -12,23 +12,27 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
   return (
-    <main className="mx-auto max-w-3xl">
+    <main>
       {isError && <strong>🥲</strong>}
       <Stack
-        className="gap-4 py-4"
+        className="prose mx-auto dark:prose-invert md:prose-lg"
         component="ul"
         divider={<Divider component="li" aria-hidden />}
       >
         {posts.map(({ description, href, title }) => (
           <li key={href}>
-            <Stack className="gap-4 p-6 md:p-8" component="article">
-              <Link href={href}>
-                <h2>{title}</h2>
-              </Link>
-              <Link href={href}>
-                <p className="line-clamp-3">{description}</p>
-              </Link>
-            </Stack>
+            <article>
+              <h2>
+                <span className="not-prose">
+                  <Link href={href}>{title}</Link>
+                </span>
+              </h2>
+              <p className="line-clamp-3">
+                <span className="not-prose">
+                  <Link href={href}>{description}</Link>
+                </span>
+              </p>
+            </article>
           </li>
         ))}
       </Stack>
