@@ -15,23 +15,38 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
     <main className="px-4">
       {isError && <strong>🥲</strong>}
       <Stack
-        className="prose mx-auto dark:prose-invert md:prose-lg"
+        className="prose prose-neutral mx-auto dark:prose-invert md:prose-lg"
         component="ul"
-        divider={<Divider component="li" aria-hidden />}
+        divider={
+          <li className="not-prose" aria-hidden>
+            <Divider />
+          </li>
+        }
       >
-        {posts.map(({ description, href, title }) => (
+        {posts.map(({ author, copyright, date, description, href, title }) => (
           <li key={href} className="md:px-2 lg:px-4">
             <article>
-              <h2>
-                <span className="not-prose">
-                  <Link href={href}>{title}</Link>
-                </span>
-              </h2>
+              <header>
+                <h2 className="!mb-[0.25em]">
+                  <span className="not-prose">
+                    <Link href={href}>{title}</Link>
+                  </span>
+                </h2>
+                <section className="flex gap-2">
+                  <div className="text-neutral-600">{author}</div>
+                  <time className="text-neutral-500" dateTime={date}>
+                    {new Date(date).toLocaleDateString('ko-KR')}
+                  </time>
+                </section>
+              </header>
               <p className="line-clamp-3">
                 <span className="not-prose">
                   <Link href={href}>{description}</Link>
                 </span>
               </p>
+              <footer>
+                <cite>{copyright}</cite>
+              </footer>
             </article>
           </li>
         ))}
@@ -44,10 +59,10 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
     const posts = await getLineBlogPosts();
 
-    return { props: { posts } };
+    return { props: { posts }, revalidate: 60 * 60 };
   } catch (error) {
     console.error(error);
-    return { props: { isError: true } };
+    return { props: { isError: true }, revalidate: 60 };
   }
 };
 

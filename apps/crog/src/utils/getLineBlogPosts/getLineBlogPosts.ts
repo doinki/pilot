@@ -34,7 +34,15 @@ const getLineBlogPosts = () =>
           .map((element) => element.textContent ?? '')
           .map((textContent) => textContent.trim());
 
-        return { author, date, description, href, tags, title };
+        return {
+          author,
+          copyright: 'LINE Corporation',
+          date,
+          description,
+          href,
+          tags,
+          title,
+        };
       });
     });
 
