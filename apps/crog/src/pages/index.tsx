@@ -20,14 +20,16 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
         divider={<Divider component="li" aria-hidden />}
       >
         {posts.map(({ description, href, title }) => (
-          <Stack className="gap-4 p-6 md:p-8" component="article">
-            <Link href={href}>
-              <h2>{title}</h2>
-            </Link>
-            <Link href={href}>
-              <p className="line-clamp-3">{description}</p>
-            </Link>
-          </Stack>
+          <li key={href}>
+            <Stack className="gap-4 p-6 md:p-8" component="article">
+              <Link href={href}>
+                <h2>{title}</h2>
+              </Link>
+              <Link href={href}>
+                <p className="line-clamp-3">{description}</p>
+              </Link>
+            </Stack>
+          </li>
         ))}
       </Stack>
     </main>
