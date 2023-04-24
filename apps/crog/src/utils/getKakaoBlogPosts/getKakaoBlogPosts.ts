@@ -6,6 +6,7 @@ import type { Post } from '@/types';
 
 const BLOG_URL = 'https://fe-developers.kakaoent.com';
 
+// Couldn't parse properly when using JSDOM
 const getKakaoBlogPosts = () =>
   axios
     .get<string>(BLOG_URL)
