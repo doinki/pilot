@@ -7,6 +7,12 @@ const Document = () => {
   return (
     <Html lang="ko">
       <Head>
+        {process.env.NODE_ENV === 'production' && (
+          <meta
+            content={`default-src 'self'; script-src 'self' 'nonce-${nonce}'`}
+            httpEquiv="Content-Security-Policy"
+          />
+        )}
         <link href="/circle.svg" rel="icon" />
         <link href="/circle-16.png" rel="icon" sizes="16x16" />
         <link href="/circle-32.png" rel="icon" sizes="32x32" />
