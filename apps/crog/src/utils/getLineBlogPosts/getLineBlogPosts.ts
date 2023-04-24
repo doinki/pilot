@@ -36,7 +36,7 @@ const getLineBlogPosts = () =>
 
         return {
           author,
-          copyright: 'LINE Corporation',
+          copyright: 'LINE',
           date,
           description,
           href,

@@ -1,6 +1,7 @@
 import { Divider, Stack } from '@pilot/ui';
 import type { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
+import { twJoin } from 'tailwind-merge';
 
 import type { Post } from '@/types';
 import { getLineBlogPosts } from '@/utils';
@@ -15,7 +16,10 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
     <main className="px-4">
       {isError && <strong>🥲</strong>}
       <Stack
-        className="prose prose-neutral mx-auto dark:prose-invert md:prose-lg"
+        className={twJoin(
+          'prose prose-neutral dark:prose-invert lg:prose-lg',
+          'mx-auto gap-6 py-6 child:m-0'
+        )}
         component="ul"
         divider={
           <li className="not-prose" aria-hidden>
@@ -24,22 +28,27 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
         }
       >
         {posts.map(({ author, copyright, date, description, href, title }) => (
-          <li key={href} className="md:px-2 lg:px-4">
+          <li key={href} className="p-2 lg:p-6">
             <article>
               <header>
-                <h2 className="!mb-[0.25em]">
+                <h2 className="!m-0">
                   <span className="not-prose">
                     <Link href={href}>{title}</Link>
                   </span>
                 </h2>
                 <section className="flex gap-2">
-                  <div className="text-neutral-600">{author}</div>
-                  <time className="text-neutral-500" dateTime={date}>
+                  <div className="text-neutral-500 dark:text-neutral-400">
+                    {author}
+                  </div>
+                  <time
+                    className="text-neutral-400 dark:text-neutral-500"
+                    dateTime={date}
+                  >
                     {new Date(date).toLocaleDateString('ko-KR')}
                   </time>
                 </section>
               </header>
-              <p className="line-clamp-3">
+              <p className="line-clamp-4">
                 <span className="not-prose">
                   <Link href={href}>{description}</Link>
                 </span>
