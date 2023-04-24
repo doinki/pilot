@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { twJoin } from 'tailwind-merge';
 
 import type { Post } from '@/types';
-import { getLineBlogPosts } from '@/utils';
+import { getKakaoBlogPosts, getLineBlogPosts } from '@/utils';
 
 interface HomeProps {
   isError?: boolean;
@@ -33,7 +33,9 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
               <header>
                 <h2 className="!m-0">
                   <span className="not-prose">
-                    <Link href={href}>{title}</Link>
+                    <Link href={href} target="_blank">
+                      {title}
+                    </Link>
                   </span>
                 </h2>
                 <section className="flex gap-2">
@@ -50,7 +52,9 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
               </header>
               <p className="line-clamp-4">
                 <span className="not-prose">
-                  <Link href={href}>{description}</Link>
+                  <Link href={href} target="_blank">
+                    {description}
+                  </Link>
                 </span>
               </p>
               <footer>
@@ -66,9 +70,19 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
-    const posts = await getLineBlogPosts();
+    const [lineBlogPosts, kakaoBlogPosts] = await Promise.all([
+      getLineBlogPosts(),
+      getKakaoBlogPosts(),
+    ]);
 
-    return { props: { posts }, revalidate: 60 * 60 };
+    return {
+      props: {
+        posts: [...lineBlogPosts, ...kakaoBlogPosts].sort((a, b) =>
+          a.date < b.date ? 1 : a.date > b.date ? -1 : 0
+        ),
+      },
+      revalidate: 60 * 60,
+    };
   } catch (error) {
     console.error(error);
     return { props: { isError: true }, revalidate: 60 };

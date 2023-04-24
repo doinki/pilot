@@ -22,6 +22,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'no-console': ['warn', { allow: ['error'] }],
+    'no-nested-ternary': 'off',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
   },
