@@ -1,5 +1,5 @@
-const isSafari = () => {
-  const ua = navigator.userAgent.toLowerCase();
+const isSafari = (userAgent = navigator.userAgent) => {
+  const ua = userAgent.toLowerCase();
 
   return ua.includes('safari') && !ua.includes('chrom');
 };

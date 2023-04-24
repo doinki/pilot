@@ -14,8 +14,9 @@ describe('isSafari', () => {
     'Mozilla/5.0 (iPhone; CPU iPhone OS 16_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1', // iPhone 14 Pro
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15', // iPad Pro (12.9-inch) (6th generation)
   ])('should return `true` if it is a safari browser', (userAgent) => {
-    Object.defineProperty(global.navigator, 'userAgent', { value: userAgent });
+    expect(isSafari(userAgent)).toBe(true);
 
+    Object.defineProperty(global.navigator, 'userAgent', { value: userAgent });
     expect(isSafari()).toBe(true);
   });
 
@@ -24,8 +25,9 @@ describe('isSafari', () => {
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36', // Chrome
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58', // Edge
   ])('should return `false` if it is not a safari browser', (userAgent) => {
-    Object.defineProperty(global.navigator, 'userAgent', { value: userAgent });
+    expect(isSafari(userAgent)).toBe(false);
 
+    Object.defineProperty(global.navigator, 'userAgent', { value: userAgent });
     expect(isSafari()).toBe(false);
   });
 });
