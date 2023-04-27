@@ -26,7 +26,7 @@
   "devDependencies": {
     "@pilot/tsconfig": "workspace:^",
     "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "eslint": "^8.39.0",
     "eslint-config-pilot": "workspace:^",
     "next": "^13.3.1",
