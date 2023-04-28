@@ -7,7 +7,7 @@ module.exports = {
   extends: ['plugin:tailwindcss/recommended'],
   settings: {
     tailwindcss: {
-      callees: ['tw', 'twJoin', 'twMerge'],
+      callees: ['noop', 'twJoin', 'twMerge'],
       classRegex: '^(?:c|\\w+C)lassName$',
     },
   },

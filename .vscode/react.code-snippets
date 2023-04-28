@@ -1,0 +1,45 @@
+{
+  "Overridable Component Type": {
+    "prefix": "ofc",
+    "body": [
+      "import type { OverrideProps } from '@pilot/types';",
+      "import type { ElementType } from 'react';",
+      "",
+      "export interface $1TypeMap<P = {}, D extends ElementType = 'div'> {",
+      "  defaultComponent: D;",
+      "  props: P & {",
+      "    /**",
+      "     * @default 'div'",
+      "     */",
+      "    component?: ElementType;",
+      "  };",
+      "}",
+      "",
+      "export type $2Props<",
+      "  P = {},",
+      "  D extends ElementType = $3TypeMap['defaultComponent']",
+      "> = OverrideProps<$4TypeMap<P, D>, D>;",
+      ""
+    ]
+  },
+  "Stories": {
+    "prefix": "sb",
+    "body": [
+      "import type { Meta, StoryObj } from '@storybook/react';",
+      "",
+      "import ${TM_FILENAME_BASE/\\.stories//} from './${TM_FILENAME_BASE/\\.stories//}';",
+      "",
+      "const meta: Meta<typeof ${TM_FILENAME_BASE/\\.stories//}> = {",
+      "  component: ${TM_FILENAME_BASE/\\.stories//},",
+      "  tags: ['autodocs']",
+      "  title: '${TM_FILENAME_BASE/\\.stories//}',",
+      "};",
+      "",
+      "export default meta;",
+      "type Story = StoryObj<typeof ${TM_FILENAME_BASE/\\.stories//}>;",
+      "",
+      "export const Usage: Story = {};",
+      ""
+    ]
+  }
+}

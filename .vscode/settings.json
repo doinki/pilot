@@ -1,6 +1,10 @@
 {
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "search.exclude": { "pnpm-lock.yaml": true },
+  "tailwindCSS.experimental.classRegex": [
+    "noop\\s*\\(\\s*\"([^\"]*)\"\\s*\\)",
+    "noop\\s*\\(\\s*'([^']*)'\\s*\\)"
+  ],
   "tailwindCSS.experimental.configFile": {
     "apps/challenge/tailwind.config.js": "apps/challenge/**",
     "apps/crog/tailwind.config.js": "apps/crog/**",
