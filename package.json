@@ -18,7 +18,7 @@
     "test:coverage": "turbo run test:coverage",
     "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
-    "challenges": "pnpm --filter=challenges",
+    "challenge": "pnpm --filter=challenge",
     "crog": "pnpm --filter=crog",
     "lotto": "pnpm --filter=lotto",
     "hooks": "pnpm --filter=@pilot/hooks",

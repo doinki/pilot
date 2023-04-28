@@ -1,19 +1,8 @@
 {
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "search.exclude": { "pnpm-lock.yaml": true },
-  "tailwindCSS.classAttributes": [
-    "className",
-    "endClassName",
-    "startClassName",
-    "wrapperClassName",
-    "enter",
-    "enterFrom",
-    "enterTo",
-    "leave",
-    "leaveFrom",
-    "leaveTo"
-  ],
   "tailwindCSS.experimental.configFile": {
+    "apps/challenge/tailwind.config.js": "apps/challenge/**",
     "apps/crog/tailwind.config.js": "apps/crog/**",
     "apps/lotto/tailwind.config.js": "apps/lotto/**",
     "packages/ui/tailwind.config.js": "packages/ui/**"

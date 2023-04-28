@@ -20,7 +20,7 @@ importers:
         specifier: ^1.9.3
         version: 1.9.3
 
-  apps/challenges:
+  apps/challenge:
     dependencies:
       '@types/node':
         specifier: ^18.16.2
