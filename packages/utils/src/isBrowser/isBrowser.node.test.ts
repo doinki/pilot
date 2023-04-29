@@ -1,6 +1,6 @@
 /* @jest-environment node */
 
-import { isBrowser } from './isBrowser';
+import isBrowser from './isBrowser';
 
 describe('isBrowser', () => {
   test('should return `false` if not browser', () => {
