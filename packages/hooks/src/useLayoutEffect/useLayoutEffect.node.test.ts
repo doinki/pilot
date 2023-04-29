@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { useLayoutEffect } from './useLayoutEffect';
+import useLayoutEffect from './useLayoutEffect';
 
 describe('useLayoutEffect', () => {
   test('should be `React.useEffect` if not browser', () => {
