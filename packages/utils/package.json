@@ -16,14 +16,14 @@
     "clean": "rimraf .turbo && rimraf coverage && rimraf dist && rimraf node_modules && rimraf .eslintcache"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.21.0"
+    "@babel/runtime": "^7.21.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
+    "@babel/core": "^7.21.5",
     "@babel/plugin-transform-runtime": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
-    "@babel/preset-typescript": "^7.21.4",
-    "@babel/runtime": "^7.21.0",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-typescript": "^7.21.5",
+    "@babel/runtime": "^7.21.5",
     "@pilot/tsconfig": "workspace:^",
     "@pilot/types": "workspace:^",
     "@rollup/plugin-babel": "^6.0.3",

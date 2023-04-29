@@ -16,7 +16,7 @@ const rollupConfig = [
       babel({
         babelHelpers: 'runtime',
         extensions,
-        plugins: [['@babel/plugin-transform-runtime', { version: '^7.21.0' }]],
+        plugins: [['@babel/plugin-transform-runtime', { version: '^7.21.5' }]],
         presets: [
           ['@babel/preset-env', { browserslistEnv: 'production' }],
           ['@babel/preset-react', { runtime: 'automatic' }],
