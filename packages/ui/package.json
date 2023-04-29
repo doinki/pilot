@@ -1,11 +1,14 @@
 {
-  "main": "src/index.ts",
+  "main": "dist/node/index.js",
+  "module": "dist/index.js",
   "name": "@pilot/ui",
   "private": true,
   "sideEffects": false,
-  "types": "src/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "dev": "rollup --watch -c",
     "storybook": "storybook dev -p 6006 --no-open",
+    "build": "rimraf dist && rollup -c",
     "build:storybook": "storybook build",
     "check-types": "tsc -p tsconfig.build.json",
     "test": "jest",
