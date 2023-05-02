@@ -58,7 +58,7 @@ module.exports = {
     'simple-import-sort/imports': 'warn',
     'sort-destructure-keys/sort-destructure-keys': 'warn',
     'sort-keys-fix/sort-keys-fix': 'warn',
-    'trim/argument': 'warn',
+    'trim/argument': ['warn', { callees: ['noop', 'twJoin', 'twMerge'] }],
     'trim/class-name': 'warn',
   },
   settings: { 'import/resolver': { typescript: { alwaysTryTypes: true } } },
