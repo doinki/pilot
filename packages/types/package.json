@@ -29,7 +29,7 @@
     "@types/react-dom": "^18.2.3",
     "eslint": "^8.39.0",
     "eslint-config-pilot": "workspace:^",
-    "next": "^13.3.4",
+    "next": "^13.4.0",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.4"
   }
