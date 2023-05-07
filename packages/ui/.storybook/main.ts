@@ -5,11 +5,8 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-essentials',
     '@storybook/addon-links',
-    {
-      name: '@storybook/addon-postcss',
-      options: { postcssLoaderOptions: { implementation: require('postcss') } },
-    },
     '@storybook/addon-storysource',
+    { name: '@storybook/addon-styling', options: { postCss: true } },
     'storybook-addon-swc',
   ],
   docs: { autodocs: 'tag' },
