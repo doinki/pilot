@@ -3,6 +3,12 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Stack from './Stack';
 
 const meta: Meta<typeof Stack> = {
+  argTypes: {
+    direction: {
+      control: 'radio',
+      options: ['column', 'column-reverse', 'row', 'row-reverse'],
+    },
+  },
   args: {
     children: [
       <div key={1}>1</div>,

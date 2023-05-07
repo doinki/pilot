@@ -3,6 +3,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Divider from './Divider';
 
 const meta: Meta<typeof Divider> = {
+  argTypes: {
+    flexItem: {
+      control: 'boolean',
+    },
+    orientation: {
+      control: 'radio',
+      options: ['horizontal', 'vertical'],
+    },
+  },
   component: Divider,
   tags: ['autodocs'],
   title: 'ui/Divider',

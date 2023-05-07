@@ -3,6 +3,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Skeleton from './Skeleton';
 
 const meta: Meta<typeof Skeleton> = {
+  argTypes: {
+    animation: {
+      control: 'radio',
+      options: ['pulse', false],
+    },
+    variant: {
+      control: 'radio',
+      options: ['circular', 'rectangular', 'rounded', 'text'],
+    },
+  },
   component: Skeleton,
   tags: ['autodocs'],
   title: 'ui/Skeleton',
