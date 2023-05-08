@@ -38,12 +38,12 @@ const rollupConfig = [
   {
     external: [/dist/, /node_modules/],
     input: 'src/index.ts',
-    output: { dir: 'dist/node', format: 'cjs' },
+    output: { dir: 'dist/node', format: 'cjs', preserveModules: true },
     plugins: [
       babel({
         babelHelpers: 'runtime',
         extensions,
-        plugins: [['@babel/plugin-transform-runtime', { version: '^7.21.0' }]],
+        plugins: [['@babel/plugin-transform-runtime', { version: '^7.21.5' }]],
         presets: [
           ['@babel/preset-env', { browserslistEnv: 'node' }],
           ['@babel/preset-react', { runtime: 'automatic' }],
