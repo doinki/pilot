@@ -1,4 +1,8 @@
 {
   "extends": "@pilot/tsconfig/next",
-  "compilerOptions": { "plugins": [{ "name": "next" }] }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] },
+    "plugins": [{ "name": "next" }]
+  }
 }
