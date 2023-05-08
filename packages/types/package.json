@@ -10,7 +10,9 @@
   "peerDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "next": "^13.0.0"
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -21,6 +23,12 @@
     },
     "next": {
       "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
     }
   },
   "devDependencies": {
@@ -30,6 +38,8 @@
     "eslint": "^8.40.0",
     "eslint-config-pilot": "workspace:^",
     "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.4"
   }

@@ -40,10 +40,8 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
-        "postcss",
-        "preact",
-        "react",
-        "react-dom"
+        "less",
+        "preact"
       ]
     }
   }
