@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   addons: [
@@ -7,16 +7,9 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-storysource',
     { name: '@storybook/addon-styling', options: { postCss: true } },
-    'storybook-addon-swc',
   ],
   docs: { autodocs: 'tag' },
-  framework: { name: '@storybook/react-webpack5', options: {} },
-  refs: (config, { configType }) =>
-    !process.env.URL
-      ? config
-      : configType === 'DEVELOPMENT'
-      ? { icons: { title: 'Icons', url: 'http://localhost:6007' } }
-      : { icons: { title: 'Icons', url: process.env.URL! } },
+  framework: { name: '@storybook/react-vite', options: {} },
   stories: [
     '../../icons/src/**/*.stories.@(j|t)sx',
     '../src/**/*.mdx',

@@ -1,6 +1,6 @@
 {
   "name": "pilot",
-  "packageManager": "pnpm@8.4.0",
+  "packageManager": "pnpm@8.5.0",
   "private": true,
   "version": "1.0.0",
   "workspaces": [
@@ -41,7 +41,8 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "less",
-        "preact"
+        "preact",
+        "webpack"
       ]
     }
   }

@@ -12,10 +12,9 @@ module.exports = {
       'error',
       {
         devDependencies: [
+          '**/*.config.*',
           '**/*.test.ts?(x)',
           '**/jest.setup.ts',
-          '**/next.config.js',
-          '**/rollup.config.mjs',
           '**/scripts/**/*',
         ],
       },

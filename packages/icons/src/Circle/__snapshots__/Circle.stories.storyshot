@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Circle /> snapshot 1`] = `
+exports[`Storyshots icons/Circle Usage 1`] = `
 <svg
   aria-hidden="true"
   height="1em"

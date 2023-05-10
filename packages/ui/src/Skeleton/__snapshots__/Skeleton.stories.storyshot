@@ -1,48 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Skeleton Animation False 1`] = `
+exports[`Storyshots ui/Skeleton Animation False 1`] = `
 <span
   class="block bg-black/10 child:invisible"
   style="height: 120px; width: 120px;"
 />
 `;
 
-exports[`Storyshots Skeleton Animation Pulse 1`] = `
+exports[`Storyshots ui/Skeleton Animation Pulse 1`] = `
 <span
   class="block bg-black/10 child:invisible animate-skeleton-pulse duration-75"
   style="height: 120px; width: 120px;"
 />
 `;
 
-exports[`Storyshots Skeleton Size 1`] = `
+exports[`Storyshots ui/Skeleton Size 1`] = `
 <span
   class="block bg-black/10 child:invisible animate-skeleton-pulse duration-75 rounded-md"
   style="height: 320px; width: 320px;"
 />
 `;
 
-exports[`Storyshots Skeleton Variant Circular 1`] = `
+exports[`Storyshots ui/Skeleton Variant Circular 1`] = `
 <span
   class="block bg-black/10 child:invisible animate-skeleton-pulse duration-75 rounded-full"
   style="height: 64px; width: 64px;"
 />
 `;
 
-exports[`Storyshots Skeleton Variant Rectangular 1`] = `
+exports[`Storyshots ui/Skeleton Variant Rectangular 1`] = `
 <span
   class="block bg-black/10 child:invisible animate-skeleton-pulse duration-75"
   style="height: 64px; width: 160px;"
 />
 `;
 
-exports[`Storyshots Skeleton Variant Rounded 1`] = `
+exports[`Storyshots ui/Skeleton Variant Rounded 1`] = `
 <span
   class="block bg-black/10 child:invisible animate-skeleton-pulse duration-75 rounded-md"
   style="height: 64px; width: 320px;"
 />
 `;
 
-exports[`Storyshots Skeleton Variant Text 1`] = `
+exports[`Storyshots ui/Skeleton Variant Text 1`] = `
 <span
   class="block bg-black/10 child:invisible animate-skeleton-pulse duration-75 my-0 scale-y-60 rounded-md before:content-nbsp"
 />
