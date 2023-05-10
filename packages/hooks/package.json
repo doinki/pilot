@@ -6,8 +6,8 @@
   "sideEffects": false,
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "rollup --watch -c",
     "build": "rimraf dist && rollup -c",
+    "build:watch": "rollup --watch -c",
     "check-types": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:coverage": "jest --coverage",
