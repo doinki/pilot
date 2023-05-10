@@ -40,7 +40,6 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
-        "less",
         "preact",
         "webpack"
       ]
