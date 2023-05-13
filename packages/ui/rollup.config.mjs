@@ -4,6 +4,9 @@ import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+const isProduction = process.env.NODE_ENV === 'production';
+
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 /**
@@ -13,7 +16,12 @@ const rollupConfig = [
   {
     external: [/dist/, /node_modules/],
     input: 'src/index.ts',
-    output: { dir: 'dist', format: 'esm', preserveModules: true },
+    output: {
+      dir: 'dist',
+      format: 'esm',
+      preserveModules: true,
+      sourcemap: isDevelopment,
+    },
     plugins: [
       babel({
         babelHelpers: 'runtime',
@@ -36,13 +44,18 @@ const rollupConfig = [
         tsconfig: 'tsconfig.build.json',
       }),
       preserveDirectives.default(),
-      process.env.NODE_ENV === 'production' && terser(),
+      isProduction && terser(),
     ],
   },
   {
     external: [/dist/, /node_modules/],
     input: 'src/index.ts',
-    output: { dir: 'dist/node', format: 'cjs', preserveModules: true },
+    output: {
+      dir: 'dist/node',
+      format: 'cjs',
+      preserveModules: true,
+      sourcemap: isDevelopment,
+    },
     plugins: [
       babel({
         babelHelpers: 'runtime',
