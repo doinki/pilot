@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import type { FC, ReactNode } from 'react';
 
+import { notoSansKR } from '@/fonts';
+
 import Providers from './providers';
 
 export const metadata: Metadata = {
@@ -16,7 +18,7 @@ const RootLayout: FC<{
   children?: ReactNode;
 }> = ({ children }) => {
   return (
-    <html lang="ko">
+    <html className={notoSansKR.variable} lang="ko">
       <body>
         <Providers>{children}</Providers>
         <Script
