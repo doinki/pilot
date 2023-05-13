@@ -7,6 +7,5 @@ module.exports = {
   experimental: { scrollRestoration: true },
   output: 'standalone',
   poweredByHeader: false,
-  reactStrictMode: true,
   typescript: { tsconfigPath: 'tsconfig.build.json' },
 };
