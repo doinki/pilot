@@ -1,9 +1,11 @@
 import '@/styles/tailwind.css';
 
+import type { Metadata } from 'next';
 import type { FC, ReactNode } from 'react';
 
-export const metadata = {
+export const metadata: Metadata = {
   description: 'Challenge',
+  icons: [{ sizes: '32x32', url: '/circle.svg' }],
   title: 'Challenge',
 };
 
@@ -11,7 +13,6 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <html lang="ko">
       <head>
-        <link href="/circle.svg" rel="icon" />
         <script
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
