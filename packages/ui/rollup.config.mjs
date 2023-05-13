@@ -1,5 +1,6 @@
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
 
@@ -19,7 +20,7 @@ const rollupConfig = [
         extensions,
         plugins: [['@babel/plugin-transform-runtime', { version: '^7.21.5' }]],
         presets: [
-          ['@babel/preset-env', { browserslistEnv: 'production' }],
+          ['@babel/preset-env', { browserslistEnv: process.env.NODE_ENV }],
           ['@babel/preset-react', { runtime: 'automatic' }],
           '@babel/preset-typescript',
         ],
@@ -35,6 +36,7 @@ const rollupConfig = [
         tsconfig: 'tsconfig.build.json',
       }),
       preserveDirectives.default(),
+      process.env.NODE_ENV === 'production' && terser(),
     ],
   },
   {
