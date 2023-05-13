@@ -1,6 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
+import preserveDirectives from 'rollup-plugin-preserve-directives';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -33,6 +34,7 @@ const rollupConfig = [
         noForceEmit: true,
         tsconfig: 'tsconfig.build.json',
       }),
+      preserveDirectives.default(),
     ],
   },
   {
@@ -51,6 +53,7 @@ const rollupConfig = [
         ],
       }),
       nodeResolve({ extensions }),
+      preserveDirectives.default(),
     ],
   },
 ];
