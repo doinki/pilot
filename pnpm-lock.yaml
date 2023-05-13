@@ -31,6 +31,9 @@ importers:
       '@pilot/ui':
         specifier: workspace:^
         version: link:../../packages/ui
+      '@tanstack/react-query':
+        specifier: 5.0.0-alpha.31
+        version: 5.0.0-alpha.31(react-dom@18.2.0)(react@18.2.0)
       next:
         specifier: ^13.4.2
         version: 13.4.2(react-dom@18.2.0)(react@18.2.0)
@@ -4149,6 +4152,27 @@ packages:
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.3.2
+    dev: false
+
+  /@tanstack/query-core@5.0.0-alpha.31:
+    resolution: {integrity: sha512-VZaOPK7UkemdE0yCGJL5wlm9cygF9WixeogkVQYtJG3mcIfUq6ajwmUQl9oHhKCkbwkXRW7phv8pjO1B8fu9Qg==}
+    dev: false
+
+  /@tanstack/react-query@5.0.0-alpha.31(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-GJ9FeghsQpFW+7HMrFmlA3B7u7fLuCZfBY6yu6Ya2wOgQmRajHUM2iXNleyfegyPmQtgRmXVR3rM+HZgnCuX4A==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 5.0.0-alpha.31
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@testing-library/dom@8.20.0:
