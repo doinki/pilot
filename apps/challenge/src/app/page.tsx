@@ -1,61 +1,39 @@
 import { Divider, Stack } from '@pilot/ui';
-import { twJoin } from 'tailwind-merge';
+import { Suspense } from 'react';
 
-import { getKakaoBlogPosts } from '@/utils';
+import { PokemonAPI } from '@/api';
+import { PokemonCard } from '@/components';
+
+/* @ts-expect-error Async Server component */
+const PokemonCardSkeleton = <PokemonCard id={0} loading />;
 
 const Home = async () => {
-  const posts = await getKakaoBlogPosts();
+  const pokemon = await PokemonAPI.getPokemon();
 
   return (
-    <main className="px-4">
+    <main className="mx-auto max-w-screen-sm">
       <Stack
-        className={twJoin(
-          'prose prose-neutral dark:prose-invert lg:prose-lg',
-          'mx-auto gap-6 py-6 child:m-0'
-        )}
         component="ul"
         divider={
-          <li className="not-prose" aria-hidden>
+          <li aria-hidden>
             <Divider />
           </li>
         }
       >
-        {posts.map(({ author, copyright, date, description, href, title }) => (
-          <li key={href} className="p-2 lg:p-6">
-            <article>
-              <header>
-                <h2 className="!m-0">
-                  <span className="not-prose">
-                    <a href={href} rel="noreferrer" target="_blank">
-                      {title}
-                    </a>
-                  </span>
-                </h2>
-                <section className="flex gap-2">
-                  <div className="text-neutral-500 dark:text-neutral-400">
-                    {author}
-                  </div>
-                  <time
-                    className="text-neutral-400 dark:text-neutral-500"
-                    dateTime={date}
-                  >
-                    {new Date(date).toLocaleDateString('ko-KR')}
-                  </time>
-                </section>
-              </header>
-              <p className="line-clamp-4">
-                <span className="not-prose">
-                  <a href={href} rel="noreferrer" target="_blank">
-                    {description}
-                  </a>
-                </span>
-              </p>
-              <footer>
-                <cite>{copyright}</cite>
-              </footer>
-            </article>
-          </li>
-        ))}
+        {pokemon.results.map(({ name, url }) => {
+          const id = url.split('/').filter(Boolean).pop();
+
+          if (!id) return null;
+
+          return (
+            <li key={name}>
+              <Suspense fallback={PokemonCardSkeleton}>
+                {/* @ts-expect-error Async Server component */}
+                <PokemonCard id={Number(id)} />
+              </Suspense>
+            </li>
+          );
+        })}
       </Stack>
     </main>
   );

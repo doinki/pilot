@@ -6,11 +6,10 @@ import type { FC, ReactNode } from 'react';
 
 import { notoSansKR } from '@/fonts';
 
-import Providers from './providers';
+import Providers from './Providers';
 
 export const metadata: Metadata = {
   description: 'Challenge',
-  icons: [{ sizes: '32x32', url: '/circle.svg' }],
   title: 'Challenge',
 };
 

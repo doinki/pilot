@@ -1,1 +1,1 @@
-export * from './getKakaoBlogPosts';
+export { default as getQueryClient } from './getQueryClient';
