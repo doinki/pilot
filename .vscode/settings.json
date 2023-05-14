@@ -10,5 +10,7 @@
     "apps/crog/tailwind.config.js": "apps/crog/**",
     "apps/lotto/tailwind.config.js": "apps/lotto/**",
     "packages/ui/tailwind.config.js": "packages/ui/**"
-  }
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "../node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib"
 }
