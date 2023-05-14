@@ -1,20 +1,13 @@
 import { Divider, Stack } from '@pilot/ui';
-import type { GetStaticProps, NextPage } from 'next';
-import Link from 'next/link';
 import { twJoin } from 'tailwind-merge';
 
-import type { Post } from '@/types';
-import { getKakaoBlogPosts, getLineBlogPosts } from '@/utils';
+import { getKakaoBlogPosts } from '@/utils';
 
-interface HomeProps {
-  isError?: boolean;
-  posts?: Post[];
-}
+const Home = async () => {
+  const posts = await getKakaoBlogPosts();
 
-const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
   return (
     <main className="px-4">
-      {isError && <strong>🥲</strong>}
       <Stack
         className={twJoin(
           'prose prose-neutral dark:prose-invert lg:prose-lg',
@@ -33,9 +26,9 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
               <header>
                 <h2 className="!m-0">
                   <span className="not-prose">
-                    <Link href={href} target="_blank">
+                    <a href={href} rel="noreferrer" target="_blank">
                       {title}
-                    </Link>
+                    </a>
                   </span>
                 </h2>
                 <section className="flex gap-2">
@@ -52,9 +45,9 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
               </header>
               <p className="line-clamp-4">
                 <span className="not-prose">
-                  <Link href={href} target="_blank">
+                  <a href={href} rel="noreferrer" target="_blank">
                     {description}
-                  </Link>
+                  </a>
                 </span>
               </p>
               <footer>
@@ -66,27 +59,6 @@ const Home: NextPage<HomeProps> = ({ isError, posts = [] }) => {
       </Stack>
     </main>
   );
-};
-
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  try {
-    const [lineBlogPosts, kakaoBlogPosts] = await Promise.all([
-      getLineBlogPosts(),
-      getKakaoBlogPosts(),
-    ]);
-
-    return {
-      props: {
-        posts: [...lineBlogPosts, ...kakaoBlogPosts].sort((a, b) =>
-          a.date < b.date ? 1 : a.date > b.date ? -1 : 0
-        ),
-      },
-      revalidate: 60 * 60,
-    };
-  } catch (error) {
-    console.error(error);
-    return { props: { isError: true }, revalidate: 60 };
-  }
 };
 
 export default Home;

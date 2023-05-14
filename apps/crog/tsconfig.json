@@ -1,5 +1,9 @@
 {
   "extends": "@pilot/tsconfig/next",
-  "compilerOptions": { "baseUrl": ".", "paths": { "@/*": ["./src/*"] } },
-  "exclude": ["coverage", "storybook-static"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] },
+    "plugins": [{ "name": "next" }]
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next-env.d.ts"]
 }
