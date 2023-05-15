@@ -8,6 +8,7 @@ module.exports = {
   images: {
     domains: ['raw.githubusercontent.com'],
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 30 * 24 * 60 * 60,
   },
   output: 'standalone',
   poweredByHeader: false,
