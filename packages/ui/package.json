@@ -6,10 +6,10 @@
   "sideEffects": false,
   "types": "dist/index.d.ts",
   "scripts": {
+    "dev": "rollup --environment NODE_ENV:development -c -w",
     "storybook": "storybook dev -p 6006 --no-open",
     "build": "rimraf dist && NODE_ENV=production rollup -c",
     "build:storybook": "storybook build",
-    "build:watch": "NODE_ENV=development rollup --watch -c",
     "check-types": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:coverage": "jest --coverage",

@@ -9,13 +9,9 @@
       "dependsOn": ["^build", "^build:storybook"],
       "outputs": ["storybook-static/**"]
     },
-    "build:watch": {
-      "cache": false,
-      "dependsOn": ["^build:watch"]
-    },
     "check-types": { "dependsOn": ["^build"] },
     "clean": { "cache": false },
-    "dev": { "cache": false, "dependsOn": ["^build:watch"] },
+    "dev": { "cache": false, "persistent": true },
     "lint": { "dependsOn": ["^build"], "outputs": [".eslintcache"] },
     "storybook": { "cache": false },
     "test": { "dependsOn": ["^build"] },
