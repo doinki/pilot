@@ -1,6 +1,6 @@
 {
   "main": "dist/node/index.js",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
   "name": "@pilot/ui",
   "private": true,
   "sideEffects": false,

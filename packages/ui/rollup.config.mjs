@@ -18,6 +18,7 @@ const rollupConfig = [
     input: 'src/index.ts',
     output: {
       dir: 'dist',
+      entryFileNames: '[name].mjs',
       format: 'esm',
       preserveModules: true,
       sourcemap: isDevelopment,
