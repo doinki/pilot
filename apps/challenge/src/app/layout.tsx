@@ -20,6 +20,7 @@ const RootLayout: FC<{
     <html className={notoSansKR.variable} lang="ko">
       <body>
         <Providers>{children}</Providers>
+        {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
         <Script
           id="dark-mode"
           strategy="beforeInteractive"

@@ -2,8 +2,13 @@ import 'server-only';
 
 import type { GetPokemonResponse, Pokemon } from '@/types';
 
-export const getPokemon = async () => {
-  const res = await fetch('https://pokeapi.co/api/v2/pokemon');
+export const getPokemon = async (page?: number | string) => {
+  const offset = page ? Number(page) * 20 : 0;
+
+  const url = new URL('https://pokeapi.co/api/v2/pokemon');
+  url.searchParams.set('offset', String(offset));
+
+  const res = await fetch(url);
 
   if (!res.ok) {
     throw new Error('Failed to fetch pokemon');
