@@ -26,7 +26,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
   const isMaxPage = pokemon.next === null;
 
   return (
-    <main className="mx-auto max-w-screen-sm">
+    <main className="mx-auto max-w-screen-sm px-3">
       {children}
       <section className="flex justify-between pb-24 pt-16">
         <Link
@@ -34,8 +34,8 @@ const Layout = async ({ children, params }: LayoutProps) => {
           className={twJoin(
             'rounded-md border px-4 py-2 transition',
             isMinPage
-              ? 'pointer-events-none cursor-not-allowed border-gray-300 text-gray-300'
-              : 'border-blue-600 text-blue-600 hover:bg-blue-50 active:scale-105'
+              ? 'pointer-events-none cursor-not-allowed border-gray-300 text-gray-300 dark:border-gray-600 dark:text-gray-600'
+              : 'border-blue-600 text-blue-600 hover:bg-blue-600/10 active:scale-105 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400/10'
           )}
           href={{
             pathname: isMinPage
@@ -43,6 +43,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
               : `/pages/${encodeURIComponent(page - 1)}`,
           }}
           prefetch={!isMinPage}
+          tabIndex={isMinPage ? -1 : 0}
         >
           Prev
         </Link>
@@ -51,8 +52,8 @@ const Layout = async ({ children, params }: LayoutProps) => {
           className={twJoin(
             'rounded-md border px-4 py-2 transition',
             isMaxPage
-              ? 'pointer-events-none cursor-not-allowed border-gray-300 text-gray-300'
-              : 'border-blue-600 text-blue-600 hover:bg-blue-50 active:scale-105'
+              ? 'pointer-events-none cursor-not-allowed border-gray-300 text-gray-300 dark:border-gray-600 dark:text-gray-600'
+              : 'border-blue-600 text-blue-600 hover:bg-blue-600/10 active:scale-105 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400/10'
           )}
           href={{
             pathname: isMaxPage
@@ -60,6 +61,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
               : `/pages/${encodeURIComponent(page + 1)}`,
           }}
           prefetch={!isMaxPage}
+          tabIndex={isMaxPage ? -1 : 0}
         >
           Next
         </Link>
