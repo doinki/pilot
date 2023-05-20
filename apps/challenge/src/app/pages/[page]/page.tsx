@@ -18,15 +18,15 @@ const Page = async ({ params }: PageProps) => {
   return (
     <PokemonList>
       {pokemon.results.map(({ name, url }) => {
-        const id = url.split('/').filter(Boolean).pop();
+        const id = Number(url.split('/').filter(Boolean).pop());
 
-        if (!id || id > '151') return null;
+        if (Number.isNaN(id) || id > 151) return null;
 
         return (
           <li key={name}>
             <Suspense fallback={PokemonCardSkeleton}>
               {/* @ts-expect-error Async Server component */}
-              <PokemonCard id={Number(id)} />
+              <PokemonCard id={id} />
             </Suspense>
           </li>
         );
