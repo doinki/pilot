@@ -1,8 +1,7 @@
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { twJoin } from 'tailwind-merge';
-
-import { PokemonAPI } from '@/api';
 
 interface LayoutProps {
   children?: ReactNode;
@@ -13,16 +12,10 @@ const Layout = async ({ children, params }: LayoutProps) => {
   const page = Number(params.page);
 
   if (Number.isNaN(page) || page < 1 || page > 8) {
-    throw new Error('Invalid page number');
+    notFound();
   }
 
-  const pokemon = await PokemonAPI.getPokemon(page - 1);
-
-  if (pokemon.results.length === 0) {
-    throw new Error('Invalid page number');
-  }
-
-  const isMinPage = pokemon.previous === null;
+  const isMinPage = page === 1;
   const isMaxPage = page === 8;
 
   return (
@@ -39,7 +32,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
           )}
           href={{
             pathname: isMinPage
-              ? null
+              ? '/'
               : `/pages/${encodeURIComponent(page - 1)}`,
           }}
           prefetch={!isMinPage}
@@ -57,7 +50,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
           )}
           href={{
             pathname: isMaxPage
-              ? null
+              ? '/'
               : `/pages/${encodeURIComponent(page + 1)}`,
           }}
           prefetch={!isMaxPage}

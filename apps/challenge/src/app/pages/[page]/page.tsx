@@ -35,4 +35,10 @@ const Page = async ({ params }: PageProps) => {
   );
 };
 
+export async function generateStaticParams() {
+  return Array.from({ length: 8 }).map((_, index) => ({
+    page: (index + 1).toString(),
+  }));
+}
+
 export default Page;
