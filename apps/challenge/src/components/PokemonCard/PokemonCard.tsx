@@ -10,7 +10,12 @@ const PokemonCard = async ({
   id: number;
   loading?: boolean;
 }) => {
-  const pokemon = loading ? null : await PokemonAPI.getPokemonById(id);
+  const [pokemon, encodedImage] = loading
+    ? []
+    : await Promise.all([
+        PokemonAPI.getPokemonById(id),
+        PokemonAPI.getBase64EncodedPokemonImageById(id),
+      ]);
 
   return (
     <article className="flex gap-6 p-4">
@@ -20,8 +25,14 @@ const PokemonCard = async ({
         ) : (
           <Image
             alt={pokemon.name}
+            className="rounded-md"
             sizes="475px"
             src={`/images/${pokemon.id.toString().padStart(3, '0')}.png`}
+            style={{
+              backgroundImage: encodedImage
+                ? `url(${encodedImage})`
+                : undefined,
+            }}
             fill
           />
         )}
