@@ -19,23 +19,25 @@ const PokemonCard = async ({
 
   return (
     <article className="flex gap-6 p-4">
-      <div className="relative aspect-square w-1/2">
-        {!pokemon ? (
-          <Skeleton height="100%" variant="rounded" width="100%" />
-        ) : (
-          <Image
-            alt={pokemon.name}
-            className="rounded-md"
-            sizes="475px"
-            src={`/images/${pokemon.id.toString().padStart(3, '0')}.png`}
-            style={{
-              backgroundImage: encodedImage
-                ? `url(${encodedImage})`
-                : undefined,
-            }}
-            fill
-          />
-        )}
+      <div className="w-1/2 shrink-0">
+        <div className="aspect-h-1 aspect-w-1">
+          {!pokemon ? (
+            <Skeleton height="100%" variant="rounded" width="100%" />
+          ) : (
+            <Image
+              alt={pokemon.name}
+              className="rounded-md"
+              sizes="475px"
+              src={`/images/${pokemon.id.toString().padStart(3, '0')}.png`}
+              style={{
+                backgroundImage: encodedImage
+                  ? `url(${encodedImage})`
+                  : undefined,
+              }}
+              fill
+            />
+          )}
+        </div>
       </div>
       <section className="prose prose-neutral dark:prose-invert lg:prose-xl">
         <i>
@@ -46,7 +48,9 @@ const PokemonCard = async ({
           )}
         </i>
         <header>
-          <h2>{!pokemon ? <Skeleton width={160} /> : pokemon.name}</h2>
+          <h2 className="break-all">
+            {!pokemon ? <Skeleton width={160} /> : pokemon.name}
+          </h2>
         </header>
       </section>
     </article>
