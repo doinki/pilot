@@ -10,6 +10,9 @@ module.exports = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 30 * 24 * 60 * 60,
   },
+  modularizeImports: {
+    '@pilot/ui': { transform: '@pilot/ui/dist/{{member}}/{{member}}' },
+  },
   output: 'standalone',
   poweredByHeader: false,
   typescript: { tsconfigPath: 'tsconfig.build.json' },
