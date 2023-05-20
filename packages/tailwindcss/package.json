@@ -7,7 +7,7 @@
     "clean": "rimraf .turbo && rimraf node_modules && rimraf .eslintcache"
   },
   "peerDependencies": {
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.2"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
