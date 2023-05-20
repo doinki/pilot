@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout = async ({ children, params }: LayoutProps) => {
   const page = Number(params.page);
 
-  if (Number.isNaN(page) || page < 1) {
+  if (Number.isNaN(page) || page < 1 || page > 8) {
     throw new Error('Invalid page number');
   }
 
@@ -23,7 +23,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
   }
 
   const isMinPage = pokemon.previous === null;
-  const isMaxPage = pokemon.next === null;
+  const isMaxPage = page === 8;
 
   return (
     <main className="mx-auto max-w-screen-sm px-3">

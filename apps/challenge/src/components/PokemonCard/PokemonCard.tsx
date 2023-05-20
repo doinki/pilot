@@ -21,7 +21,7 @@ const PokemonCard = async ({
           <Image
             alt={pokemon.name}
             sizes="475px"
-            src={pokemon.sprites.other['official-artwork'].front_default}
+            src={`/images/${pokemon.id.toString().padStart(3, '0')}.png`}
             fill
           />
         )}

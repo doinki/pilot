@@ -20,7 +20,7 @@ const Page = async ({ params }: PageProps) => {
       {pokemon.results.map(({ name, url }) => {
         const id = url.split('/').filter(Boolean).pop();
 
-        if (!id) return null;
+        if (!id || id > '151') return null;
 
         return (
           <li key={name}>
