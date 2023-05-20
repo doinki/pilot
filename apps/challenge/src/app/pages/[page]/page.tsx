@@ -1,8 +1,9 @@
 import { Suspense } from 'react';
 
-import { PokemonAPI } from '@/api';
 import { PokemonCard } from '@/components/PokemonCard';
 import { PokemonList } from '@/components/PokemonList';
+
+const LIMIT = 20;
 
 interface PageProps {
   params: { page: string };
@@ -13,17 +14,16 @@ const PokemonCardSkeleton = <PokemonCard id={0} loading />;
 
 const Page = async ({ params }: PageProps) => {
   const page = Number(params.page);
-  const pokemon = await PokemonAPI.getPokemon(page - 1);
 
   return (
     <PokemonList>
-      {pokemon.results.map(({ name, url }) => {
-        const id = Number(url.split('/').filter(Boolean).pop());
+      {Array.from({ length: LIMIT }).map((_, index) => {
+        const id = (page - 1) * LIMIT + index + 1;
 
-        if (Number.isNaN(id) || id > 151) return null;
+        if (id > 151) return null;
 
         return (
-          <li key={name}>
+          <li key={id}>
             <Suspense fallback={PokemonCardSkeleton}>
               {/* @ts-expect-error Async Server component */}
               <PokemonCard id={id} />
