@@ -5,19 +5,23 @@ import Script from 'next/script';
 import type { FC, ReactNode } from 'react';
 
 import { notoSansKR } from '@/fonts';
+import type { Locale } from '@/types';
 
-import Providers from './Providers';
+import Providers from '../Providers';
 
 export const metadata: Metadata = {
   description: 'Challenge',
   title: 'Challenge',
 };
 
-const RootLayout: FC<{
+interface RootLayoutProps {
   children?: ReactNode;
-}> = ({ children }) => {
+  params: { lang: Locale };
+}
+
+const RootLayout: FC<RootLayoutProps> = ({ children, params: { lang } }) => {
   return (
-    <html className={notoSansKR.variable} lang="ko">
+    <html className={notoSansKR.variable} lang={lang}>
       <body>
         <Providers>{children}</Providers>
         {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}

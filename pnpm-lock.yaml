@@ -43,6 +43,9 @@ importers:
       '@tanstack/react-query':
         specifier: 5.0.0-alpha.31
         version: 5.0.0-alpha.31(react-dom@18.2.0)(react@18.2.0)
+      negotiator:
+        specifier: ^0.6.3
+        version: 0.6.3
       next:
         specifier: ^13.4.3
         version: 13.4.3(react-dom@18.2.0)(react@18.2.0)
@@ -68,6 +71,9 @@ importers:
       '@pilot/types':
         specifier: workspace:^
         version: link:../../packages/types
+      '@types/negotiator':
+        specifier: ^0.6.1
+        version: 0.6.1
       '@types/node':
         specifier: ^18.16.13
         version: 18.16.13
@@ -3002,7 +3008,7 @@ packages:
     dependencies:
       rollup: 3.22.0
       serialize-javascript: 6.0.1
-      smob: 1.1.0
+      smob: 1.1.1
       terser: 5.17.4
     dev: true
 
@@ -4489,6 +4495,10 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
 
+  /@types/negotiator@0.6.1:
+    resolution: {integrity: sha512-c4mvXFByghezQ/eVGN5HvH/jI63vm3B7FiE81BUzDAWmuiohRecCO6ddU60dfq29oKUMiQujsoB2h0JQC7JHKA==}
+    dev: true
+
   /@types/node-fetch@2.6.4:
     resolution: {integrity: sha512-1ZX9fcN4Rvkvgv4E6PAY5WXUFWFcRWxZa3EW83UjycOB9ljJCedb2CupIP4RZMEwF/M3eTcCihbBRgwtGbg5Rg==}
     dependencies:
@@ -5327,7 +5337,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001488
       electron-to-chromium: 1.4.402
-      node-releases: 2.0.10
+      node-releases: 2.0.11
       update-browserslist-db: 1.0.11(browserslist@4.21.5)
     dev: true
 
@@ -9043,7 +9053,6 @@ packages:
   /negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
-    dev: true
 
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
@@ -9143,8 +9152,8 @@ packages:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
     dev: true
 
-  /node-releases@2.0.10:
-    resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==}
+  /node-releases@2.0.11:
+    resolution: {integrity: sha512-+M0PwXeU80kRohZ3aT4J/OnR+l9/KD2nVLNNoRgFtnf+umQVFdGBAO2N8+nCnEi0xlh/Wk3zOGC+vNNx+uM79Q==}
     dev: true
 
   /normalize-package-data@2.5.0:
@@ -10518,8 +10527,8 @@ packages:
       is-fullwidth-code-point: 4.0.0
     dev: true
 
-  /smob@1.1.0:
-    resolution: {integrity: sha512-Rtrm1A5e/Yq53vgWinNSVkQ14UaGNdYzF5xaVqKXG4YBjTxkMdsx3bzpO8pD4hwf4O6JOi5/sAyFta0pLmKZOw==}
+  /smob@1.1.1:
+    resolution: {integrity: sha512-i5aqEBPnDv9d77+NDxfjROtywxzNdAVNyaOr+RsLhM28Ts+Ar7luIp/Q+SBYa6wv/7BBcOpEkrhtDxsl2WA9Jg==}
     dev: true
 
   /source-map-js@1.0.2:

@@ -2,19 +2,24 @@ import { Skeleton } from '@pilot/ui';
 import Image from 'next/image';
 
 import { PokemonAPI } from '@/api';
+import type { DictionaryPokemonKey, Locale } from '@/types';
+import { getDictionary } from '@/utils';
 
 const PokemonCard = async ({
   id,
+  lang = 'ko',
   loading,
 }: {
   id: number;
+  lang?: Locale;
   loading?: boolean;
 }) => {
-  const [pokemon, encodedImage] = loading
+  const [pokemon, encodedImage, dictionary] = loading
     ? []
     : await Promise.all([
         PokemonAPI.getPokemonById(id),
         PokemonAPI.getBase64EncodedPokemonImageById(id),
+        getDictionary(lang),
       ]);
 
   return (
@@ -25,7 +30,9 @@ const PokemonCard = async ({
             <Skeleton height="100%" variant="rounded" width="100%" />
           ) : (
             <Image
-              alt={pokemon.name}
+              alt={
+                dictionary!.pokemon[id as unknown as DictionaryPokemonKey].name
+              }
               className="rounded-md"
               sizes="475px"
               src={`/images/${pokemon.id.toString().padStart(3, '0')}.png`}
@@ -49,7 +56,11 @@ const PokemonCard = async ({
         </i>
         <header>
           <h2 className="break-all">
-            {!pokemon ? <Skeleton width={160} /> : pokemon.name}
+            {!pokemon ? (
+              <Skeleton width={160} />
+            ) : (
+              dictionary!.pokemon[id as unknown as DictionaryPokemonKey].name
+            )}
           </h2>
         </header>
       </section>

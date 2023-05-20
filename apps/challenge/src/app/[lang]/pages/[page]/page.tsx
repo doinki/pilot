@@ -2,11 +2,12 @@ import { Suspense } from 'react';
 
 import { PokemonCard } from '@/components/PokemonCard';
 import { PokemonList } from '@/components/PokemonList';
+import type { Locale } from '@/types';
 
 const LIMIT = 20;
 
 interface PageProps {
-  params: { page: string };
+  params: { lang: Locale; page: string };
 }
 
 /* @ts-expect-error Async Server component */
@@ -26,7 +27,7 @@ const Page = async ({ params }: PageProps) => {
           <li key={id}>
             <Suspense fallback={PokemonCardSkeleton}>
               {/* @ts-expect-error Async Server component */}
-              <PokemonCard id={id} />
+              <PokemonCard id={id} lang={params.lang} />
             </Suspense>
           </li>
         );
