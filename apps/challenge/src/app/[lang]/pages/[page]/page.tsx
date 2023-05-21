@@ -28,12 +28,13 @@ const PokemonCardSkeleton = <PokemonCard id={0} loading />;
 const Page = async ({ params }: PageProps) => {
   const page = Number(params.page);
   const pokemon = await PokemonAPI.getPokemon();
+  const offset = (page - 1) * LIMIT;
 
   return (
     <main>
       <PokemonList>
-        {Array.from({ length: LIMIT }).map((_, index) => {
-          const { id, name } = pokemon[(page - 1) * LIMIT + index];
+        {pokemon.slice(offset, offset + LIMIT).map((_, index) => {
+          const { id, name } = pokemon[offset + index];
 
           if (id > 151) return null;
 
