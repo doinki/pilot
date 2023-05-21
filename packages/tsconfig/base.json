@@ -5,6 +5,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "incremental": true,
     "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "node",
