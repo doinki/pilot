@@ -37,6 +37,7 @@ const rollupConfig = [
         compilerOptions: {
           declarationDir: 'dist',
           emitDeclarationOnly: true,
+          incremental: false,
           noEmit: false,
         },
         noForceEmit: true,
