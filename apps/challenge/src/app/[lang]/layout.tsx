@@ -24,7 +24,9 @@ const RootLayout: FC<RootLayoutProps> = ({ children, params: { lang } }) => {
   return (
     <html className={notoSansKR.variable} lang={lang}>
       <body>
-        <Providers>{children}</Providers>
+        <div className="mx-auto max-w-screen-sm">
+          <Providers>{children}</Providers>
+        </div>
         {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
         <Script
           id="dark-mode"

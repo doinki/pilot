@@ -46,7 +46,7 @@ const PokemonCard = async ({
           )}
         </div>
       </div>
-      <section className="prose prose-neutral dark:prose-invert lg:prose-xl">
+      <section className="prose prose-neutral flex-1 dark:prose-invert lg:prose-xl">
         <i>
           {!pokemon ? (
             <Skeleton width={64} />
@@ -57,7 +57,7 @@ const PokemonCard = async ({
         <header>
           <h2 className="break-all">
             {!pokemon ? (
-              <Skeleton width={160} />
+              <Skeleton width="calc(min(50%, 120px))" />
             ) : (
               dictionary!.pokemon[id as unknown as DictionaryPokemonKey].name
             )}

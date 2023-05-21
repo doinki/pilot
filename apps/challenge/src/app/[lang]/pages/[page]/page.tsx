@@ -1,6 +1,8 @@
-import type { Metadata } from 'next';
+import type { Metadata, Route } from 'next';
+import Link from 'next/link';
 import { Suspense } from 'react';
 
+import { PokemonAPI } from '@/api';
 import { PokemonCard } from '@/components/PokemonCard';
 import { PokemonList } from '@/components/PokemonList';
 import type { Locale } from '@/types';
@@ -25,24 +27,29 @@ const PokemonCardSkeleton = <PokemonCard id={0} loading />;
 
 const Page = async ({ params }: PageProps) => {
   const page = Number(params.page);
+  const pokemon = await PokemonAPI.getPokemon();
 
   return (
-    <PokemonList>
-      {Array.from({ length: LIMIT }).map((_, index) => {
-        const id = (page - 1) * LIMIT + index + 1;
+    <main>
+      <PokemonList>
+        {Array.from({ length: LIMIT }).map((_, index) => {
+          const { id, name } = pokemon[(page - 1) * LIMIT + index];
 
-        if (id > 151) return null;
+          if (id > 151) return null;
 
-        return (
-          <li key={id}>
-            <Suspense fallback={PokemonCardSkeleton}>
-              {/* @ts-expect-error Async Server component */}
-              <PokemonCard id={id} lang={params.lang} />
-            </Suspense>
-          </li>
-        );
-      })}
-    </PokemonList>
+          return (
+            <li key={name}>
+              <Link href={`/pokemon/${name}` as Route}>
+                <Suspense fallback={PokemonCardSkeleton}>
+                  {/* @ts-expect-error Async Server component */}
+                  <PokemonCard id={id} lang={params.lang} />
+                </Suspense>
+              </Link>
+            </li>
+          );
+        })}
+      </PokemonList>
+    </main>
   );
 };
 

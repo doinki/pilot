@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import type { ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import { twJoin } from 'tailwind-merge';
 
 interface LayoutProps {
@@ -8,7 +8,7 @@ interface LayoutProps {
   params: { page: string };
 }
 
-const Layout = async ({ children, params }: LayoutProps) => {
+const Layout: FC<LayoutProps> = ({ children, params }) => {
   const page = Number(params.page);
 
   if (Number.isNaN(page) || page < 1 || page > 8) {
@@ -19,9 +19,9 @@ const Layout = async ({ children, params }: LayoutProps) => {
   const isMaxPage = page === 8;
 
   return (
-    <main className="mx-auto max-w-screen-sm px-3">
+    <>
       {children}
-      <section className="flex justify-between pb-24 pt-16">
+      <section className="flex justify-between px-4 pb-24 pt-12">
         <Link
           aria-disabled={isMinPage}
           className={twJoin(
@@ -59,7 +59,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
           Next
         </Link>
       </section>
-    </main>
+    </>
   );
 };
 

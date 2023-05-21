@@ -3,22 +3,11 @@ import 'server-only';
 import { cache } from 'react';
 import sharp from 'sharp';
 
-import type { GetPokemonResponse, Pokemon } from '@/types';
+import type { Pokemon } from '@/types';
 
-export const getPokemon = async (page?: number | string) => {
-  const offset = page ? Number(page) * 20 : 0;
-
-  const url = new URL('https://pokeapi.co/api/v2/pokemon');
-  url.searchParams.set('offset', String(offset));
-
-  const res = await fetch(url);
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch pokemon');
-  }
-
-  return (await res.json()) as GetPokemonResponse;
-};
+export const getPokemon = cache(() =>
+  import('public/pokemon.json').then((module) => module.default)
+);
 
 export const getPokemonById = async (id: number | string) => {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`, {
