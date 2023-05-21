@@ -11,6 +11,7 @@ import Providers from '../Providers';
 
 export const metadata: Metadata = {
   description: 'Challenge',
+  robots: { follow: true, index: true },
   title: 'Challenge',
 };
 

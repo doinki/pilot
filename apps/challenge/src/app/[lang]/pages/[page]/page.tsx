@@ -1,8 +1,18 @@
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 
 import { PokemonCard } from '@/components/PokemonCard';
 import { PokemonList } from '@/components/PokemonList';
 import type { Locale } from '@/types';
+
+export const generateMetadata = ({ params: { page } }: PageProps): Metadata => {
+  return {
+    alternates: {
+      canonical: new URL(`/pages/${page}`, process.env.URL).href,
+      languages: { en: `/en/pages/${page}`, ko: `/ko/pages/${page}` },
+    },
+  };
+};
 
 const LIMIT = 20;
 
