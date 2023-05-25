@@ -6,6 +6,10 @@ import { PokemonAPI } from '@/api';
 import type { DictionaryPokemonKey, Locale } from '@/types';
 import { getDictionary } from '@/utils';
 
+export const generateStaticParams = async () => {
+  return [];
+};
+
 interface PageProps {
   params: { lang: Locale; name: string };
 }

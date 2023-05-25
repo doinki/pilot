@@ -16,6 +16,12 @@ export const generateMetadata = ({ params: { page } }: PageProps): Metadata => {
   };
 };
 
+export const generateStaticParams = async () => {
+  return Array.from({ length: 8 }).map((_, index) => ({
+    page: (index + 1).toString(),
+  }));
+};
+
 const LIMIT = 20;
 
 interface PageProps {
@@ -53,11 +59,5 @@ const Page = async ({ params }: PageProps) => {
     </main>
   );
 };
-
-export async function generateStaticParams() {
-  return Array.from({ length: 8 }).map((_, index) => ({
-    page: (index + 1).toString(),
-  }));
-}
 
 export default Page;
