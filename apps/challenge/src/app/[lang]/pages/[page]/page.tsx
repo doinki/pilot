@@ -27,8 +27,8 @@ const PokemonCardSkeleton = <PokemonCard loading />;
 
 const Page = async ({ params }: PageProps) => {
   const page = Number(params.page);
-  const pokemon = await PokemonAPI.getPokemon();
   const offset = (page - 1) * LIMIT;
+  const pokemon = await PokemonAPI.getPokemon();
 
   return (
     <main>
