@@ -9,33 +9,36 @@ const PokemonCard = async ({
   id,
   lang = 'ko',
   loading,
+  name,
 }: {
   id: number;
   lang?: Locale;
   loading?: boolean;
+  name: string;
 }) => {
-  const [pokemon, encodedImage, dictionary] = loading
+  const [encodedImage, dictionary] = loading
     ? []
     : await Promise.all([
-        PokemonAPI.getPokemonById(id),
-        PokemonAPI.getBase64EncodedPokemonImageById(id),
+        PokemonAPI.getBase64EncodedPokemonImageByName(name),
         getDictionary(lang),
       ]);
+
+  const pokemonName = loading
+    ? ''
+    : dictionary!.pokemon[id as unknown as DictionaryPokemonKey].name;
 
   return (
     <article className="flex gap-6 p-4">
       <div className="w-1/2 shrink-0">
         <div className="aspect-h-1 aspect-w-1">
-          {!pokemon ? (
+          {loading ? (
             <Skeleton height="100%" variant="rounded" width="100%" />
           ) : (
             <Image
-              alt={
-                dictionary!.pokemon[id as unknown as DictionaryPokemonKey].name
-              }
+              alt={pokemonName}
               className="rounded-md"
               sizes="475px"
-              src={`/images/${pokemon.name}.png`}
+              src={`/images/${name}.png`}
               style={{
                 backgroundImage: encodedImage
                   ? `url(${encodedImage})`
@@ -48,19 +51,15 @@ const PokemonCard = async ({
       </div>
       <section className="prose prose-neutral flex-1 dark:prose-invert lg:prose-xl">
         <i>
-          {!pokemon ? (
+          {loading ? (
             <Skeleton width={64} />
           ) : (
-            `#${String(pokemon.id).padStart(3, '0')}`
+            `#${String(id).padStart(3, '0')}`
           )}
         </i>
         <header>
           <h2 className="break-all">
-            {!pokemon ? (
-              <Skeleton width="calc(min(50%, 120px))" />
-            ) : (
-              dictionary!.pokemon[id as unknown as DictionaryPokemonKey].name
-            )}
+            {loading ? <Skeleton width="calc(min(50%, 120px))" /> : pokemonName}
           </h2>
         </header>
       </section>

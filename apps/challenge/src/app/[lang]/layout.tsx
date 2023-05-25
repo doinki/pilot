@@ -4,8 +4,10 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import type { FC, ReactNode } from 'react';
 
+import { PokemonAPI } from '@/api';
 import { notoSansKR } from '@/fonts';
 import type { Locale } from '@/types';
+import { preloadDictionaries } from '@/utils';
 
 import Providers from '../Providers';
 
@@ -21,6 +23,9 @@ interface RootLayoutProps {
 }
 
 const RootLayout: FC<RootLayoutProps> = ({ children, params: { lang } }) => {
+  preloadDictionaries();
+  PokemonAPI.preloadPokemon();
+
   return (
     <html className={notoSansKR.variable} lang={lang}>
       <body>

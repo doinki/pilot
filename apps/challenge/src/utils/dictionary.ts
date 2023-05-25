@@ -12,3 +12,7 @@ export const dictionaries = {
 export const getDictionary = cache(async (locale: Locale) =>
   dictionaries[locale]()
 );
+export const preloadDictionaries = () => {
+  getDictionary('en');
+  getDictionary('ko');
+};
