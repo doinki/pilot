@@ -35,7 +35,7 @@ const PokemonCard = async ({
               }
               className="rounded-md"
               sizes="475px"
-              src={`/images/${pokemon.id.toString().padStart(3, '0')}.png`}
+              src={`/images/${pokemon.name}.png`}
               style={{
                 backgroundImage: encodedImage
                   ? `url(${encodedImage})`
@@ -51,7 +51,7 @@ const PokemonCard = async ({
           {!pokemon ? (
             <Skeleton width={64} />
           ) : (
-            `#${String(pokemon.id).padStart(4, '0')}`
+            `#${String(pokemon.id).padStart(3, '0')}`
           )}
         </i>
         <header>
