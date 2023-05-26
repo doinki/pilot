@@ -30,21 +30,21 @@ const PokemonCard = async ({
   return (
     <article className="flex gap-6 p-4">
       <div className="w-1/2 shrink-0">
-        <div className="aspect-h-1 aspect-w-1">
+        <div
+          className="aspect-h-1 aspect-w-1"
+          style={{
+            backgroundImage: encodedImage ? `url(${encodedImage})` : undefined,
+          }}
+        >
           {loading ? (
             <Skeleton height="100%" variant="rounded" width="100%" />
           ) : (
             <Image
               alt={pokemonName}
-              className="rounded-md hover:scale-105"
+              className="rounded-md transition-transform hover:scale-105"
               quality={100}
               sizes="475px"
               src={`/images/${name}.png`}
-              style={{
-                backgroundImage: encodedImage
-                  ? `url(${encodedImage})`
-                  : undefined,
-              }}
               fill
             />
           )}
