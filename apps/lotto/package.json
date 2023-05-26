@@ -10,7 +10,7 @@
     "clean": "rimraf .next && rimraf .turbo && rimraf coverage && rimraf node_modules && rimraf storybook-static && rimraf next-env.d.ts"
   },
   "dependencies": {
-    "@babel/runtime": "^7.21.5",
+    "@babel/runtime": "^7.22.0",
     "@pilot/hooks": "workspace:^",
     "@pilot/icons": "workspace:^",
     "@pilot/tailwindcss": "workspace:^",
