@@ -37,6 +37,7 @@ const PokemonCard = async ({
             <Image
               alt={pokemonName}
               className="rounded-md"
+              quality={100}
               sizes="475px"
               src={`/images/${name}.png`}
               style={{

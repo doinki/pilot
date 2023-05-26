@@ -40,6 +40,7 @@ const Page = async ({ params: { lang, name } }: PageProps) => {
         <figure className="absolute left-1/2 top-1/2 max-h-[475px] max-w-[475px] -translate-x-1/2 -translate-y-1/2">
           <Image
             alt={pokemonName}
+            quality={100}
             sizes="475px"
             src={`/images/${name}.png`}
             fill
