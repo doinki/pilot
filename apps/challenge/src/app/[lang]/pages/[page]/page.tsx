@@ -11,7 +11,10 @@ export const generateMetadata = ({ params: { page } }: PageProps): Metadata => {
   return {
     alternates: {
       canonical: new URL(`/pages/${page}`, process.env.URL).href,
-      languages: { en: `/en/pages/${page}`, ko: `/ko/pages/${page}` },
+      languages: {
+        en: new URL(`/en/pages/${page}`, process.env.URL).href,
+        ko: new URL(`/ko/pages/${page}`, process.env.URL).href,
+      },
     },
   };
 };
