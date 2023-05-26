@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: 'Challenge',
 };
 
+export const generateStaticParams = () => {
+  return [{ lang: 'ko' }, { lang: 'en' }];
+};
+
 interface RootLayoutProps {
   children?: ReactNode;
   params: { lang: Locale };
