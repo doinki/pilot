@@ -38,7 +38,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
           href={{
             pathname: isMinPage
               ? '/'
-              : `/pages/${encodeURIComponent(page - 1)}`,
+              : `/${params.lang}/pages/${encodeURIComponent(page - 1)}`,
           }}
           prefetch={!isMinPage}
           tabIndex={isMinPage ? -1 : 0}
@@ -56,7 +56,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
           href={{
             pathname: isMaxPage
               ? '/'
-              : `/pages/${encodeURIComponent(page + 1)}`,
+              : `/${params.lang}/pages/${encodeURIComponent(page + 1)}`,
           }}
           prefetch={!isMaxPage}
           tabIndex={isMaxPage ? -1 : 0}
