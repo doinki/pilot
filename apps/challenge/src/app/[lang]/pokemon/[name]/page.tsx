@@ -32,7 +32,7 @@ const Page = async ({ params: { lang, name } }: PageProps) => {
       .name;
 
   return (
-    <main className="prose prose-neutral dark:prose-invert sm:prose-sm lg:prose-lg">
+    <main className="prose prose-neutral !max-w-full dark:prose-invert sm:prose-sm lg:prose-lg">
       <section
         className="not-prose aspect-h-1 aspect-w-1 w-full rounded-md"
         style={{ backgroundImage: `url(${encodedImage})` }}
