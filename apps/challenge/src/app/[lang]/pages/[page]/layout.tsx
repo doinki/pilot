@@ -1,14 +1,17 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import type { FC, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { twJoin } from 'tailwind-merge';
+
+import type { Locale } from '@/types';
+import { getDictionary } from '@/utils';
 
 interface LayoutProps {
   children?: ReactNode;
-  params: { page: string };
+  params: { lang: Locale; page: string };
 }
 
-const Layout: FC<LayoutProps> = ({ children, params }) => {
+const Layout = async ({ children, params }: LayoutProps) => {
   const page = Number(params.page);
 
   if (Number.isNaN(page) || page < 1 || page > 8) {
@@ -17,6 +20,8 @@ const Layout: FC<LayoutProps> = ({ children, params }) => {
 
   const isMinPage = page === 1;
   const isMaxPage = page === 8;
+
+  const { button } = await getDictionary(params.lang);
 
   return (
     <>
@@ -38,7 +43,7 @@ const Layout: FC<LayoutProps> = ({ children, params }) => {
           prefetch={!isMinPage}
           tabIndex={isMinPage ? -1 : 0}
         >
-          Prev
+          {button.previous}
         </Link>
         <Link
           aria-disabled={isMaxPage}
@@ -56,7 +61,7 @@ const Layout: FC<LayoutProps> = ({ children, params }) => {
           prefetch={!isMaxPage}
           tabIndex={isMaxPage ? -1 : 0}
         >
-          Next
+          {button.next}
         </Link>
       </section>
     </>

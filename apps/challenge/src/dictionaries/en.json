@@ -1,4 +1,8 @@
 {
+  "button": {
+    "next": "Next",
+    "previous": "Prev"
+  },
   "pokemon": {
     "1": { "name": "bulbasaur" },
     "2": { "name": "ivysaur" },

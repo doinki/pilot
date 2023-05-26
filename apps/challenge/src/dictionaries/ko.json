@@ -1,4 +1,8 @@
 {
+  "button": {
+    "next": "다음",
+    "previous": "이전"
+  },
   "pokemon": {
     "1": { "name": "이상해씨" },
     "2": { "name": "이상해풀" },
