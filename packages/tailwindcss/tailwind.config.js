@@ -3,6 +3,7 @@
  */
 module.exports = {
   corePlugins: { aspectRatio: false },
+  future: { hoverOnlyWhenSupported: true },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
