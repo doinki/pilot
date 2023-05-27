@@ -8,6 +8,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
     require('./plugins/child'),
+    require('./plugins/tap-highlight-color'),
     require('./plugins/theme'),
   ],
   theme: { extend: require('./theme/extend') },

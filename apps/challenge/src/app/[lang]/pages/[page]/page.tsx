@@ -49,7 +49,10 @@ const Page = async ({ params }: PageProps) => {
 
           return (
             <li key={name}>
-              <Link href={`/${params.lang}/pokemon/${name}` as Route}>
+              <Link
+                className="tap-highlight-transparent"
+                href={`/${params.lang}/pokemon/${name}` as Route}
+              >
                 <Suspense fallback={PokemonCardSkeleton}>
                   {/* @ts-expect-error Async Server component */}
                   <PokemonCard id={id} lang={params.lang} name={name} />
