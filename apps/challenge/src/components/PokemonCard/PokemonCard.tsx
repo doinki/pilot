@@ -41,7 +41,7 @@ const PokemonCard = async ({
           ) : (
             <Image
               alt={pokemonName}
-              className="rounded-md transition-transform hover:scale-105"
+              className="rounded-md transition-transform motion-safe:hover:scale-105"
               quality={100}
               sizes="475px"
               src={`/images/${name}.png`}
