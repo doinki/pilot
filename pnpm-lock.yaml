@@ -40,9 +40,6 @@ importers:
       '@pilot/utils':
         specifier: workspace:^
         version: link:../../packages/utils
-      '@tanstack/react-query':
-        specifier: 5.0.0-alpha.31
-        version: 5.0.0-alpha.31(react-dom@18.2.0)(react@18.2.0)
       negotiator:
         specifier: ^0.6.3
         version: 0.6.3
@@ -55,9 +52,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      remeda:
-        specifier: ^1.19.0
-        version: 1.19.0
       server-only:
         specifier: ^0.0.1
         version: 0.0.1
@@ -5289,27 +5283,6 @@ packages:
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.3.2
-    dev: false
-
-  /@tanstack/query-core@5.0.0-alpha.31:
-    resolution: {integrity: sha512-VZaOPK7UkemdE0yCGJL5wlm9cygF9WixeogkVQYtJG3mcIfUq6ajwmUQl9oHhKCkbwkXRW7phv8pjO1B8fu9Qg==}
-    dev: false
-
-  /@tanstack/react-query@5.0.0-alpha.31(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GJ9FeghsQpFW+7HMrFmlA3B7u7fLuCZfBY6yu6Ya2wOgQmRajHUM2iXNleyfegyPmQtgRmXVR3rM+HZgnCuX4A==}
-    peerDependencies:
-      react: ^18.0.0
-      react-dom: ^18.0.0
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      '@tanstack/query-core': 5.0.0-alpha.31
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@testing-library/dom@8.20.0:
@@ -11342,10 +11315,6 @@ packages:
       mdast-util-to-string: 1.1.0
       unist-util-visit: 2.0.3
     dev: true
-
-  /remeda@1.19.0:
-    resolution: {integrity: sha512-iwZohiXDhC1K+adRI6OB+tYxOfXyX7DaPXQDZrR5s1k7umrkG3Yd2+QDfSrYFlC7oc0IqeUns6RqSjNkERXeLw==}
-    dev: false
 
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}

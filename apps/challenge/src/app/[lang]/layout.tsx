@@ -9,8 +9,6 @@ import { notoSansKR } from '@/fonts';
 import type { Locale } from '@/types';
 import { preloadDictionaries } from '@/utils';
 
-import Providers from '../Providers';
-
 export const metadata: Metadata = {
   description: 'Challenge',
   robots: { follow: true, index: true },
@@ -44,7 +42,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children, params: { lang } }) => {
         <div className="flex justify-end p-4">
           <ThemeSwitch />
         </div>
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );
