@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import type { FC, ReactNode } from 'react';
 
 import { PokemonAPI } from '@/api';
+import { ThemeSwitch } from '@/components/ThemeSwitch';
 import { notoSansKR } from '@/fonts';
 import type { Locale } from '@/types';
 import { preloadDictionaries } from '@/utils';
@@ -39,10 +40,11 @@ const RootLayout: FC<RootLayoutProps> = ({ children, params: { lang } }) => {
           }}
         />
       </head>
-      <body className="min-w-[320px] text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200">
-        <div className="mx-auto max-w-screen-sm">
-          <Providers>{children}</Providers>
+      <body className="mx-auto min-w-[320px] max-w-screen-sm text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200">
+        <div className="flex justify-end p-4">
+          <ThemeSwitch />
         </div>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
