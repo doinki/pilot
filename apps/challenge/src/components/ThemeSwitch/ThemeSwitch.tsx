@@ -20,7 +20,7 @@ const ThemeSwitch = () => {
     <button
       aria-label={isMounted ? (isDark ? 'dark' : 'light') : undefined}
       aria-live="polite"
-      className="h-12 w-12 rounded-full text-neutral-600 outline-offset-4 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300"
+      className="h-12 w-12 rounded-full text-neutral-600 outline-offset-4 tap-highlight-transparent hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300"
       title="Theme Switch"
       type="button"
       onClick={() => {
