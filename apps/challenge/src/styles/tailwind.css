@@ -1,16 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  body {
-    min-width: 320px;
-    @apply text-neutral-800;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      @apply bg-neutral-800 text-neutral-200;
-    }
-  }
-}
