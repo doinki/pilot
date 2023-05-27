@@ -18,7 +18,7 @@
     "clean": "rimraf .turbo && rimraf coverage && rimraf dist && rimraf node_modules && rimraf storybook-static && rimraf .eslintcache"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.22.0",
+    "@babel/runtime": "^7.22.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.2"
@@ -31,11 +31,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
-    "@babel/plugin-transform-runtime": "^7.22.0",
-    "@babel/preset-env": "^7.22.1",
-    "@babel/preset-react": "^7.22.0",
+    "@babel/plugin-transform-runtime": "^7.22.2",
+    "@babel/preset-env": "^7.22.2",
+    "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
-    "@babel/runtime": "^7.22.0",
+    "@babel/runtime": "^7.22.3",
     "@pilot/tsconfig": "workspace:^",
     "@pilot/types": "workspace:^",
     "@rollup/plugin-babel": "^6.0.3",
@@ -57,7 +57,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.1",
-    "@types/node": "^18.16.15",
+    "@types/node": "^18.16.16",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "@types/testing-library__jest-dom": "^5.14.6",
