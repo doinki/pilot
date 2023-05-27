@@ -1,10 +1,22 @@
 import { Divider } from '@pilot/ui';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { PokemonAPI } from '@/api';
 import type { DictionaryPokemonKey, Locale } from '@/types';
 import { getDictionary } from '@/utils';
+
+export const generateMetadata = ({ params: { name } }: PageProps): Metadata => {
+  return {
+    alternates: {
+      languages: {
+        en: new URL(`/en/pokemon/${name}`, process.env.URL).href,
+        ko: new URL(`/ko/pokemon/${name}`, process.env.URL).href,
+      },
+    },
+  };
+};
 
 export const generateStaticParams = async () => {
   return [];
