@@ -1,6 +1,6 @@
 {
   "name": "pilot",
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "private": true,
   "version": "1.0.0",
   "workspaces": [
@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "dev": "turbo run dev --concurrency=12",
-    "dev:crog": "turbo run dev --filter=crog...",
     "storybook": "turbo run storybook",
     "build": "turbo run build",
     "build:storybook": "turbo run build:storybook",
@@ -40,8 +39,7 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
-        "preact",
-        "webpack"
+        "preact"
       ]
     }
   }
