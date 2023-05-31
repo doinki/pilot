@@ -39,7 +39,7 @@
     "@pilot/tsconfig": "workspace:^",
     "@pilot/types": "workspace:^",
     "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.1",
     "@storybook/addon-a11y": "^7.0.18",
