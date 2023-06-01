@@ -1,5 +1,7 @@
+import { isDate } from '../isDate';
+
 const isValidDate = (date: unknown): date is Date => {
-  return date instanceof Date && !Number.isNaN(date.getTime());
+  return isDate(date) && !Number.isNaN(date.getTime());
 };
 
 export default isValidDate;
