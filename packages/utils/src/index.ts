@@ -1,6 +1,7 @@
 export * from './isArrayLike';
 export * from './isBrowser';
 export * from './isDate';
+export * from './isFunction';
 export * from './isLength';
 export * from './isNil';
 export * from './isSafari';
