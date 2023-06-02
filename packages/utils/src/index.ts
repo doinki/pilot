@@ -4,6 +4,7 @@ export * from './isBoolean';
 export * from './isBrowser';
 export * from './isDate';
 export * from './isDefined';
+export * from './isEmpty';
 export * from './isFunction';
 export * from './isLength';
 export * from './isNil';
