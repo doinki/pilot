@@ -41,6 +41,6 @@
     "jest-environment-jsdom": "^29.5.0",
     "rimraf": "^5.0.1",
     "rollup": "^3.23.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }

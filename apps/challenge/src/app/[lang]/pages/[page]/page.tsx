@@ -30,8 +30,7 @@ interface PageProps {
   params: { lang: Locale; page: string };
 }
 
-/* @ts-expect-error Async Server component */
-const PokemonCardSkeleton = <PokemonCard loading />;
+const PokemonCardSkeleton = <PokemonCard id={0} name="" loading />;
 
 const Page = async ({ params }: PageProps) => {
   const page = Number(params.page);
@@ -53,7 +52,6 @@ const Page = async ({ params }: PageProps) => {
                 href={`/${params.lang}/pokemon/${name}` as Route}
               >
                 <Suspense fallback={PokemonCardSkeleton}>
-                  {/* @ts-expect-error Async Server component */}
                   <PokemonCard id={id} lang={params.lang} name={name} />
                 </Suspense>
               </Link>

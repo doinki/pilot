@@ -1,4 +1,9 @@
-import type { ComponentPropsWithRef, CSSProperties, ElementType } from 'react';
+import type {
+  ComponentPropsWithRef,
+  CSSProperties,
+  ElementType,
+  ReactNode,
+} from 'react';
 
 export type DistributiveOmit<T, K extends keyof any> = T extends any
   ? Omit<T, K>
@@ -31,6 +36,6 @@ export type DefaultComponentProps<M extends OverridableTypeMap> = BaseProps<M> &
 export interface OverridableComponent<M extends OverridableTypeMap> {
   <C extends ElementType>(
     props: { component: C } & OverrideProps<M, C>
-  ): JSX.Element | null;
-  (props: DefaultComponentProps<M>): JSX.Element | null;
+  ): ReactNode;
+  (props: DefaultComponentProps<M>): ReactNode;
 }

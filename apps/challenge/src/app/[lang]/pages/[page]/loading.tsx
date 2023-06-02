@@ -1,8 +1,7 @@
 import { PokemonCard } from '@/components/PokemonCard';
 import { PokemonList } from '@/components/PokemonList';
 
-/* @ts-expect-error Async Server component */
-const PokemonCardSkeleton = <PokemonCard id={0} loading />;
+const PokemonCardSkeleton = <PokemonCard id={0} name="" loading />;
 
 const Loading = () => {
   return (
