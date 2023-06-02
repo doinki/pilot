@@ -10,6 +10,7 @@ export * from './isFunction';
 export * from './isLength';
 export * from './isNil';
 export * from './isNumber';
+export * from './isObject';
 export * from './isObjectLike';
 export * from './isPromise';
 export * from './isSafari';
