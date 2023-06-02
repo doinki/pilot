@@ -6,5 +6,6 @@ export * from './isLength';
 export * from './isNil';
 export * from './isObjectLike';
 export * from './isSafari';
+export * from './isTruthy';
 export * from './isValidDate';
 export * from './noop';
