@@ -5,6 +5,7 @@ export * from './isFunction';
 export * from './isLength';
 export * from './isNil';
 export * from './isObjectLike';
+export * from './isPromise';
 export * from './isSafari';
 export * from './isString';
 export * from './isTruthy';
