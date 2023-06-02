@@ -4,6 +4,7 @@ export * from './isDate';
 export * from './isFunction';
 export * from './isLength';
 export * from './isNil';
+export * from './isObjectLike';
 export * from './isSafari';
 export * from './isValidDate';
 export * from './noop';
