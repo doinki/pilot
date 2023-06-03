@@ -15,7 +15,7 @@
     "tailwind-merge": "^1.13.0"
   },
   "devDependencies": {
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "eslint-config-pilot": "workspace:^",
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.2"

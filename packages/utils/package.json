@@ -35,7 +35,7 @@
     "@swc/jest": "^0.2.26",
     "@types/jest": "^29.5.2",
     "@types/node": "^18.16.16",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "eslint-config-pilot": "workspace:^",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
