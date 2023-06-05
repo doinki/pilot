@@ -1,3 +1,4 @@
+export * from './getAllFilePaths';
 export * from './isArray';
 export * from './isArrayLike';
 export * from './isBoolean';
