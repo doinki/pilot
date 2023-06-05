@@ -1,10 +1,7 @@
-export interface Noop {
-  (): void;
-  <T>(value: T): T;
-}
-
-const noop: Noop = <T>(value?: T) => {
+function noop(): void;
+function noop<T>(value: T): T;
+function noop<T>(value?: T) {
   return value;
-};
+}
 
 export default noop;
