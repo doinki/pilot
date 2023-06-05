@@ -14,4 +14,12 @@ module.exports = {
   output: 'standalone',
   poweredByHeader: false,
   typescript: { tsconfigPath: 'tsconfig.build.json' },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+      config.resolve.fallback.path = false;
+    }
+
+    return config;
+  },
 };

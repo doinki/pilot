@@ -1,5 +1,5 @@
-import { readdirSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { readdirSync } from 'fs';
+import { resolve } from 'path';
 
 function* getAllFilePaths(path: string): IterableIterator<string> {
   const dirents = readdirSync(path, { withFileTypes: true });
