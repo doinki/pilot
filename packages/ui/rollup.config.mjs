@@ -18,7 +18,6 @@ const rollupConfig = [
     output: {
       dir: 'dist',
       entryFileNames: '[name].mjs',
-      format: 'esm',
       preserveModules: true,
       sourcemap: true,
     },
