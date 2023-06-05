@@ -3,7 +3,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
-const isDevelopment = process.env.NODE_ENV === 'development';
 const isProduction = process.env.NODE_ENV === 'production';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -20,7 +19,7 @@ const rollupConfig = [
       entryFileNames: '[name].mjs',
       format: 'esm',
       preserveModules: true,
-      sourcemap: isDevelopment,
+      sourcemap: true,
     },
     plugins: [
       babel({
@@ -53,7 +52,7 @@ const rollupConfig = [
       dir: 'dist/node',
       format: 'cjs',
       preserveModules: true,
-      sourcemap: isDevelopment,
+      sourcemap: true,
     },
     plugins: [
       babel({
