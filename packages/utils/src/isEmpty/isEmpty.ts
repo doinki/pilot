@@ -2,7 +2,7 @@ import { isArray } from '../isArray';
 import { isObjectLike } from '../isObjectLike';
 import { isString } from '../isString';
 
-const isEmpty = (value: unknown): boolean => {
+function isEmpty(value: unknown): boolean {
   if (isString(value) || isArray(value)) {
     return value.length === 0;
   }
@@ -12,6 +12,6 @@ const isEmpty = (value: unknown): boolean => {
   }
 
   return false;
-};
+}
 
 export default isEmpty;

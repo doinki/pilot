@@ -1,5 +1,5 @@
-const isArray = (value: unknown): value is any[] => {
+function isArray(value: unknown): value is any[] {
   return Array.isArray(value);
-};
+}
 
 export default isArray;

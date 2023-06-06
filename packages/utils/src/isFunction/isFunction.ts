@@ -1,4 +1,5 @@
-const isFunction = (value: unknown): value is (...args: any[]) => any =>
-  typeof value === 'function';
+function isFunction(value: unknown): value is (...args: any[]) => any {
+  return typeof value === 'function';
+}
 
 export default isFunction;
