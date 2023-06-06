@@ -45,3 +45,6 @@ next-env.d.ts
 # storybook
 storybook-static
 build-storybook.log
+
+# icons
+!packages/icons/material-design-icons/**/*
