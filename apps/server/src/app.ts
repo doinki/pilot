@@ -34,7 +34,7 @@ server.keepAliveTimeout = KEEP_ALIVE_TIMEOUT;
 
 const signals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
 signals.forEach((signal) => {
-  process.once(signal, () => {
+  process.on(signal, () => {
     console.log(`\n\nProcess received a ${signal} signal\n\n`);
     isShuttingDown = true;
 
