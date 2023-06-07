@@ -1,7 +1,7 @@
 import express from 'express';
 
 const PORT = process.env.PORT ?? 8080;
-const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) ?? 65000;
+const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) || 65000;
 let isShuttingDown = false;
 
 const app = express();
