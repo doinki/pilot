@@ -48,3 +48,8 @@ build-storybook.log
 
 # icons
 !packages/icons/material-design-icons/**/*
+
+# playwright
+test-results
+playwright-report
+playwright/.cache

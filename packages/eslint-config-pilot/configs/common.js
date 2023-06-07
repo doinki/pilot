@@ -16,6 +16,7 @@ module.exports = {
       {
         devDependencies: [
           '**/*.config.*',
+          '**/*.spec.ts?(x)',
           '**/*.test.ts?(x)',
           '**/jest.setup.ts',
           '**/scripts/**/*',
