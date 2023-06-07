@@ -7,6 +7,7 @@ module.exports = {
   ignorePatterns: ['coverage', 'dist', 'public', 'storybook-static'],
   rules: {
     '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
