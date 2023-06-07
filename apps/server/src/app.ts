@@ -36,6 +36,11 @@ const signals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
 signals.forEach((signal) => {
   process.on(signal, () => {
     console.log(`\n\nProcess received a ${signal} signal\n\n`);
+
+    if (isShuttingDown) {
+      return;
+    }
+
     isShuttingDown = true;
 
     server.close((err) => {
