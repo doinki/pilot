@@ -6,6 +6,7 @@ const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) || 65000;
 let isShuttingDown = false;
 
 const app = express();
+app.disable('x-powered-by');
 app.response.originalSend = app.response.send;
 app.response.send = function (this: Response, body) {
   if (isShuttingDown) {
