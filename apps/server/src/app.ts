@@ -1,4 +1,3 @@
-import type { Response } from 'express';
 import express from 'express';
 import morgan from 'morgan';
 
@@ -10,7 +9,7 @@ let isShuttingDown = false;
 const app = express();
 app.disable('x-powered-by');
 app.response.originalSend = app.response.send;
-app.response.send = function (this: Response, body) {
+app.response.send = function (body) {
   if (isShuttingDown) {
     this.shouldKeepAlive = false;
   }
