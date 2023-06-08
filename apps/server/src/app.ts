@@ -1,3 +1,4 @@
+import type { Response } from 'express';
 import express from 'express';
 
 const PORT = process.env.PORT ?? 8080;
@@ -5,20 +6,15 @@ const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) || 65000;
 let isShuttingDown = false;
 
 const app = express();
+app.response.originalSend = app.response.send;
+app.response.send = function (this: Response, body) {
+  if (isShuttingDown) {
+    this.shouldKeepAlive = false;
+  }
 
-app.use((_, res, next) => {
-  const { send } = res;
-
-  res.send = (body) => {
-    if (isShuttingDown) {
-      res.shouldKeepAlive = false;
-    }
-
-    return send.call(res, body);
-  };
-
-  next();
-});
+  // eslint-disable-next-line
+  return this.originalSend(body);
+};
 
 app.get('/health', (_, res) => {
   res.type('text/plain');
