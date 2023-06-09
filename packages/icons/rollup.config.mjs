@@ -24,7 +24,7 @@ const rollupConfig = [
       babel({
         babelHelpers: 'runtime',
         extensions,
-        plugins: [['@babel/plugin-transform-runtime', { version: '^7.22.3' }]],
+        plugins: [['@babel/plugin-transform-runtime', { version: '^7.22.5' }]],
         presets: [
           ['@babel/preset-env', { browserslistEnv: process.env.NODE_ENV }],
           ['@babel/preset-react', { runtime: 'automatic' }],
@@ -57,7 +57,7 @@ const rollupConfig = [
       babel({
         babelHelpers: 'runtime',
         extensions,
-        plugins: [['@babel/plugin-transform-runtime', { version: '^7.22.3' }]],
+        plugins: [['@babel/plugin-transform-runtime', { version: '^7.22.5' }]],
         presets: [
           ['@babel/preset-env', { browserslistEnv: 'node' }],
           ['@babel/preset-react', { runtime: 'automatic' }],
