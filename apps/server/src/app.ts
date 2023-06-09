@@ -1,9 +1,11 @@
+import { config } from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT ?? 4000;
 const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) || 65000;
+config();
 
 const app = express();
 app.disable('x-powered-by');

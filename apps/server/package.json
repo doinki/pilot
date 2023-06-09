@@ -12,6 +12,8 @@
   "dependencies": {
     "@pilot/utils": "workspace:^",
     "@swc/helpers": "^0.5.1",
+    "axios": "^1.4.0",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "morgan": "^1.10.0"
   },
