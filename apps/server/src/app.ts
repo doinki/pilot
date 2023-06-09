@@ -4,20 +4,9 @@ import morgan from 'morgan';
 const isProduction = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT ?? 4000;
 const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) || 65000;
-let isShuttingDown = false;
 
 const app = express();
 app.disable('x-powered-by');
-app.response.originalSend = app.response.send;
-app.response.send = function (body) {
-  if (isShuttingDown) {
-    this.shouldKeepAlive = false;
-  }
-
-  // eslint-disable-next-line
-  return this.originalSend(body);
-};
-
 app.use(morgan(isProduction ? 'combined' : 'dev'));
 
 app.get('/health', (_, res) => {
@@ -37,11 +26,17 @@ signals.forEach((signal) => {
   process.on(signal, () => {
     console.log(`\n\nProcess received a ${signal} signal\n\n`);
 
-    if (isShuttingDown) {
+    if (app.response.originalSend) {
       return;
     }
 
-    isShuttingDown = true;
+    app.response.originalSend = app.response.send;
+    app.response.send = function (body) {
+      this.shouldKeepAlive = false;
+
+      // eslint-disable-next-line
+      return this.originalSend(body);
+    };
 
     server.close((err) => {
       if (err) {
