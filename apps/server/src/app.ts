@@ -7,6 +7,7 @@ import { from, mergeAll } from 'rxjs';
 import route from './routes/route';
 import kakaoBlogPosts$ from './services/kakaoBlogPosts';
 import kakaoFrontendBlogPosts$ from './services/kakaoFrontendBlogPosts';
+import lineBlogPosts$ from './services/lineBlogPosts';
 
 config();
 const isProduction = process.env.NODE_ENV === 'production';
@@ -28,7 +29,7 @@ const server = app.listen(PORT, () => {
 server.keepAliveTimeout = KEEP_ALIVE_TIMEOUT;
 
 setInterval(() => {
-  from([kakaoFrontendBlogPosts$, kakaoBlogPosts$])
+  from([lineBlogPosts$, kakaoFrontendBlogPosts$, kakaoBlogPosts$])
     .pipe(mergeAll())
     .subscribe({
       error: console.error,
