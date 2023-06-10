@@ -21,7 +21,7 @@
     "@pilot/tsconfig": "workspace:^",
     "@types/express": "^4.17.17",
     "@types/morgan": "^1.9.4",
-    "@types/node": "^18.16.16",
+    "@types/node": "^18.16.17",
     "eslint": "^8.42.0",
     "eslint-config-pilot": "workspace:^",
     "nodemon": "^2.0.22",

@@ -26,13 +26,13 @@
     "@swc/helpers": "^0.5.1",
     "@swc/jest": "^0.2.26",
     "@types/jest": "^29.5.2",
-    "@types/node": "^18.16.16",
+    "@types/node": "^18.16.17",
     "eslint": "^8.42.0",
     "eslint-config-pilot": "workspace:^",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "rimraf": "^5.0.1",
-    "rollup": "^3.24.0",
+    "rollup": "^3.24.1",
     "rollup-plugin-swc3": "^0.8.2",
     "typescript": "^5.1.3"
   }
