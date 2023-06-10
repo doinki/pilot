@@ -2,9 +2,11 @@ import { PrismaClient } from '@prisma/client';
 import { config } from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
+import { from, mergeAll } from 'rxjs';
 
 import route from './routes/route';
 import kakaoBlogPosts$ from './services/kakaoBlogPosts';
+import kakaoFrontendBlogPosts$ from './services/kakaoFrontendBlogPosts';
 
 config();
 const isProduction = process.env.NODE_ENV === 'production';
@@ -26,20 +28,24 @@ const server = app.listen(PORT, () => {
 server.keepAliveTimeout = KEEP_ALIVE_TIMEOUT;
 
 setInterval(() => {
-  kakaoBlogPosts$.subscribe({
-    error: console.error,
-    next: (newPost) => {
-      prisma.post.findFirst({ where: { href: newPost.href } }).then((post) => {
-        if (post) {
-          return null;
-        }
+  from([kakaoFrontendBlogPosts$, kakaoBlogPosts$])
+    .pipe(mergeAll())
+    .subscribe({
+      error: console.error,
+      next: (newPost) => {
+        prisma.post
+          .findFirst({ where: { href: newPost.href } })
+          .then((post) => {
+            if (post) {
+              return null;
+            }
 
-        return prisma.post.create({
-          data: newPost,
-        });
-      });
-    },
-  });
+            return prisma.post.create({
+              data: newPost,
+            });
+          });
+      },
+    });
 }, 60 * 60 * 1000);
 
 const signals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
