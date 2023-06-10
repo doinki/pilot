@@ -5,9 +5,11 @@
   "name": "server",
   "private": true,
   "scripts": {
+    "generate": "prisma generate",
     "dev": "nodemon --exec ts-node --files src/app.ts",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "start": "NODE_ENV=production node dist/app.js",
+    "clean": "rimraf .turbo && rimraf dist && rimraf node_modules",
     "prepare": "node scripts/prepare.js"
   },
   "dependencies": {
