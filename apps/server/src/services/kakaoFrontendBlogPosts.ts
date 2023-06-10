@@ -43,6 +43,7 @@ const kakaoFrontendBlogPosts$ = fetchKakaoFrontendBlogPosts$.pipe(
         [element]
       )
     ).trim(),
+    copyright: 'kakao',
     date:
       DomUtils.findAll(
         (element) => element.attribs.class?.includes('PostDate-module--date--'),

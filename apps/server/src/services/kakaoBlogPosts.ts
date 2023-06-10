@@ -37,6 +37,7 @@ const kakaoBlogPosts$ = fetchKakaoBlogPosts$.pipe(
         [element]
       )
     ).trim(),
+    copyright: 'kakao',
     date:
       DomUtils.findAll(
         (element) => element.attribs.class?.includes('elementor-post-date'),

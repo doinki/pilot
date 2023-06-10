@@ -38,6 +38,7 @@ const lineBlogPosts$ = fetchLineBlogPosts$.pipe(
     content: DomUtils.textContent(
       selectOne('p.desc span.text', element)!
     ).trim(),
+    copyright: 'LINE',
     date: DomUtils.textContent(
       DomUtils.findAll(
         (element) =>
