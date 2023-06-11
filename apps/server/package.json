@@ -1,6 +1,7 @@
 {
   "files": [
-    "dist"
+    "dist",
+    "prisma"
   ],
   "name": "server",
   "private": true,
@@ -10,14 +11,12 @@
     "prebuild": "rimraf dist && pnpm generate",
     "build": "pnpm prebuild && tsc -p tsconfig.build.json",
     "start": "NODE_ENV=production node dist/app.js",
+    "lint": "eslint --cache .",
     "clean": "rimraf .turbo && rimraf dist && rimraf node_modules",
     "prepare": "node scripts/prepare.js"
   },
   "dependencies": {
-    "@pilot/utils": "workspace:^",
     "@prisma/client": "4.15.0",
-    "@swc/helpers": "^0.5.1",
-    "axios": "^1.4.0",
     "css-select": "^5.1.0",
     "date-fns": "^2.30.0",
     "dotenv": "^16.1.4",
