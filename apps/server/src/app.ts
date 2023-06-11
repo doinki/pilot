@@ -1,9 +1,9 @@
-import { PrismaClient } from '@prisma/client';
 import { config } from 'dotenv';
 import express from 'express';
 import morgan from 'morgan';
 import { from, mergeAll } from 'rxjs';
 
+import prisma from './prisma';
 import route from './routes/route';
 import kakaoBlogPosts$ from './services/kakaoBlogPosts';
 import kakaoFrontendBlogPosts$ from './services/kakaoFrontendBlogPosts';
@@ -13,8 +13,6 @@ config();
 const isProduction = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT ?? 4000;
 const KEEP_ALIVE_TIMEOUT = Number(process.env.KEEP_ALIVE_TIMEOUT) || 65000;
-
-const prisma = new PrismaClient();
 
 const app = express();
 app.disable('x-powered-by');

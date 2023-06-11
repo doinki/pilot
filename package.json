@@ -15,7 +15,7 @@
     "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
     "challenge": "pnpm --filter=challenge",
-    "server": "pnpm --filter=challenge",
+    "api": "pnpm --filter=api",
     "hooks": "pnpm --filter=@pilot/hooks",
     "icons": "pnpm --filter=@pilot/icons",
     "tailwindcss": "pnpm --filter=@pilot/tailwindcss",

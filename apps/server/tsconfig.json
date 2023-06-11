@@ -1,11 +1,9 @@
 {
   "extends": "@pilot/tsconfig/base",
   "compilerOptions": {
-    "baseUrl": ".",
     "declaration": false,
     "module": "CommonJS",
     "noEmit": false,
-    "outDir": "dist",
-    "paths": { "@/*": ["./src/*"] }
+    "outDir": "dist"
   }
 }
