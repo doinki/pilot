@@ -1,17 +1,10 @@
 import { format, parse } from 'date-fns';
 import { DomUtils, parseDocument } from 'htmlparser2';
-import { concatMap, filter, from, map, retry, switchMap } from 'rxjs';
-import { fromFetch } from 'rxjs/fetch';
+import { concatMap, filter, from, map, retry } from 'rxjs';
 
-const fetchKakaoBlogPosts$ = fromFetch('https://tech.kakao.com/blog/').pipe(
-  switchMap((res) => {
-    if (!res.ok) {
-      throw new Error('Failed to fetch');
-    }
+import fetch from '../observable/fetch';
 
-    return res.text();
-  })
-);
+const fetchKakaoBlogPosts$ = fetch('https://tech.kakao.com/blog/');
 
 const kakaoBlogPosts$ = fetchKakaoBlogPosts$.pipe(
   map((html) => parseDocument(html)),

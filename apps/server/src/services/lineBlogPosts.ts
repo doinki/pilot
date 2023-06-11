@@ -1,19 +1,10 @@
 import { selectOne } from 'css-select';
 import { DomUtils, parseDocument } from 'htmlparser2';
-import { concatMap, filter, from, map, retry, switchMap } from 'rxjs';
-import { fromFetch } from 'rxjs/fetch';
+import { concatMap, filter, from, map, retry } from 'rxjs';
 
-const fetchLineBlogPosts$ = fromFetch(
-  'https://engineering.linecorp.com/ko/blog'
-).pipe(
-  switchMap((res) => {
-    if (!res.ok) {
-      throw new Error('Failed to fetch');
-    }
+import fetch from '../observable/fetch';
 
-    return res.text();
-  })
-);
+const fetchLineBlogPosts$ = fetch('https://engineering.linecorp.com/ko/blog');
 
 const lineBlogPosts$ = fetchLineBlogPosts$.pipe(
   map((html) => parseDocument(html)),
