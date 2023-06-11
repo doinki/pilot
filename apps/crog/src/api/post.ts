@@ -10,7 +10,7 @@ export const getPosts = async (
   url.searchParams.set('page', String(page));
   url.searchParams.set('size', String(size));
 
-  const res = await fetch(url);
+  const res = await fetch(url, { next: { revalidate: 60 * 60 } });
 
   if (!res.ok) {
     throw new Error(res.statusText);
