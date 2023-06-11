@@ -1,9 +1,16 @@
 export interface Post {
   author: string;
+  content: string;
   copyright: string;
   date: string;
-  description: string;
   href: string;
-  tags: string[];
+  id: number;
   title: string;
+}
+
+export interface GetPostsResponse {
+  count: number;
+  data: Post[];
+  next: string;
+  previous: string;
 }

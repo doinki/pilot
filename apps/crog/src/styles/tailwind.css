@@ -4,13 +4,6 @@
 
 @layer base {
   body {
-    min-width: 320px;
-    @apply text-neutral-800;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      @apply bg-neutral-800 text-neutral-200;
-    }
+    @apply text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 min-w-[320px];
   }
 }
