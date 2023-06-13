@@ -9,6 +9,7 @@ import kakaoBlogPosts$ from './services/kakaoBlogPosts';
 import kakaoFrontendBlogPosts$ from './services/kakaoFrontendBlogPosts';
 import lineBlogPosts$ from './services/lineBlogPosts';
 import tossBlogPosts$ from './services/tossBlogPosts';
+import woowahanBlogPosts$ from './services/woowahanBlogPosts';
 
 config();
 const isProduction = process.env.NODE_ENV === 'production';
@@ -29,6 +30,7 @@ server.keepAliveTimeout = KEEP_ALIVE_TIMEOUT;
 
 setInterval(() => {
   from([
+    woowahanBlogPosts$,
     tossBlogPosts$,
     lineBlogPosts$,
     kakaoFrontendBlogPosts$,
