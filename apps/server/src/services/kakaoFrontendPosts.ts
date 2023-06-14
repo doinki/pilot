@@ -4,11 +4,9 @@ import { concatMap, filter, from, map, retry } from 'rxjs';
 
 import fetch from '../observable/fetch';
 
-const fetchKakaoFrontendBlogPosts$ = fetch(
-  'https://fe-developers.kakaoent.com'
-);
+const fetchKakaoFrontendPosts$ = fetch('https://fe-developers.kakaoent.com');
 
-const kakaoFrontendBlogPosts$ = fetchKakaoFrontendBlogPosts$.pipe(
+const kakaoFrontendPosts$ = fetchKakaoFrontendPosts$.pipe(
   map((html) => parseDocument(html)),
   map((document) =>
     DomUtils.findAll(
@@ -70,4 +68,4 @@ const kakaoFrontendBlogPosts$ = fetchKakaoFrontendBlogPosts$.pipe(
   retry(1)
 );
 
-export default kakaoFrontendBlogPosts$;
+export default kakaoFrontendPosts$;

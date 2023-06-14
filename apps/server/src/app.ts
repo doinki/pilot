@@ -5,11 +5,11 @@ import { from, mergeAll } from 'rxjs';
 
 import prisma from './prisma';
 import route from './routes/route';
-import kakaoBlogPosts$ from './services/kakaoBlogPosts';
-import kakaoFrontendBlogPosts$ from './services/kakaoFrontendBlogPosts';
-import lineBlogPosts$ from './services/lineBlogPosts';
-import tossBlogPosts$ from './services/tossBlogPosts';
-import woowahanBlogPosts$ from './services/woowahanBlogPosts';
+import kakaoFrontendPosts$ from './services/kakaoFrontendPosts';
+import kakaoPosts$ from './services/kakaoPosts';
+import linePosts$ from './services/linePosts';
+import tossPosts$ from './services/tossPosts';
+import woowahanPosts$ from './services/woowahanPosts';
 
 config();
 const isProduction = process.env.NODE_ENV === 'production';
@@ -30,11 +30,11 @@ server.keepAliveTimeout = KEEP_ALIVE_TIMEOUT;
 
 setInterval(() => {
   from([
-    woowahanBlogPosts$,
-    tossBlogPosts$,
-    lineBlogPosts$,
-    kakaoFrontendBlogPosts$,
-    kakaoBlogPosts$,
+    kakaoFrontendPosts$,
+    kakaoPosts$,
+    linePosts$,
+    tossPosts$,
+    woowahanPosts$,
   ])
     .pipe(mergeAll())
     .subscribe({

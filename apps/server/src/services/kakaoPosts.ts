@@ -4,9 +4,9 @@ import { concatMap, filter, from, map, retry } from 'rxjs';
 
 import fetch from '../observable/fetch';
 
-const fetchKakaoBlogPosts$ = fetch('https://tech.kakao.com/blog/');
+const fetchKakaoPosts$ = fetch('https://tech.kakao.com/blog/');
 
-const kakaoBlogPosts$ = fetchKakaoBlogPosts$.pipe(
+const kakaoPosts$ = fetchKakaoPosts$.pipe(
   map((html) => parseDocument(html)),
   map((document) =>
     DomUtils.findAll(
@@ -58,4 +58,4 @@ const kakaoBlogPosts$ = fetchKakaoBlogPosts$.pipe(
   retry(1)
 );
 
-export default kakaoBlogPosts$;
+export default kakaoPosts$;
