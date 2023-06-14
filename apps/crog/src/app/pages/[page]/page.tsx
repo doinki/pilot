@@ -79,7 +79,7 @@ const Page = async ({ params }: PageProps) => {
                 rel="noreferrer"
                 target="_blank"
               >
-                <p className="line-clamp-5">{content}</p>
+                <p className="line-clamp-4">{content.substring(0, 300)}</p>
               </a>
               <footer>
                 <cite>{copyright}</cite>
