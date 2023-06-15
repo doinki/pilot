@@ -30,7 +30,7 @@
   "devDependencies": {
     "@pilot/tsconfig": "workspace:^",
     "@pilot/types": "workspace:^",
-    "@playwright/test": "^1.35.0",
+    "@playwright/test": "^1.35.1",
     "@types/negotiator": "^0.6.1",
     "@types/node": "^18.16.18",
     "@types/react": "^18.2.12",
