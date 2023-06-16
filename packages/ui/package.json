@@ -28,7 +28,7 @@
     "@pilot/hooks": "workspace:^",
     "@pilot/tailwindcss": "workspace:^",
     "@pilot/utils": "workspace:^",
-    "tailwind-merge": "^1.13.1"
+    "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
