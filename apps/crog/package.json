@@ -3,7 +3,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev:mobile": "TARGET=mobile next dev -p 3000",
+    "dev:desktop": "TARGET=desktop next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

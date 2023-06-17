@@ -15,6 +15,7 @@
     "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
     "challenge": "pnpm --filter=challenge",
+    "crog": "pnpm --filter=crog",
     "api": "pnpm --filter=api",
     "hooks": "pnpm --filter=@pilot/hooks",
     "icons": "pnpm --filter=@pilot/icons",
