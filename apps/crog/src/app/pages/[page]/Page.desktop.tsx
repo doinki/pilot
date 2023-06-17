@@ -68,7 +68,7 @@ const Page = async ({ params }: PageProps) => {
                   </time>
                 </section>
               </header>
-              <a href={href} rel="noreferrer" target="_blank">
+              <a href={href} rel="noreferrer" tabIndex={-1} target="_blank">
                 <p className="line-clamp-6">{content.substring(0, 640)}</p>
               </a>
               <footer>
@@ -92,6 +92,7 @@ const Page = async ({ params }: PageProps) => {
           )}
           href={minPage === 1 ? '/' : `/pages/${minPage - 1}`}
           prefetch={minPage !== 1}
+          tabIndex={minPage === 1 ? -1 : 0}
         >
           이전
         </Link>
@@ -113,8 +114,9 @@ const Page = async ({ params }: PageProps) => {
             maxPage === totalPages &&
               'pointer-events-none border-neutral-200 text-neutral-200 dark:border-neutral-600 dark:text-neutral-600'
           )}
-          href={minPage === totalPages ? '/' : `/pages/${maxPage + 1}`}
+          href={maxPage === totalPages ? '/' : `/pages/${maxPage + 1}`}
           prefetch={maxPage !== totalPages}
+          tabIndex={maxPage === totalPages ? -1 : 0}
         >
           다음
         </Link>
