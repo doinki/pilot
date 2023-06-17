@@ -37,7 +37,7 @@ const Page = async ({ params }: PageProps) => {
   );
 
   return (
-    <main className="px-12">
+    <main className="mx-auto w-[960px] px-12">
       <Stack
         className="prose-lg prose-neutral dark:prose-invert"
         component="ul"

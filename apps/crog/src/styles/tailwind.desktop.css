@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply mx-auto w-[960px] text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200;
+    @apply mx-auto text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200;
   }
 }

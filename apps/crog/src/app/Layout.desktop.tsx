@@ -2,6 +2,7 @@ import '@/styles/tailwind.desktop.css';
 
 import type { FC, ReactElement } from 'react';
 
+import { ThemeSwitch } from '@/components/ThemeSwitch';
 import { notoSansKR } from '@/fonts';
 
 const RootLayout: FC<{
@@ -18,7 +19,12 @@ const RootLayout: FC<{
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <section className="min-w-[960px] p-8 text-end">
+          <ThemeSwitch />
+        </section>
+        {children}
+      </body>
     </html>
   );
 };
