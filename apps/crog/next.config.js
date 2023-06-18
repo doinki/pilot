@@ -2,12 +2,18 @@ let distDir = '.next';
 let tsconfigPath = 'tsconfig.build.json';
 
 if (process.env.NODE_ENV === 'development') {
-  if (process.env.TARGET === 'mobile') {
-    distDir = '.next-mobile';
-    tsconfigPath = 'tsconfig.mobile.json';
-  } else if (process.env.TARGET === 'desktop') {
-    distDir = '.next-desktop';
-    tsconfigPath = 'tsconfig.desktop.json';
+  switch (process.env.TARGET) {
+    case 'mobile':
+      distDir = '.next-mobile';
+      tsconfigPath = 'tsconfig.mobile.json';
+      break;
+    case 'desktop':
+      distDir = '.next-desktop';
+      tsconfigPath = 'tsconfig.desktop.json';
+      break;
+    default:
+      console.error('Invalid TARGET');
+      process.exit(1);
   }
 }
 
