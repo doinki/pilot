@@ -37,6 +37,8 @@ const nextConfig = {
       });
       config.plugins.push(
         new webpack.DefinePlugin({
+          __SENTRY_DEBUG__: false,
+          __SENTRY_TRACING__: false,
           'process.env.TARGET': JSON.stringify('mobile'),
         })
       );
@@ -47,6 +49,8 @@ const nextConfig = {
       });
       config.plugins.push(
         new webpack.DefinePlugin({
+          __SENTRY_DEBUG__: false,
+          __SENTRY_TRACING__: false,
           'process.env.TARGET': JSON.stringify('desktop'),
         })
       );
