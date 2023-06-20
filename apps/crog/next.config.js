@@ -1,3 +1,5 @@
+const { withSentryConfig } = require('@sentry/nextjs');
+
 let distDir = '.next';
 let tsconfigPath = 'tsconfig.build.json';
 
@@ -20,7 +22,7 @@ if (process.env.NODE_ENV === 'development') {
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = {
+const nextConfig = {
   compress: process.env.NODE_ENV === 'development',
   distDir,
   eslint: { ignoreDuringBuilds: true },
@@ -58,3 +60,15 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = withSentryConfig(
+  nextConfig,
+  { org: 'sentry', project: 'crog', silent: true },
+  {
+    disableLogger: true,
+    hideSourceMaps: true,
+    transpileClientSDK: true,
+    tunnelRoute: '/monitoring',
+    widenClientFileUpload: true,
+  }
+);
