@@ -30,6 +30,9 @@ const nextConfig = {
   poweredByHeader: false,
   typescript: { tsconfigPath },
   webpack: (config, { isServer, webpack }) => {
+    process.env.BROWSERSLIST_ENV =
+      process.env.NODE_ENV === 'production' ? 'next' : 'development';
+
     if (process.env.TARGET === 'mobile') {
       config.module.rules.push({
         test: /desktop\./,

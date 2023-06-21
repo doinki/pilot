@@ -8,3 +8,7 @@ defaults and supports bigint
 
 [node]
 node 18
+
+[next]
+defaults and supports bigint
+node 16
