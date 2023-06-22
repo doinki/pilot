@@ -42,7 +42,7 @@ const rollupConfig = [
         noForceEmit: true,
         tsconfig: 'tsconfig.build.json',
       }),
-      preserveDirectives.default(),
+      preserveDirectives,
       isProduction && terser(),
     ],
   },
@@ -67,7 +67,7 @@ const rollupConfig = [
         ],
       }),
       nodeResolve({ extensions }),
-      preserveDirectives.default(),
+      preserveDirectives,
     ],
   },
 ];
