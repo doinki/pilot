@@ -5,7 +5,6 @@ const defaultTheme = require('tailwindcss/defaultTheme');
  * @type {import('tailwindcss').Config}
  */
 module.exports = {
-  ...tailwindConfig,
   content: [
     '../../packages/ui/src/**/*.@(j|t)s?(x)',
     '!../../packages/ui/src/**/*.stories.@(j|t)s?(x)',
@@ -15,10 +14,9 @@ module.exports = {
     process.env.TARGET === 'desktop' && '!src/**/*.mobile.@(j|t)s?(x)',
   ].filter(Boolean),
   darkMode: 'class',
+  presets: [tailwindConfig],
   theme: {
-    ...tailwindConfig.theme,
     extend: {
-      ...tailwindConfig.theme.extend,
       fontFamily: {
         sans: ['var(--font-noto-sans-kr)', ...defaultTheme.fontFamily.sans],
       },
