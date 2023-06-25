@@ -1,9 +1,6 @@
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-
-const isProduction = process.env.NODE_ENV === 'production';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -41,7 +38,6 @@ const rollupConfig = [
         noForceEmit: true,
         tsconfig: 'tsconfig.build.json',
       }),
-      isProduction && terser(),
     ],
   },
   {
