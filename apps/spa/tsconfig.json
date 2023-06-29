@@ -1,0 +1,11 @@
+{
+  "extends": "@pilot/tsconfig/react",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "moduleResolution": "Bundler",
+    "paths": { "@/*": ["./src/*"] },
+    "useDefineForClassFields": true
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

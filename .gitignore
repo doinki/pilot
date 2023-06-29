@@ -60,3 +60,9 @@ dev.db
 
 # sentry
 .sentryclirc
+
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

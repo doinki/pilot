@@ -1,6 +1,6 @@
 {
   "name": "pilot",
-  "packageManager": "pnpm@8.6.3",
+  "packageManager": "pnpm@8.6.5",
   "private": true,
   "version": "1.0.0",
   "workspaces": [
@@ -17,6 +17,7 @@
     "challenge": "pnpm --filter=challenge",
     "crog": "pnpm --filter=crog",
     "api": "pnpm --filter=api",
+    "spa": "pnpm --filter=spa",
     "hooks": "pnpm --filter=@pilot/hooks",
     "icons": "pnpm --filter=@pilot/icons",
     "tailwindcss": "pnpm --filter=@pilot/tailwindcss",
@@ -31,7 +32,7 @@
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "turbo": "^1.10.6",
-    "typescript": "^5.1.5"
+    "typescript": "^5.1.6"
   },
   "pnpm": {
     "peerDependencyRules": {
