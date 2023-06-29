@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 export const Component: FC = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1 className="text-center text-4xl">Home</h1>
       <nav>
-        <ul>
+        <ul style={{ listStyle: 'inside' }}>
           <li>
             <Link to="about">About</Link>
           </li>

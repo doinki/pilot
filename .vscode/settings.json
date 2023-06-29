@@ -9,6 +9,7 @@
     "apps/challenge/tailwind.config.js": "apps/challenge/**",
     "apps/crog/tailwind.config.js": "apps/crog/**",
     "apps/lotto/tailwind.config.js": "apps/lotto/**",
+    "apps/spa/tailwind.config.cjs": "apps/spa/**",
     "packages/ui/tailwind.config.js": "packages/ui/**"
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
