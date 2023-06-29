@@ -1,5 +1,12 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  { lazy: () => import('./pages/Home'), path: '/' },
+  { lazy: () => import('./pages/About'), path: 'about' },
+]);
+
 const App = () => {
-  return <h1>Vite</h1>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
