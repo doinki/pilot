@@ -2,14 +2,14 @@ import { render, screen } from '@testing-library/react';
 import { twJoin } from 'tailwind-merge';
 
 import Skeleton from './Skeleton';
-import skeletonClasses from './skeletonClasses';
+import * as classes from './skeletonClasses';
 import type { SkeletonVariant } from './skeletonTypes';
 
 const testId = 'skeleton';
 
 describe('<Skeleton />', () => {
   describe('variant', () => {
-    const table = Object.entries(skeletonClasses.variants)
+    const table = Object.entries(classes.variants)
       .map(([variant, className]) => [variant, className])
       .filter(([, expected]) => expected);
 
@@ -25,7 +25,7 @@ describe('<Skeleton />', () => {
     test('false', () => {
       render(<Skeleton animation={false} data-testid={testId} />);
 
-      Object.values(skeletonClasses.animations).forEach((className) => {
+      Object.values(classes.animations).forEach((className) => {
         expect(screen.getByTestId(testId)).not.toHaveClass(twJoin(className));
       });
     });

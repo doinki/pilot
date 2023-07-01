@@ -2,7 +2,7 @@ import type { OverridableComponent } from '@pilot/types';
 import { Children, cloneElement, forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 
-import stackClasses from './stackClasses';
+import * as classes from './stackClasses';
 import type { StackTypeMap } from './stackTypes';
 
 const Stack: OverridableComponent<StackTypeMap> = forwardRef((props, ref) => {
@@ -18,7 +18,7 @@ const Stack: OverridableComponent<StackTypeMap> = forwardRef((props, ref) => {
   return (
     <Component
       ref={ref}
-      className={twJoin('flex', stackClasses.directions[direction], className)}
+      className={twJoin('flex', classes.directions[direction], className)}
       {...other}
     >
       {divider

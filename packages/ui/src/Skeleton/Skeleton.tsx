@@ -2,7 +2,7 @@ import type { OverridableComponent } from '@pilot/types';
 import { forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 
-import skeletonClasses from './skeletonClasses';
+import * as classes from './skeletonClasses';
 import type { SkeletonTypeMap } from './skeletonTypes';
 
 const Skeleton: OverridableComponent<SkeletonTypeMap> = forwardRef(
@@ -23,8 +23,8 @@ const Skeleton: OverridableComponent<SkeletonTypeMap> = forwardRef(
         ref={ref}
         className={twJoin(
           'block bg-black/10 child:invisible',
-          animation && skeletonClasses.animations[animation],
-          skeletonClasses.variants[variant],
+          animation && classes.animations[animation],
+          classes.variants[variant],
           className
         )}
         style={{ height, width, ...style }}

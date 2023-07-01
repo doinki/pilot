@@ -2,7 +2,7 @@ import type { OverridableComponent } from '@pilot/types';
 import { forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 
-import dividerClasses from './dividerClasses';
+import * as classes from './dividerClasses';
 import type { DividerTypeMap } from './dividerTypes';
 
 const Divider: OverridableComponent<DividerTypeMap> = forwardRef(
@@ -19,7 +19,7 @@ const Divider: OverridableComponent<DividerTypeMap> = forwardRef(
       <Component
         ref={ref}
         className={twJoin(
-          dividerClasses.orientations[
+          classes.orientations[
             orientation === 'vertical' && flexItem
               ? 'vertical-flexItem'
               : orientation
