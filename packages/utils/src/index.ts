@@ -1,3 +1,4 @@
+export * from './capitalize';
 export * from './delay';
 export * from './getAllFilePaths';
 export * from './isArray';
