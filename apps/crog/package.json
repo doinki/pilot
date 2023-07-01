@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "rimraf .next && rimraf .turbo && rimraf coverage && rimraf node_modules && rimraf storybook-static && rimraf next-env.d.ts",
-    "prepare": "node scripts/prepare.js"
+    "prepare": "is-ci || node scripts/prepare.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.5",
@@ -34,6 +34,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.44.0",
     "eslint-config-pilot": "workspace:^",
+    "is-ci": "^3.0.1",
     "postcss": "^8.4.24",
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.2",

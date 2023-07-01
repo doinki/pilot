@@ -11,6 +11,9 @@ importers:
       husky:
         specifier: ^8.0.3
         version: 8.0.3
+      is-ci:
+        specifier: ^3.0.1
+        version: 3.0.1
       lint-staged:
         specifier: ^13.2.3
         version: 13.2.3
@@ -108,6 +111,9 @@ importers:
       htmlparser2:
         specifier: ^9.0.0
         version: 9.0.0
+      is-ci:
+        specifier: ^3.0.1
+        version: 3.0.1
       postcss:
         specifier: ^8.4.24
         version: 8.4.24
@@ -181,6 +187,9 @@ importers:
       eslint-config-pilot:
         specifier: workspace:^
         version: link:../../packages/eslint-config-pilot
+      is-ci:
+        specifier: ^3.0.1
+        version: 3.0.1
       postcss:
         specifier: ^8.4.24
         version: 8.4.24
@@ -9255,6 +9264,13 @@ packages:
   /is-callable@1.2.7:
     resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==}
     engines: {node: '>= 0.4'}
+
+  /is-ci@3.0.1:
+    resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
+    hasBin: true
+    dependencies:
+      ci-info: 3.8.0
+    dev: true
 
   /is-core-module@2.12.1:
     resolution: {integrity: sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==}

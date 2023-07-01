@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test",
-    "prepare": "node scripts/prepare.js"
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "prepare": "is-ci || node scripts/prepare.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.5",
@@ -39,6 +41,7 @@
     "eslint": "^8.44.0",
     "eslint-config-pilot": "workspace:^",
     "htmlparser2": "^9.0.0",
+    "is-ci": "^3.0.1",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.6"
