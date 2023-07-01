@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
+
+const reducer = () => true;
 
 const useIsMounted = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, dispatch] = useReducer(reducer, false);
 
   useEffect(() => {
-    setIsMounted(true);
+    dispatch();
   }, []);
 
   return isMounted;
