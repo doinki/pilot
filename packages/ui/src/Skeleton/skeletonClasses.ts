@@ -1,4 +1,4 @@
-import type { ClassNameValue } from '@pilot/types';
+import type { ClassNameValue } from '@pilot/types/react';
 
 import type { SkeletonAnimation, SkeletonVariant } from './skeletonTypes';
 

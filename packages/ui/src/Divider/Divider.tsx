@@ -1,4 +1,4 @@
-import type { OverridableComponent } from '@pilot/types';
+import type { OverridableComponent } from '@pilot/types/react';
 import { forwardRef } from 'react';
 import { twJoin } from 'tailwind-merge';
 

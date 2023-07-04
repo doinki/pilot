@@ -1,4 +1,4 @@
-import type { OverrideProps } from '@pilot/types';
+import type { OverrideProps } from '@pilot/types/react';
 import type { ElementType, ReactElement } from 'react';
 
 export type StackDirection =

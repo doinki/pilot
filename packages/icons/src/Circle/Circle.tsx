@@ -1,4 +1,4 @@
-import type { IconProps } from '@pilot/types';
+import type { IconProps } from '@pilot/types/react';
 import type { FC } from 'react';
 
 const Circle: FC<IconProps> = (props) => {

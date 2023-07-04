@@ -2,7 +2,7 @@
   "Overridable Component Type": {
     "prefix": "ofc",
     "body": [
-      "import type { OverrideProps } from '@pilot/types';",
+      "import type { OverrideProps } from '@pilot/types/react';",
       "import type { ElementType } from 'react';",
       "",
       "export interface $1TypeMap<P = {}, D extends ElementType = 'div'> {",

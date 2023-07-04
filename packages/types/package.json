@@ -1,8 +1,27 @@
 {
+  "exports": {
+    ".": "./src/index.d.ts",
+    "./next": "./src/next/index.d.ts",
+    "./react": "./src/react/index.d.ts",
+    "./package.json": "./package.json"
+  },
   "name": "@pilot/types",
   "private": true,
   "sideEffects": false,
-  "types": "src/index.d.ts",
+  "types": "./src/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./src/index.d.ts"
+      ],
+      "next": [
+        "./src/next/index.d.ts"
+      ],
+      "react": [
+        "./src/react/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "lint": "eslint --cache .",
     "clean": "rimraf .turbo && rimraf node_modules && rimraf .eslintcache"

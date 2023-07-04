@@ -1,4 +1,4 @@
-import type { OverrideProps } from '@pilot/types';
+import type { OverrideProps } from '@pilot/types/react';
 import type { ElementType } from 'react';
 
 export type SkeletonAnimation = 'pulse';
