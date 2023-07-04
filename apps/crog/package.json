@@ -12,13 +12,13 @@
     "prepare": "is-ci || node scripts/prepare.js"
   },
   "dependencies": {
-    "@babel/runtime": "^7.22.5",
+    "@babel/runtime": "^7.22.6",
     "@pilot/hooks": "workspace:^",
     "@pilot/tailwindcss": "workspace:^",
     "@pilot/ui": "workspace:^",
     "@sentry/nextjs": "^7.57.0",
     "@swc/helpers": "^0.5.1",
-    "next": "^13.4.7",
+    "next": "^13.4.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remeda": "^1.23.0",
