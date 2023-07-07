@@ -1,37 +1,32 @@
-import { babel } from '@rollup/plugin-babel';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
+import { swc } from 'rollup-plugin-swc3';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const external = [/node_modules/, 'fs', 'path'];
+const input = 'dist/index.ts';
+const tsconfig = 'tsconfig.build.json';
 
 /**
  * @type {import('rollup').RollupOptions[]}
  */
 const rollupConfig = [
   {
-    external: [/dist/, /node_modules/],
-    input: 'src/index.ts',
+    external,
+    input,
     output: {
-      dir: 'dist',
+      dir: 'lib',
       entryFileNames: '[name].mjs',
       preserveModules: true,
-      sourcemap: true,
     },
     plugins: [
-      babel({
-        babelHelpers: 'runtime',
-        extensions,
-        plugins: [['@babel/plugin-transform-runtime', { version: '^7.22.5' }]],
-        presets: [
-          ['@babel/preset-env', { browserslistEnv: process.env.NODE_ENV }],
-          ['@babel/preset-react', { runtime: 'automatic' }],
-          '@babel/preset-typescript',
-        ],
+      swc({
+        env: { targets: 'defaults and supports bigint' },
+        jsc: { externalHelpers: true },
+        sourceMaps: true,
+        tsconfig,
       }),
-      nodeResolve({ extensions }),
       typescript({
         compilerOptions: {
-          declarationDir: 'dist',
+          declarationDir: 'lib',
           emitDeclarationOnly: true,
           noEmit: false,
         },
@@ -41,26 +36,20 @@ const rollupConfig = [
     ],
   },
   {
-    external: [/dist/, /node_modules/],
-    input: 'src/index.ts',
+    external,
+    input,
     output: {
-      dir: 'dist/node',
+      dir: 'lib/node',
       format: 'cjs',
       preserveModules: true,
-      sourcemap: true,
     },
     plugins: [
-      babel({
-        babelHelpers: 'runtime',
-        extensions,
-        plugins: [['@babel/plugin-transform-runtime', { version: '^7.22.5' }]],
-        presets: [
-          ['@babel/preset-env', { browserslistEnv: 'node' }],
-          ['@babel/preset-react', { runtime: 'automatic' }],
-          '@babel/preset-typescript',
-        ],
+      swc({
+        env: { targets: 'node 18' },
+        jsc: { externalHelpers: true },
+        sourceMaps: true,
+        tsconfig,
       }),
-      nodeResolve({ extensions }),
     ],
   },
 ];

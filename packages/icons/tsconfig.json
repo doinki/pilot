@@ -1,4 +1,4 @@
 {
   "extends": "@pilot/tsconfig/react",
-  "exclude": ["coverage", "dist", "storybook-static"]
+  "exclude": ["coverage", "dist", "lib", "storybook-static"]
 }
