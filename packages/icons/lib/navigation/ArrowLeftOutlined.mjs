@@ -1,24 +1,17 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { forwardRef } from 'react';
 
 const ArrowLeftOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxs("svg", {
+    return /*#__PURE__*/ jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsx("path", {
-                d: "M24 0v24H0V0h24z",
-                fill: "none",
-                opacity: ".87"
-            }),
-            /*#__PURE__*/ jsx("path", {
-                d: "M14 7l-5 5 5 5V7z"
-            })
-        ]
+        children: /*#__PURE__*/ jsx("path", {
+            d: "m14 7-5 5 5 5V7z"
+        })
     });
 });
 

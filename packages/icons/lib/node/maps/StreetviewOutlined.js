@@ -6,16 +6,12 @@ var react = require('react');
 const StreetviewOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsxRuntime.jsx("path", {
-                d: "M0 0h24v24H0V0z",
-                fill: "none"
-            }),
             /*#__PURE__*/ jsxRuntime.jsx("path", {
                 d: "M12.56 14.33c-.34.27-.56.7-.56 1.17V21h7c1.1 0 2-.9 2-2v-5.98c-.94-.33-1.95-.52-3-.52-2.03 0-3.93.7-5.44 1.83z"
             }),

@@ -6,16 +6,12 @@ var react = require('react');
 const RecentActorsOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsxRuntime.jsx("path", {
-                d: "M0 0h24v24H0V0z",
-                fill: "none"
-            }),
             /*#__PURE__*/ jsxRuntime.jsx("path", {
                 d: "M21 5h2v14h-2zm-4 0h2v14h-2zm-3 0H2c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1zm-1 12H3V7h10v10z"
             }),

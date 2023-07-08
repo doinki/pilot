@@ -1,31 +1,17 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { forwardRef } from 'react';
 
 const NightlightOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxs("svg", {
+    return /*#__PURE__*/ jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("path", {
-                    d: "M0,0h24v24H0V0z",
-                    fill: "none"
-                })
-            }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("g", {
-                    children: /*#__PURE__*/ jsx("g", {
-                        children: /*#__PURE__*/ jsx("path", {
-                            d: "M14,4c0.34,0,0.68,0.02,1.01,0.07C13.1,6.23,12,9.05,12,12s1.1,5.77,3.01,7.93C14.68,19.98,14.34,20,14,20 c-4.41,0-8-3.59-8-8S9.59,4,14,4 M14,2C8.48,2,4,6.48,4,12s4.48,10,10,10c1.82,0,3.53-0.5,5-1.35c-2.99-1.73-5-4.95-5-8.65 s2.01-6.92,5-8.65C17.53,2.5,15.82,2,14,2L14,2z"
-                        })
-                    })
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsx("path", {
+            d: "M14 4c.34 0 .68.02 1.01.07C13.1 6.23 12 9.05 12 12s1.1 5.77 3.01 7.93c-.33.05-.67.07-1.01.07-4.41 0-8-3.59-8-8s3.59-8 8-8m0-2C8.48 2 4 6.48 4 12s4.48 10 10 10c1.82 0 3.53-.5 5-1.35-2.99-1.73-5-4.95-5-8.65s2.01-6.92 5-8.65C17.53 2.5 15.82 2 14 2z"
+        })
     });
 });
 

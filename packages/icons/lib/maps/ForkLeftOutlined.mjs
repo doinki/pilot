@@ -1,28 +1,17 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { forwardRef } from 'react';
 
 const ForkLeftOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxs("svg", {
+    return /*#__PURE__*/ jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("path", {
-                    d: "M9.41,15.59L8,17l-4-4l4-4l1.41,1.41L7.83,12c1.51-0.33,3.73,0.08,5.17,1.36l0-6.53l-1.59,1.59L10,7l4-4l4,4l-1.41,1.41 L15,6.83V21l-2,0v-4c-0.73-2.58-3.07-3.47-5.17-3L9.41,15.59z"
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsx("path", {
+            d: "M9.41 15.59 8 17l-4-4 4-4 1.41 1.41L7.83 12c1.51-.33 3.73.08 5.17 1.36V6.83l-1.59 1.59L10 7l4-4 4 4-1.41 1.41L15 6.83V21h-2v-4c-.73-2.58-3.07-3.47-5.17-3l1.58 1.59z"
+        })
     });
 });
 

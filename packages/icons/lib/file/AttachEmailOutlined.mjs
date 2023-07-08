@@ -4,30 +4,17 @@ import { forwardRef } from 'react';
 const AttachEmailOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "m3 6 8 5 8-5v3h2V4c0-1.1-.9-2-2-2H3c-1.1 0-1.99.9-1.99 2L1 16c0 1.1.9 2 2 2h10v-2H3V6zm16-2-8 5-8-5h16z"
             }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsxs("g", {
-                    children: [
-                        /*#__PURE__*/ jsx("path", {
-                            d: "M3,6l8,5l8-5v3h2V4c0-1.1-0.9-2-2-2H3C1.9,2,1.01,2.9,1.01,4L1,16c0,1.1,0.9,2,2,2h10v-2H3V6z M19,4l-8,5L3,4H19z"
-                        }),
-                        /*#__PURE__*/ jsx("path", {
-                            d: "M21,14v4c0,1.1-0.9,2-2,2s-2-0.9-2-2v-4.5c0-0.28,0.22-0.5,0.5-0.5s0.5,0.22,0.5,0.5V18h2v-4.5c0-1.38-1.12-2.5-2.5-2.5 S15,12.12,15,13.5V18c0,2.21,1.79,4,4,4s4-1.79,4-4v-4H21z"
-                        })
-                    ]
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "M21 14v4c0 1.1-.9 2-2 2s-2-.9-2-2v-4.5c0-.28.22-.5.5-.5s.5.22.5.5V18h2v-4.5c0-1.38-1.12-2.5-2.5-2.5S15 12.12 15 13.5V18c0 2.21 1.79 4 4 4s4-1.79 4-4v-4h-2z"
             })
         ]
     });

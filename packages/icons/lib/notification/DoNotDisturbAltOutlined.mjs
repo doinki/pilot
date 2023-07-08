@@ -1,32 +1,17 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { forwardRef } from 'react';
 
 const DoNotDisturbAltOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxs("svg", {
+    return /*#__PURE__*/ jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("g", {
-                    children: /*#__PURE__*/ jsx("g", {
-                        children: /*#__PURE__*/ jsx("path", {
-                            d: "M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M4,12c0-4.4,3.6-8,8-8c1.8,0,3.5,0.6,4.9,1.7L5.7,16.9 C4.6,15.5,4,13.8,4,12z M12,20c-1.8,0-3.5-0.6-4.9-1.7L18.3,7.1C19.4,8.5,20,10.2,20,12C20,16.4,16.4,20,12,20z"
-                        })
-                    })
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsx("path", {
+            d: "M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM4 12c0-4.4 3.6-8 8-8 1.8 0 3.5.6 4.9 1.7L5.7 16.9C4.6 15.5 4 13.8 4 12zm8 8c-1.8 0-3.5-.6-4.9-1.7L18.3 7.1C19.4 8.5 20 10.2 20 12c0 4.4-3.6 8-8 8z"
+        })
     });
 });
 

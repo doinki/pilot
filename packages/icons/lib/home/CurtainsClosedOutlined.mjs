@@ -1,28 +1,17 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { forwardRef } from 'react';
 
 const CurtainsClosedOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxs("svg", {
+    return /*#__PURE__*/ jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("path", {
-                    d: "M20,19V3H4v16H2v2h20v-2H20z M13,5v14h-2V5H13z M6,5h3v14H6V5z M15,19V5h3v14H15z"
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsx("path", {
+            d: "M20 19V3H4v16H2v2h20v-2h-2zM13 5v14h-2V5h2zM6 5h3v14H6V5zm9 14V5h3v14h-3z"
+        })
     });
 });
 

@@ -4,27 +4,16 @@ var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 
 const FolderCopyOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
+    return /*#__PURE__*/ jsxRuntime.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("path", {
-                    d: "M3,19h17v2H3c-1.1,0-2-0.9-2-2V6h2V19z M23,6v9c0,1.1-0.9,2-2,2H7c-1.1,0-2-0.9-2-2L5.01,4C5.01,2.9,5.9,2,7,2h5l2,2h7 C22.1,4,23,4.9,23,6z M7,15h14V6h-7.83l-2-2H7V15z"
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsxRuntime.jsx("path", {
+            d: "M3 19h17v2H3c-1.1 0-2-.9-2-2V6h2v13zM23 6v9c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2l.01-11c0-1.1.89-2 1.99-2h5l2 2h7c1.1 0 2 .9 2 2zM7 15h14V6h-7.83l-2-2H7v11z"
+        })
     });
 });
 

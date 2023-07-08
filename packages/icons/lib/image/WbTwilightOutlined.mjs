@@ -1,58 +1,17 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsx } from 'react/jsx-runtime';
 import { forwardRef } from 'react';
 
 const WbTwilightOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxs("svg", {
+    return /*#__PURE__*/ jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsxs("g", {
-                    children: [
-                        /*#__PURE__*/ jsx("rect", {
-                            height: "2",
-                            transform: "matrix(0.7069 -0.7074 0.7074 0.7069 -0.3887 15.676)",
-                            width: "3",
-                            x: "17.22",
-                            y: "7.31"
-                        }),
-                        /*#__PURE__*/ jsx("rect", {
-                            height: "2",
-                            width: "20",
-                            x: "2",
-                            y: "18"
-                        }),
-                        /*#__PURE__*/ jsx("rect", {
-                            height: "3",
-                            width: "2",
-                            x: "11",
-                            y: "4"
-                        }),
-                        /*#__PURE__*/ jsx("rect", {
-                            height: "3",
-                            transform: "matrix(0.7071 -0.7071 0.7071 0.7071 -4.2992 6.1783)",
-                            width: "2",
-                            x: "4.31",
-                            y: "6.78"
-                        }),
-                        /*#__PURE__*/ jsx("path", {
-                            d: "M5,16h14c0-3.87-3.13-7-7-7S5,12.13,5,16z"
-                        })
-                    ]
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsx("path", {
+            d: "m16.9542 8.6615 2.1205-2.122 1.4147 1.4137-2.1205 2.122zM2 18h20v2H2zm9-14h2v3h-2zM3.5426 7.9248l1.4142-1.4142L7.078 8.632l-1.4142 1.4142zM5 16h14c0-3.87-3.13-7-7-7s-7 3.13-7 7z"
+        })
     });
 });
 

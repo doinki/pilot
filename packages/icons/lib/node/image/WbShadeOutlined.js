@@ -4,29 +4,16 @@ var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 
 const WbShadeOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
+    return /*#__PURE__*/ jsxRuntime.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("g", {
-                    children: /*#__PURE__*/ jsxRuntime.jsx("path", {
-                        d: "M14,12v2.5l5.5,5.5H22L14,12z M14,20h3l-3-3V20z M8,4l-6,6h2v10h8V10h2L8,4z M9,14H7v-4h2V14z"
-                    })
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsxRuntime.jsx("path", {
+            d: "M14 12v2.5l5.5 5.5H22l-8-8zm0 8h3l-3-3v3zM8 4l-6 6h2v10h8V10h2L8 4zm1 10H7v-4h2v4z"
+        })
     });
 });
 

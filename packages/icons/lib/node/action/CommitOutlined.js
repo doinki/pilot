@@ -4,27 +4,16 @@ var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 
 const CommitOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
+    return /*#__PURE__*/ jsxRuntime.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
-            }),
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("path", {
-                    d: "M16.9,11L16.9,11c-0.46-2.28-2.48-4-4.9-4s-4.44,1.72-4.9,4h0H2v2h5.1h0c0.46,2.28,2.48,4,4.9,4s4.44-1.72,4.9-4h0H22v-2 H16.9z M12,15c-1.66,0-3-1.34-3-3s1.34-3,3-3s3,1.34,3,3S13.66,15,12,15z"
-                })
-            })
-        ]
+        children: /*#__PURE__*/ jsxRuntime.jsx("path", {
+            d: "M16.9 11c-.46-2.28-2.48-4-4.9-4s-4.44 1.72-4.9 4H2v2h5.1c.46 2.28 2.48 4 4.9 4s4.44-1.72 4.9-4H22v-2h-5.1zM12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"
+        })
     });
 });
 

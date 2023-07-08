@@ -4,22 +4,16 @@ var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 
 const NavigationOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
+    return /*#__PURE__*/ jsxRuntime.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsxRuntime.jsx("path", {
-                d: "M0 0h24v24H0V0z",
-                fill: "none"
-            }),
-            /*#__PURE__*/ jsxRuntime.jsx("path", {
-                d: "M12 7.27l4.28 10.43-3.47-1.53-.81-.36-.81.36-3.47 1.53L12 7.27M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"
-            })
-        ]
+        children: /*#__PURE__*/ jsxRuntime.jsx("path", {
+            d: "m12 7.27 4.28 10.43-3.47-1.53-.81-.36-.81.36-3.47 1.53L12 7.27M12 2 4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"
+        })
     });
 });
 

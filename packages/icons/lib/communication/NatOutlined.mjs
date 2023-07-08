@@ -4,30 +4,17 @@ import { forwardRef } from 'react';
 const NatOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "M6.82 13H11v-2H6.82C6.4 9.84 5.3 9 4 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c1.3 0 2.4-.84 2.82-2zM4 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
             }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsxs("g", {
-                    children: [
-                        /*#__PURE__*/ jsx("path", {
-                            d: "M6.82,13H11v-2H6.82C6.4,9.84,5.3,9,4,9c-1.66,0-3,1.34-3,3s1.34,3,3,3C5.3,15,6.4,14.16,6.82,13z M4,13 c-0.55,0-1-0.45-1-1c0-0.55,0.45-1,1-1s1,0.45,1,1C5,12.55,4.55,13,4,13z"
-                        }),
-                        /*#__PURE__*/ jsx("path", {
-                            d: "M23,12l-4-3v2h-4.05C14.45,5.95,10.19,2,5,2v2c4.42,0,8,3.58,8,8s-3.58,8-8,8v2c5.19,0,9.45-3.95,9.95-9H19v2L23,12z"
-                        })
-                    ]
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "m23 12-4-3v2h-4.05c-.5-5.05-4.76-9-9.95-9v2c4.42 0 8 3.58 8 8s-3.58 8-8 8v2c5.19 0 9.45-3.95 9.95-9H19v2l4-3z"
             })
         ]
     });

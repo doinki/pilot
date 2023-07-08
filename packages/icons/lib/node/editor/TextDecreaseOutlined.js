@@ -4,23 +4,16 @@ var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 
 const TextDecreaseOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
-    return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
+    return /*#__PURE__*/ jsxRuntime.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
-        children: [
-            /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                fill: "none",
-                height: "24",
-                width: "24"
-            }),
-            /*#__PURE__*/ jsxRuntime.jsx("path", {
-                d: "M0.99,19h2.42l1.27-3.58h5.65L11.59,19h2.42L8.75,5h-2.5L0.99,19z M5.41,13.39L7.44,7.6h0.12l2.03,5.79H5.41z M23,11v2h-8 v-2H23z"
-            })
-        ]
+        children: /*#__PURE__*/ jsxRuntime.jsx("path", {
+            d: "M.99 19h2.42l1.27-3.58h5.65L11.59 19h2.42L8.75 5h-2.5L.99 19zm4.42-5.61L7.44 7.6h.12l2.03 5.79H5.41zM23 11v2h-8v-2h8z"
+        })
     });
 });
 

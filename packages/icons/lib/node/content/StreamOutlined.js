@@ -6,60 +6,34 @@ var react = require('react');
 const StreamOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
+            /*#__PURE__*/ jsxRuntime.jsx("circle", {
+                cx: "20",
+                cy: "12",
+                r: "2"
             }),
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsxs("g", {
-                    children: [
-                        /*#__PURE__*/ jsxRuntime.jsx("circle", {
-                            cx: "20",
-                            cy: "12",
-                            r: "2"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("circle", {
-                            cx: "4",
-                            cy: "12",
-                            r: "2"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("circle", {
-                            cx: "12",
-                            cy: "20",
-                            r: "2"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                            height: "2",
-                            transform: "matrix(0.7081 -0.7061 0.7061 0.7081 -0.1146 13.9802)",
-                            width: "6.22",
-                            x: "13.74",
-                            y: "6.13"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("polygon", {
-                            points: "8.32,9.68 8.63,10 10.05,8.59 6.03,4.55 6.02,4.55 5.71,4.23 4.29,5.64 8.31,9.69"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("polygon", {
-                            points: "15.41,13.94 14,15.35 17.99,19.36 18.34,19.71 19.76,18.3 15.77,14.29"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("polygon", {
-                            points: "8.59,13.95 4.56,17.96 4.24,18.29 5.65,19.7 9.68,15.68 10.01,15.36"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("circle", {
-                            cx: "12",
-                            cy: "4",
-                            r: "2"
-                        })
-                    ]
-                })
+            /*#__PURE__*/ jsxRuntime.jsx("circle", {
+                cx: "4",
+                cy: "12",
+                r: "2"
+            }),
+            /*#__PURE__*/ jsxRuntime.jsx("circle", {
+                cx: "12",
+                cy: "20",
+                r: "2"
+            }),
+            /*#__PURE__*/ jsxRuntime.jsx("path", {
+                d: "m13.943 8.6191 4.4044-4.392 1.4122 1.4162-4.4043 4.392zM8.32 9.68l.31.32 1.42-1.41-4.02-4.04h-.01l-.31-.32-1.42 1.41 4.02 4.05zm7.09 4.26L14 15.35l3.99 4.01.35.35 1.42-1.41-3.99-4.01zm-6.82.01-4.03 4.01-.32.33 1.41 1.41 4.03-4.02.33-.32z"
+            }),
+            /*#__PURE__*/ jsxRuntime.jsx("circle", {
+                cx: "12",
+                cy: "4",
+                r: "2"
             })
         ]
     });

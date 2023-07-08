@@ -4,36 +4,17 @@ import { forwardRef } from 'react';
 const AddBusinessOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "M2 4h15v2H2zm13 13h2v-3h1v-2l-1-5H2l-1 5v2h1v6h9v-6h4v3zm-6 1H4v-4h5v4zm-5.96-6 .6-3h11.72l.6 3H3.04z"
             }),
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsxs("g", {
-                    children: [
-                        /*#__PURE__*/ jsx("rect", {
-                            height: "2",
-                            width: "15",
-                            x: "2",
-                            y: "4"
-                        }),
-                        /*#__PURE__*/ jsx("path", {
-                            d: "M15,17h2v-3h1v-2l-1-5H2l-1,5v2h1v6h9v-6h4V17z M9,18H4v-4h5V18z M3.04,12l0.6-3h11.72l0.6,3H3.04z"
-                        }),
-                        /*#__PURE__*/ jsx("polygon", {
-                            points: "23,18 20,18 20,15 18,15 18,18 15,18 15,20 18,20 18,23 20,23 20,20 23,20"
-                        })
-                    ]
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "M23 18h-3v-3h-2v3h-3v2h3v3h2v-3h3z"
             })
         ]
     });

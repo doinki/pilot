@@ -4,48 +4,17 @@ import { forwardRef } from 'react';
 const PostAddOutlined = /*#__PURE__*/ forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsx("g", {
-                children: /*#__PURE__*/ jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
+            /*#__PURE__*/ jsx("path", {
+                d: "M17 19.22H5V7h7V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7h-2v7.22z"
             }),
-            /*#__PURE__*/ jsxs("g", {
-                children: [
-                    /*#__PURE__*/ jsx("g", {}),
-                    /*#__PURE__*/ jsxs("g", {
-                        children: [
-                            /*#__PURE__*/ jsx("path", {
-                                d: "M17,19.22H5V7h7V5H5C3.9,5,3,5.9,3,7v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-7h-2V19.22z"
-                            }),
-                            /*#__PURE__*/ jsx("path", {
-                                d: "M19,2h-2v3h-3c0.01,0.01,0,2,0,2h3v2.99c0.01,0.01,2,0,2,0V7h3V5h-3V2z"
-                            }),
-                            /*#__PURE__*/ jsx("rect", {
-                                height: "2",
-                                width: "8",
-                                x: "7",
-                                y: "9"
-                            }),
-                            /*#__PURE__*/ jsx("polygon", {
-                                points: "7,12 7,14 15,14 15,12 12,12"
-                            }),
-                            /*#__PURE__*/ jsx("rect", {
-                                height: "2",
-                                width: "8",
-                                x: "7",
-                                y: "15"
-                            })
-                        ]
-                    })
-                ]
+            /*#__PURE__*/ jsx("path", {
+                d: "M19 2h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V7h3V5h-3V2zM7 9h8v2H7zm0 3v2h8v-2h-3zm0 3h8v2H7z"
             })
         ]
     });

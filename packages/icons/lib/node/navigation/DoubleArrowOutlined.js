@@ -6,30 +6,17 @@ var react = require('react');
 const DoubleArrowOutlined = /*#__PURE__*/ react.forwardRef((props, ref)=>{
     return /*#__PURE__*/ jsxRuntime.jsxs("svg", {
         xmlns: "http://www.w3.org/2000/svg",
+        width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        width: "24",
         ref: ref,
         ...props,
         children: [
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsx("rect", {
-                    fill: "none",
-                    height: "24",
-                    width: "24"
-                })
+            /*#__PURE__*/ jsxRuntime.jsx("path", {
+                d: "M15.5 5H11l5 7-5 7h4.5l5-7z"
             }),
-            /*#__PURE__*/ jsxRuntime.jsx("g", {
-                children: /*#__PURE__*/ jsxRuntime.jsxs("g", {
-                    children: [
-                        /*#__PURE__*/ jsxRuntime.jsx("polygon", {
-                            points: "15.5,5 11,5 16,12 11,19 15.5,19 20.5,12"
-                        }),
-                        /*#__PURE__*/ jsxRuntime.jsx("polygon", {
-                            points: "8.5,5 4,5 9,12 4,19 8.5,19 13.5,12"
-                        })
-                    ]
-                })
+            /*#__PURE__*/ jsxRuntime.jsx("path", {
+                d: "M8.5 5H4l5 7-5 7h4.5l5-7z"
             })
         ]
     });
