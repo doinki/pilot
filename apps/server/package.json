@@ -36,7 +36,7 @@
     "domhandler": "^5.0.3",
     "eslint": "^8.44.0",
     "eslint-config-pilot": "workspace:^",
-    "nodemon": "^2.0.22",
+    "nodemon": "^3.0.1",
     "prisma": "^4.16.2",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
