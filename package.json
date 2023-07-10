@@ -1,6 +1,6 @@
 {
   "name": "pilot",
-  "packageManager": "pnpm@8.6.6",
+  "packageManager": "pnpm@8.6.7",
   "private": true,
   "version": "1.0.0",
   "workspaces": [
@@ -14,10 +14,10 @@
     "test:coverage": "turbo run test:coverage",
     "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
+    "api": "pnpm --filter=api",
     "challenge": "pnpm --filter=challenge",
     "crog": "pnpm --filter=crog",
-    "api": "pnpm --filter=api",
-    "spa": "pnpm --filter=spa",
+    "sandbox": "pnpm --filter=sandbox",
     "hooks": "pnpm --filter=@pilot/hooks",
     "icons": "pnpm --filter=@pilot/icons",
     "tailwindcss": "pnpm --filter=@pilot/tailwindcss",
