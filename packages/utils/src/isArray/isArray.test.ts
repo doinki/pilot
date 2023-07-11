@@ -9,6 +9,6 @@ describe('isArray', () => {
     'isArray(%s) should return `false`',
     (value) => {
       expect(isArray(value)).toBe(false);
-    }
+    },
   );
 });

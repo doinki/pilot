@@ -15,14 +15,14 @@ const fetchWoowahanPosts$ = range().pipe(
 
     const req = new Request(
       'https://techblog.woowahan.com/wp-admin/admin-ajax.php',
-      { body: searchParams, method: 'POST' }
+      { body: searchParams, method: 'POST' },
     );
 
     return fetch(req).pipe(
       map((text) => JSON.parse(text) as GetWoowahanPostsResponse),
-      delay(200)
+      delay(200),
     );
-  })
+  }),
 );
 
 const woowahanPosts$ = fetchWoowahanPosts$.pipe(
@@ -37,7 +37,7 @@ const woowahanPosts$ = fetchWoowahanPosts$.pipe(
       href: post.permalink,
       title: post.post.post_title,
     };
-  })
+  }),
 );
 
 export default woowahanPosts$;

@@ -5,7 +5,7 @@ import type { UseMediaQueryOptions } from './useMediaQueryTypes';
 
 const useMediaQuery = (
   query: string,
-  options: UseMediaQueryOptions = {}
+  options: UseMediaQueryOptions = {},
 ): boolean => {
   const replacedQuery = query.replace(/^@media( ?)/m, '');
   const {
@@ -19,7 +19,7 @@ const useMediaQuery = (
 
   const getDefaultSnapshot = useCallback(
     () => defaultMatches,
-    [defaultMatches]
+    [defaultMatches],
   );
 
   const [subscribe, getSnapshot] = useMemo(() => {

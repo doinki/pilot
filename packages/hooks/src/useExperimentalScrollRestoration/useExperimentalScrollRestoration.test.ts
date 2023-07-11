@@ -33,7 +33,7 @@ describe('useExperimentalScrollRestoration', () => {
       renderHook(() => useExperimentalScrollRestoration());
 
       expect(window.history.scrollRestoration).toBe('auto');
-    }
+    },
   );
 
   test.each([

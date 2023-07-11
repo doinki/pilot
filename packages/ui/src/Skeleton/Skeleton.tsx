@@ -25,13 +25,13 @@ const Skeleton: OverridableComponent<SkeletonTypeMap> = forwardRef(
           'block bg-black/10 child:invisible',
           animation && classes.animations[animation],
           classes.variants[variant],
-          className
+          className,
         )}
         style={{ height, width, ...style }}
         {...other}
       />
     );
-  }
+  },
 );
 
 export default Skeleton;

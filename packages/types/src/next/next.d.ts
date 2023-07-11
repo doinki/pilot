@@ -5,7 +5,7 @@ import type { ReactElement, ReactNode } from 'react';
 
 export type GetLayout<Props = {}> = (
   page: ReactElement,
-  context: { pageProps: Props; router: Router }
+  context: { pageProps: Props; router: Router },
 ) => ReactNode;
 
 export type ExtendedAppProps = AppProps & {

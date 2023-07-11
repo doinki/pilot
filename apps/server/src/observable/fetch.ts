@@ -9,7 +9,7 @@ function fetch(url: string | Request, init?: RequestInit) {
       }
       return res.text();
     }),
-    retry(1)
+    retry(1),
   );
 }
 

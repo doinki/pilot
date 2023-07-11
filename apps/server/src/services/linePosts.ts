@@ -10,15 +10,15 @@ const fetchLinePosts$ = range().pipe(
   concatMap((page) => {
     const url = new URL(
       `/page-data/ko/blog${page === 1 ? '' : `/page/${page}`}/page-data.json`,
-      'https://engineering.linecorp.com'
+      'https://engineering.linecorp.com',
     );
     const req = new Request(url);
 
     return fetch(req).pipe(
       map((text) => JSON.parse(text) as GetLinePostsResponse),
-      delay(200)
+      delay(200),
     );
-  })
+  }),
 );
 
 const linePosts$ = fetchLinePosts$.pipe(
@@ -34,7 +34,7 @@ const linePosts$ = fetchLinePosts$.pipe(
         .href,
       title: post.node.title,
     };
-  })
+  }),
 );
 
 export default linePosts$;

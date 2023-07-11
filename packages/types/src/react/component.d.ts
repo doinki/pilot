@@ -23,7 +23,7 @@ export type BaseProps<M extends OverridableTypeMap> = M['props'] & CommonProps;
 
 export type OverrideProps<
   M extends OverridableTypeMap,
-  C extends ElementType
+  C extends ElementType,
 > = BaseProps<M> &
   DistributiveOmit<ComponentPropsWithRef<C>, keyof BaseProps<M>>;
 
@@ -35,7 +35,7 @@ export type DefaultComponentProps<M extends OverridableTypeMap> = BaseProps<M> &
 
 export interface OverridableComponent<M extends OverridableTypeMap> {
   <C extends ElementType>(
-    props: { component: C } & OverrideProps<M, C>
+    props: { component: C } & OverrideProps<M, C>,
   ): ReactNode;
   (props: DefaultComponentProps<M>): ReactNode;
 }

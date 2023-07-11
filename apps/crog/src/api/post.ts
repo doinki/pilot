@@ -4,7 +4,7 @@ export const getPosts = async (
   { page, size }: { page?: number | string; size?: number | string } = {
     page: 1,
     size: 10,
-  }
+  },
 ) => {
   const url = new URL('/posts', process.env.API_URL);
   url.searchParams.set('page', String(page));

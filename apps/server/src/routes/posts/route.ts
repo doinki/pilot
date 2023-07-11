@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     Number,
     (value) => (R.isNumber(value) ? value : 1),
     R.clamp({ max: Number.MAX_SAFE_INTEGER, min: 1 }),
-    Math.floor
+    Math.floor,
   );
   const size = R.pipe(
     req.query.size,
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     Number,
     (value) => (R.isNumber(value) ? value : 10),
     R.clamp({ max: 100, min: 1 }),
-    Math.floor
+    Math.floor,
   );
 
   const [count, posts] = await Promise.all([
@@ -43,7 +43,7 @@ router.get('/', async (req, res) => {
       url.searchParams.append('page', String(page - 1));
 
       return value ? url : null;
-    }
+    },
   );
   const next = R.pipe(
     page * size,
@@ -54,7 +54,7 @@ router.get('/', async (req, res) => {
       url.searchParams.append('page', String(page + 1));
 
       return value ? url : null;
-    }
+    },
   );
 
   res.json({ count, data: posts, next, previous });

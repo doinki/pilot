@@ -9,6 +9,6 @@ describe('isTruthy', () => {
     'should return `false`',
     (value) => {
       expect(isTruthy(value)).toBe(false);
-    }
+    },
   );
 });

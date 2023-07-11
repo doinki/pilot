@@ -13,8 +13,8 @@ const kakaoFrontendPosts$ = fetchKakaoFrontendPosts$.pipe(
       (element) =>
         element.tagName === 'a' &&
         element.attribs.class?.includes('ThumbnailItem-module--wrapper--'),
-      document.children
-    )
+      document.children,
+    ),
   ),
   concatMap((elements) => from(elements)),
   map((element) => ({
@@ -22,29 +22,29 @@ const kakaoFrontendPosts$ = fetchKakaoFrontendPosts$.pipe(
       DomUtils.findAll(
         (element) =>
           element.attribs.class?.includes('ThumbnailItem-module--author--'),
-        [element]
-      )
+        [element],
+      ),
     ).trim(),
     content: DomUtils.textContent(
       DomUtils.findAll(
         (element) =>
           element.attribs.class?.includes(
-            'ThumbnailItem-module--description--'
+            'ThumbnailItem-module--description--',
           ),
-        [element]
-      )
+        [element],
+      ),
     ).trim(),
     copyright: 'kakao',
     date:
       DomUtils.findAll(
         (element) => element.attribs.class?.includes('PostDate-module--date--'),
-        [element]
+        [element],
       )
         .map((element) => DomUtils.textContent(element).trim())
         .map((dateString) => {
           return format(
             parse(dateString.trim(), 'yyyy.MM.dd', new Date()),
-            'yyyy-MM-dd'
+            'yyyy-MM-dd',
           );
         })
         .at(0)
@@ -54,18 +54,18 @@ const kakaoFrontendPosts$ = fetchKakaoFrontendPosts$.pipe(
         .map((element) => DomUtils.getAttributeValue(element, 'href'))
         .at(0)
         ?.trim() ?? '',
-      'https://fe-developers.kakaoent.com'
+      'https://fe-developers.kakaoent.com',
     ).href,
     title: DomUtils.textContent(
       DomUtils.findAll(
         (element) =>
           element.attribs.class?.includes('ThumbnailItem-module--title--'),
-        [element]
-      )
+        [element],
+      ),
     ).trim(),
   })),
   filter((post) => post.content !== ''),
-  retry(1)
+  retry(1),
 );
 
 export default kakaoFrontendPosts$;

@@ -5,6 +5,6 @@ describe('noop', () => {
     'should return the value passed to it',
     (value) => {
       expect(noop(value)).toBe(value);
-    }
+    },
   );
 });

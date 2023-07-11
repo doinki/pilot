@@ -7,5 +7,5 @@ writeFileSync(
   join(__dirname, '..', '.env'),
   Object.entries(local)
     .map(([key, value]) => `${key}=${value}`)
-    .join('\n')
+    .join('\n'),
 );

@@ -23,37 +23,40 @@ app.use(route);
 
 const server = app.listen(PORT, () => {
   console.log(
-    `\n\nProcess pid: ${process.pid}\nServer is running on port ${PORT}\n\n`
+    `\n\nProcess pid: ${process.pid}\nServer is running on port ${PORT}\n\n`,
   );
 });
 server.keepAliveTimeout = KEEP_ALIVE_TIMEOUT;
 
-setInterval(() => {
-  from([
-    kakaoFrontendPosts$,
-    kakaoPosts$,
-    linePosts$,
-    tossPosts$,
-    woowahanPosts$,
-  ])
-    .pipe(mergeAll())
-    .subscribe({
-      error: console.error,
-      next: (newPost) => {
-        prisma.post
-          .findFirst({ where: { href: newPost.href } })
-          .then((post) => {
-            if (post) {
-              return null;
-            }
+setInterval(
+  () => {
+    from([
+      kakaoFrontendPosts$,
+      kakaoPosts$,
+      linePosts$,
+      tossPosts$,
+      woowahanPosts$,
+    ])
+      .pipe(mergeAll())
+      .subscribe({
+        error: console.error,
+        next: (newPost) => {
+          prisma.post
+            .findFirst({ where: { href: newPost.href } })
+            .then((post) => {
+              if (post) {
+                return null;
+              }
 
-            return prisma.post.create({
-              data: newPost,
+              return prisma.post.create({
+                data: newPost,
+              });
             });
-          });
-      },
-    });
-}, 60 * 60 * 1000);
+        },
+      });
+  },
+  60 * 60 * 1000,
+);
 
 const signals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
 signals.forEach((signal) => {

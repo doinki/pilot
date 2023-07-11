@@ -44,7 +44,7 @@ const Home: NextPage<HomeProps> = ({ lottos = {}, ranking = {} }) => {
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
     const lottos = JSON.parse(
-      await readFile('public/lottos.json', 'utf-8')
+      await readFile('public/lottos.json', 'utf-8'),
     ) as Lottos;
 
     const ranking = Object.values(lottos).reduce(
@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
         return ranking;
       },
-      new Map<number, number>()
+      new Map<number, number>(),
     );
 
     return { props: { lottos, ranking: Object.fromEntries(ranking) } };

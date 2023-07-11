@@ -9,6 +9,6 @@ describe('isLength', () => {
     'should return `false`',
     (value) => {
       expect(isLength(value)).toBe(false);
-    }
+    },
   );
 });

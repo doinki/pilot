@@ -10,6 +10,6 @@ describe('getAllFilePaths', () => {
     '%s ends with .ts',
     (path) => {
       expect(path.endsWith('.ts')).toBe(true);
-    }
+    },
   );
 });

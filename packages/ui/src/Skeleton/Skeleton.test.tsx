@@ -15,7 +15,7 @@ describe('<Skeleton />', () => {
 
     test.each(table)('"%s"', (variant, expected) => {
       render(
-        <Skeleton data-testid={testId} variant={variant as SkeletonVariant} />
+        <Skeleton data-testid={testId} variant={variant as SkeletonVariant} />,
       );
       expect(screen.getByTestId(testId)).toHaveClass(twJoin(expected));
     });
@@ -42,7 +42,7 @@ describe('<Skeleton />', () => {
           height={height}
           variant="rounded"
           width={width}
-        />
+        />,
       );
 
       expect(screen.getByTestId(testId)).toHaveStyle({

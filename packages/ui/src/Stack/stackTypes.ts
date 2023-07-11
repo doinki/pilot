@@ -26,5 +26,5 @@ export interface StackTypeMap<P = {}, D extends ElementType = 'div'> {
 
 export type StackProps<
   P = {},
-  D extends ElementType = StackTypeMap['defaultComponent']
+  D extends ElementType = StackTypeMap['defaultComponent'],
 > = OverrideProps<StackTypeMap<P, D>, D>;

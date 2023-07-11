@@ -22,5 +22,5 @@ export interface DividerTypeMap<P = {}, D extends ElementType = 'hr'> {
 
 export type DividerProps<
   P = {},
-  D extends ElementType = DividerTypeMap['defaultComponent']
+  D extends ElementType = DividerTypeMap['defaultComponent'],
 > = OverrideProps<DividerTypeMap<P, D>, D>;

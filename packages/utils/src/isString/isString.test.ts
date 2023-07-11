@@ -9,6 +9,6 @@ describe('isString', () => {
     'should return `false`',
     (value) => {
       expect(isString(value)).toBe(false);
-    }
+    },
   );
 });

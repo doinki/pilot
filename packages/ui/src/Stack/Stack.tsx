@@ -28,7 +28,7 @@ const Stack: OverridableComponent<StackTypeMap> = forwardRef((props, ref) => {
               index === 0
                 ? child
                 : // eslint-disable-next-line react/no-array-index-key
-                  [cloneElement(divider, { key: `separator-${index}` }), child]
+                  [cloneElement(divider, { key: `separator-${index}` }), child],
             )
         : children}
     </Component>

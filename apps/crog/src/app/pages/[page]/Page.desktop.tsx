@@ -29,11 +29,11 @@ const Page = async ({ params }: PageProps) => {
 
   const minPage = Math.max(
     Math.floor((page - 1) / PAGE_SIZE) * PAGE_SIZE + 1,
-    1
+    1,
   );
   const maxPage = Math.min(
     Math.floor((page - 1) / PAGE_SIZE) * PAGE_SIZE + PAGE_SIZE,
-    totalPages
+    totalPages,
   );
 
   return (
@@ -88,7 +88,7 @@ const Page = async ({ params }: PageProps) => {
           className={twJoin(
             'inline-flex items-center justify-center rounded-sm border px-4 py-2',
             minPage === 1 &&
-              'pointer-events-none border-neutral-200 text-neutral-200 dark:border-neutral-600 dark:text-neutral-600'
+              'pointer-events-none border-neutral-200 text-neutral-200 dark:border-neutral-600 dark:text-neutral-600',
           )}
           href={minPage === 1 ? '/' : `/pages/${minPage - 1}`}
           prefetch={minPage !== 1}
@@ -101,7 +101,7 @@ const Page = async ({ params }: PageProps) => {
             key={value}
             className={twJoin(
               'inline-flex h-12 w-12 items-center justify-center rounded-sm border',
-              value === page && 'bg-blue-100 dark:bg-blue-950'
+              value === page && 'bg-blue-100 dark:bg-blue-950',
             )}
             href={`/pages/${value}`}
           >
@@ -112,7 +112,7 @@ const Page = async ({ params }: PageProps) => {
           className={twJoin(
             'inline-flex items-center justify-center rounded-sm border px-4 py-2',
             maxPage === totalPages &&
-              'pointer-events-none border-neutral-200 text-neutral-200 dark:border-neutral-600 dark:text-neutral-600'
+              'pointer-events-none border-neutral-200 text-neutral-200 dark:border-neutral-600 dark:text-neutral-600',
           )}
           href={maxPage === totalPages ? '/' : `/pages/${maxPage + 1}`}
           prefetch={maxPage !== totalPages}

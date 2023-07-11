@@ -24,12 +24,12 @@ const Divider: OverridableComponent<DividerTypeMap> = forwardRef(
               ? 'vertical-flexItem'
               : orientation
           ],
-          className
+          className,
         )}
         {...other}
       />
     );
-  }
+  },
 );
 
 export default Divider;
